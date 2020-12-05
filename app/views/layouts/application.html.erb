@@ -12,15 +12,15 @@
   <link rel="canonical" href="<%= request.url %>" />
   <meta property="og:url" content="https://caffeinate.email/" />
   <meta property="og:site_name" content="Ruby on Rails" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/4223" />
+  <meta property="og:image" content="<%= image_url "logo.png" %>" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/4223" />
+  <meta property="twitter:image" content="<%= image_url "logo.png" %>" />
   <meta property="twitter:title" content="Josh Brody" />
   <meta name="twitter:site" content="@joshmn" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <!-- I am too lazy to put these into sprockets rn -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
