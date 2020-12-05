@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_27_223136) do
+ActiveRecord::Schema.define(version: 2020_12_05_220255) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer "visit_id"
@@ -61,7 +61,10 @@ ActiveRecord::Schema.define(version: 2020_11_27_223136) do
     t.string "user_id"
     t.string "token", null: false
     t.datetime "ended_at"
+    t.string "ended_reason"
+    t.datetime "resubscribed_at"
     t.datetime "unsubscribed_at"
+    t.string "unsubscribe_reason"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["caffeinate_campaign_id"], name: "caffeineate_campaign_subscriptions_on_campaign"
@@ -72,6 +75,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_223136) do
   create_table "caffeinate_campaigns", force: :cascade do |t|
     t.string "name", null: false
     t.string "slug", null: false
+    t.boolean "active", default: true, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["slug"], name: "index_caffeinate_campaigns_on_slug", unique: true
@@ -86,8 +90,11 @@ ActiveRecord::Schema.define(version: 2020_11_27_223136) do
     t.string "mailer_action", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index "\"campaign_subscription_id\", \"mailer_class\", \"mailer_action\", \"sent_at\", \"send_at\", \"skipped_at\"", name: "index_caffeinate_mailings"
+    t.index "\"campaign_subscription_id\", \"mailer_class\", \"mailer_action\"", name: "index_caffeinate_mailings"
     t.index ["caffeinate_campaign_subscription_id"], name: "index_caffeinate_mailings_on_campaign_subscription"
+    t.index ["send_at"], name: "index_caffeinate_mailings_on_send_at"
+    t.index ["sent_at"], name: "index_caffeinate_mailings_on_sent_at"
+    t.index ["skipped_at"], name: "index_caffeinate_mailings_on_skipped_at"
   end
 
   create_table "users", force: :cascade do |t|

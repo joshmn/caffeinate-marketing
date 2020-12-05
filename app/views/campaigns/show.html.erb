@@ -1,15 +1,70 @@
-<h2><%= @campaign.name %></h2>
-<h5>Drips in this campaign:</h5>
-<ul>
-  <% @campaign.to_dripper.drips.each do |drip| %>
-    <li><%= drip.options[:mailer_class] %>#<%= drip.action %> gets sent <%= drip.options[:delay].inspect %> after a user subscribes.</li>
-  <% end %>
-</ul>
+<div class=" rounded-12 shadow-dark-80 mb-3" data-aos="fade-up" data-aos-delay="100">
 
-<h5>Manage your subscription</h5>
-<% if @campaign.subscribes?(current_user) %>
-  <p>You've already subscribed to this campaign!</p>
-  <p><%= link_to "Manage my subscription", campaign_subscription_path(token: @campaign.subscriber(current_user).token) %>
-<% else %>
-  <p><%= button_to "Subscribe", campaign_subscriptions_path(campaign_slug: @campaign.slug) %></p>
-<% end %>
+  <%= title("#{@campaign.name} Drips") %>
+  <% @campaign.to_dripper.drips.each do |drip| %>
+    <div class="px-4 px-md-5 py-4">
+      <div class="d-flex align-items-center">
+        <div class="pr-2">
+          <h6 class="font-weight-normal">
+            <%= drip.options[:mailer_class] %>#<%= drip.action %>
+          </h6>
+          <small class="d-block text-gray-400 lh-lg">Gets sent <%= drip.options[:delay].inspect %> after a user subscribes.</small>
+        </div>
+        <div class="ml-auto">
+          <a class="btn btn-info" data-toggle="modal" data-target="#<%= dom_id(@campaign) %>_drip_<%=drip.action %>" href="#">View source</a>
+        </div>
+      </div>
+    </div>
+    <hr class="bg-gray-200 my-0">
+    <div class="modal fade" id="<%= dom_id(@campaign) %>_drip_<%=drip.action %>" tabindex="-1" aria-labelledby="<%= dom_id(@campaign) %>_drip_<%=drip.action %>ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-dark" id="<%= dom_id(@campaign) %>_drip_<%=drip.action %>ModalLabel">Drip Mail Source</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="text-dark">File location: <code>app/mailers/<%= drip.options[:mailer_class].underscore %>.rb</code></p>
+            <pre class="language-ruby">
+                      <code><%= drip.options[:mailer_class].constantize.instance_method(:this_is_caffeinate).source %>
+                      </code>
+                    </pre>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>
+
+<div class=" rounded-12 shadow-dark-80 mb-3" data-aos="fade-up" data-aos-delay="100">
+  <%= title("Your #{@campaign.name} subscription") %>
+  <div class="px-4 px-md-5 py-4">
+    <div class="d-flex align-items-center">
+      <% if @campaign.subscribes?(current_user) %>
+        <div class="pr-2">
+          <h6 class="font-weight-normal">
+            You're subscribed
+          </h6>
+          <small class="d-block text-gray-400 lh-lg">You were subscribed <%= time_ago_in_words(@campaign.subscriber(current_user).created_at) %> ago.</small>
+        </div>
+        <div class="ml-auto">
+          <a class="btn btn-info" href="<%= campaign_subscription_path(@campaign.subscriber(current_user).token) %>">More details</a>
+        </div>
+      <% else %>
+
+        <div class="pr-2">
+          <h6 class="font-weight-normal">
+            You're not subscribed yet
+          </h6>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <hr class="bg-gray-200 my-0">
+</div>

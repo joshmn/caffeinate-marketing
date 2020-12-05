@@ -1,0 +1,3 @@
+<% flash.each do |k,v| %>
+  <div class="alert alert-<%= k == 'notice' ? 'info' : 'danger' %>"><%= v %></div>
+<% end %>

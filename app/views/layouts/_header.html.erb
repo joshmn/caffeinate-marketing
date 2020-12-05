@@ -2,7 +2,7 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="javascript:void(0);">
-        <img src="../../assets/svg/brand/logo-white.svg" alt="Muse">
+        <%= image_tag('logotype-h.png', style: "max-height:96px") %>
       </a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <svg class="menu-icon" data-name="icons/tabler/hamburger" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
@@ -17,16 +17,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav m-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Code Documentation</a>
+            <a class="nav-link" href="https://rubydoc.info/gems/caffeinate/">Code Documentation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Getting Started Guide</a>
+            <a class="nav-link" href="https://github.com/joshmn/caffeinate/tree/master/docs">Getting Started Guide</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Github</a>
+            <a class="nav-link" href="https://github.com/joshmn/caffeinate">Github</a>
           </li>
         </ul>
-        <a href="javascript:void(0);" class="btn btn-lg btn-danger my-3 my-lg-0 mr-2">Try it live</a>
+        <a href="<%= campaigns_path %>" class="btn btn-lg btn-outline-primary my-3 my-lg-0 mr-2">Try it live</a>
       </div>
     </nav>
   </div>

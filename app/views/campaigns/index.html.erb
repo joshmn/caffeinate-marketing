@@ -1,7 +1,48 @@
-<h5>Available Campaigns</h5>
-<p>We're giving you the opportunity to explicitly opt-in to these demo campaigns. Don't worry, you can unsubscribe at any time, and you can delete your account and all its data if you want!</p>
-<ul>
-  <% @campaigns.each do |campaign| %>
-  <li><%= link_to(campaign.name, campaign_path(slug: campaign.slug)) %></li>
-  <% end %>
-</ul>
+<div class=" rounded-12 shadow-dark-80 mb-3" data-aos="fade-up" data-aos-delay="100">
+
+  <%= title("Available Campaigns") %>
+<% @campaigns.each do |campaign| %>
+  <div class="px-4 px-md-5 py-4">
+    <div class="d-flex align-items-center">
+      <div class="pr-2">
+        <h6 class="font-weight-normal"><%= campaign.name %>
+          (<a data-toggle="modal" data-target="#<%= dom_id(campaign) %>" href='#'>View source</a>)
+        </h6>
+        <small class="d-block text-gray-400 lh-lg">Sends <%= campaign.to_dripper.drip_collection.values.map { |drip| "#{drip.options[:mailer_class]}##{drip.action}"}.to_sentence %></small>
+      </div>
+      <div class="ml-auto">
+        <a class="btn btn-info" href="<%= campaign_path(campaign.slug) %>">More details</a>
+      </div>
+    </div>
+  </div>
+  <hr class="bg-gray-200 my-0">
+<% end %>
+</div>
+
+<div class=" rounded-12 shadow-dark-80 mb-3" data-aos="fade-up" data-aos-delay="100">
+
+<% @campaigns.each do |campaign| %>
+  <div class="modal fade" id="<%= dom_id(campaign) %>" tabindex="-1" aria-labelledby="<%= dom_id(campaign) %>ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark" id="<%= dom_id(campaign) %>ModalLabel"><%= campaign.name %> Source</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="text-dark">File location: <code><%= dripper_filename(campaign) %></code></p>
+          <pre class="language-ruby">
+                      <code><%= dripper_source(campaign)  %>
+                      </code>
+                    </pre>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row align-items-center vh-100">
+    <div class="col-md-10 col-lg-6 m-auto py-4 py-md-5">
+      <div class="text-center pb-4 mb-3">
+        <%= image_tag("logo.png", style: "max-height: 96px;") %>
+      </div>
+      <%= render_flash %>
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+<% @body_class = "login-simple-template bg-gray-100" %>
+<% parent_layout 'application' %>

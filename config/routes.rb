@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
-  mount Caffeinate::Engine => '/caffeinate'
+  mount ::Caffeinate::Engine => '/caffeinate'
+  devise_for :users, controllers: {
+      registrations: 'users/registrations',
+      confirmations: 'users/confirmations'
+  }
 
+  mount Ahoy::Engine => "/yoha"
   resources :campaigns, only: [:index, :show], param: :slug
-  resources :campaign_subscriptions, only: [:index, :show, :update, :destroy], param: :token
-  resources :mailings, only: [:index, :show]
-  resource :users, only: [:show, :destroy]
+  resources :campaign_subscriptions, only: [:index, :show, :create, :update, :destroy], param: :token
+  resource :profile, only: [:show, :destroy]
   root to: 'root#index'
 end

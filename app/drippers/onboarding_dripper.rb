@@ -1,5 +1,5 @@
 class OnboardingDripper < ApplicationDripper
-  campaign :onboarding
+  self.campaign = :onboarding
   default mailer_class: "OnboardingMailer"
 
   drip :this_is_caffeinate, delay: 15.minutes

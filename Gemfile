@@ -11,6 +11,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'caffeinate', path: '../../ruby/caffeinate'
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
+gem 'turbolinks'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

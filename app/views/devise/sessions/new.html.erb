@@ -1,0 +1,28 @@
+<div class="bg-white rounded-12 shadow-dark-80 py-4 py-md-5 px-md-4 px-3">
+  <h1 class="mb-md-3 mb-0 text-center">Sign in</h1>
+  <p class="small text-center">This is just a marketing site that will show off the features of Caffeinate. You can delete your account and all its associated data permanently at any time.</p>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "p-2" }) do |f| %>
+    <div class="mb-4">
+      <%= f.label :email, class: "form-label form-label-lg" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control form-control-lg' %>
+    </div>
+    <div class="mb-4">
+      <%= f.label :password, class: "form-label form-label-lg" %>
+      <%= f.password_field :password, class: 'form-control form-control-lg' %>
+    </div>
+
+
+      <div class="d-none">
+        <%= f.check_box :remember_me, class: 'form-check-input' %>
+        <%= f.label :remember_me, class: 'form-check-label' do %>
+          <%= resource.class.human_attribute_name('remember_me') %>
+        <% end %>
+      </div>
+
+    <div class="form-group">
+      <button type="button" class="btn btn-xl btn-block btn-primary" data-disable-with="Working that latency...">Sign in</button>
+    </div>
+  <% end %>
+
+  <p class="mt-5 mb-0 text-center">Don't have an account yet? <a href="<%= new_registration_path(:user)  %>" class="text-secondary font-weight-bold">Sign up</a></p>
+</div>

@@ -1,0 +1,30 @@
+<div class="bg-white rounded-12 shadow-dark-80 py-4 py-md-5 px-md-4 px-3">
+  <h1 class="mb-md-3 mb-0 text-center">Sign up</h1>
+  <p class="small text-center">This is just a marketing site that will show off the features of Caffeinate. You can delete your account and all its associated data permanently at any time.</p>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "p-2" }) do |f| %>
+    <div class="mb-4">
+      <%= f.label :email, class: "form-label form-label-lg" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control form-control-lg' %>
+      <p class="small">We will be verifying this, so make sure it's correct.</p>
+    </div>
+
+    <div class="mb-4">
+      <%= f.label :password, class: "form-label form-label-lg" %>
+      <%= f.password_field :password, class: 'form-control form-control-lg' %>
+      <p class="small">At least six characters, please.</p>
+    </div>
+
+    <div class="mb-4">
+      <%= f.label :password_confirmation, class: "form-label form-label-lg" %>
+      <%= f.password_field :password_confirmation, class: 'form-control form-control-lg' %>
+      <p class="small">Once again for good measure.</p>
+    </div>
+
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-xl btn-block btn-primary" data-disable-with="Phoning home...">Sign Up</button>
+    </div>
+  <% end %>
+
+  <p class="mt-5 mb-0 text-center">Already have an account? <a href="<%= new_session_path(:user)  %>" class="text-secondary font-weight-bold">Sign In</a></p>
+</div>

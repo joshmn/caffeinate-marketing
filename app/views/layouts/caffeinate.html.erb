@@ -1,0 +1,40 @@
+<div class="container ">
+  <section class="muse-section pt-4">
+    <%= render_flash %>
+    <div class="row">
+      <div class="col-lg-3">
+        <aside class="muse-aside mb-4 " data-aos="fade-up" data-aos-delay="100">
+          <div class="collapse navbar-collapse d-lg-block" id="navbarNav2">
+            <ul class="sidebar-nav pt-3">
+              <li>
+                <a href="<%= campaigns_path %>"  class="<%= 'active' if controller_name == 'campaigns' %>">Campaigns</a>
+              </li>
+              <li>
+                <a href="<%= campaign_subscriptions_path %>" class="<%= 'active' if controller_name == 'campaign_subscriptions' %>">Subscriptions</a>
+              </li>
+              <li>
+                <a href="<%= profile_path %>"  class="<%= 'active' if controller_name == 'profiles' %>">Security</a>
+              </li>
+            </ul>
+            <div class="border-top border-gray-200 p-3">
+              <% if user_signed_in? %>
+                <p class="mb-0">Nice! You're in!
+                  <a href="/users/sign_out" class="btn btn-sm btn-primary">Log Out</a>
+                </p>
+              <% else %>
+                <p class="mb-0">Get it personalized!
+                  <a href="/users/sign_in" class="btn btn-sm btn-primary">Log In</a>
+                </p>
+              <% end %>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="col-lg-9">
+        <%= yield %>
+      </div>
+    </div>
+  </section>
+</div>
+
+<% parent_layout "application" %>

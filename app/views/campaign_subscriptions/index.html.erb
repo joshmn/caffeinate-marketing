@@ -1,6 +1,22 @@
-<h2>Your subscriptions</h2>
-<ul>
-  <% current_user.caffeinate_campaign_subscriptions.includes(:caffeinate_campaign).each do |sub| %>
-    <li><%= link_to sub.caffeinate_campaign.name, campaign_subscription_path(token: sub.token) %> <%= subscription_status(sub) %></li>
-  <% end %>
-</ul>
+<div class=" rounded-12 shadow-dark-80 mb-3" data-aos="fade-up" data-aos-delay="100">
+
+  <%= title("Your subscriptions") %>
+
+<% @subscriptions.each do |sub| %>
+  <div class="px-4 px-md-5 py-4">
+    <div class="d-flex align-items-center">
+      <div class="pr-2">
+        <h6 class="font-weight-normal"><%= sub.caffeinate_campaign.name %>
+          (<a href="<%= campaign_path(sub.caffeinate_campaign.slug) %>">More details</a>)
+        </h6>
+        <small class="d-block text-gray-400 lh-lg"><%= subscription_status(sub) %></small>
+      </div>
+      <div class="ml-auto">
+        <a class="btn btn-info" href="<%= campaign_subscription_path(token: sub.token) %>">More details</a>
+      </div>
+    </div>
+  </div>
+  <hr class="bg-gray-200 my-0">
+<% end %>
+
+</div>

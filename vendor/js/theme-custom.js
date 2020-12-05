@@ -83,7 +83,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var docReady = function docReady(fn) {
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', fn);
+    document.addEventListener('turbolinks:load', fn);
   } else {
     setTimeout(fn, 1);
   }
@@ -321,7 +321,7 @@ var popoverInit = function popoverInit() {
 
 //Muse Progressbar JavaScript
 var progressBar = function progressBar() {
-  var merge = window._.merge; 
+  var merge = window._.merge;
   var progresCircle = document.querySelectorAll('.progress-circle');
 
   if (progresCircle.length) {
@@ -389,11 +389,3 @@ var tooltipInit = function tooltipInit() {
 };
 
 //Muse Theme Initialization
-docReady(progressBar);
-docReady(tooltipInit);
-docReady(popoverInit);
-docReady(flatpickrInit);
-docReady(toastInit);
-docReady(plyrInit);
-docReady(dropzoneInit);
-docReady(choicesInit);

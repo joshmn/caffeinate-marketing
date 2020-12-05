@@ -1,9 +1,21 @@
-<h2><%= @campaign_subscription.caffeinate_campaign.name %></h2>
-<p><%= link_to "Back to details", campaign_path(slug: @campaign_subscription.caffeinate_campaign.slug) %></p>
-<h5>Mailings</h5>
-<ul>
-  <% @campaign_subscription.caffeinate_mailings.each do |mailing| %>
-  <li><%= mailing.mailer_class %>#<%= mailing.mailer_action %> <%= mailing_status(mailing) %></li>
-  <% end %>
-</ul>
-<hr />
+<div class=" rounded-12 shadow-dark-80 mb-3" data-aos="fade-up" data-aos-delay="100">
+
+  <%= title("My #{@campaign_subscription.caffeinate_campaign.name} subscription", link_to("Unsubscribe", campaign_subscription_path(@campaign_subscription.token), method: :delete, confirm: "Are you sure?")) %>
+<% @campaign_subscription.caffeinate_mailings.each do |mailing| %>
+  <div class="px-4 px-md-5 py-4">
+    <div class="d-flex align-items-center">
+      <div class="pr-2">
+        <h6 class="font-weight-normal"><%= mailing.mailer_class %>#<%= mailing.mailer_action %>
+          (<a href="<%= campaign_path(mailing.caffeinate_campaign.slug) %>">More details</a>)
+        </h6>
+        <small class="d-block text-gray-400 lh-lg"><%= mailing_status(mailing) %></small>
+      </div>
+      <div class="ml-auto">
+        <a class="btn btn-info" href="">View source</a>
+      </div>
+    </div>
+  </div>
+  <hr class="bg-gray-200 my-0">
+<% end %>
+
+</div>

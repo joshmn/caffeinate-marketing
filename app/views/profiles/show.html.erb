@@ -1,0 +1,24 @@
+<div class=" rounded-12 shadow-dark-80 mb-3" data-aos="fade-up" data-aos-delay="100">
+  <%= title("Your subscriptions") %>
+  <% if @subscriptions.empty? %>
+  <p>You have no subscriptions.</p>
+  <% end %>
+  <% @subscriptions.each do |sub| %>
+    <div class="px-4 px-md-5 py-4">
+      <div class="d-flex align-items-center">
+        <div class="pr-2">
+          <h6 class="font-weight-normal"><%= sub.caffeinate_campaign.name %>
+            (<a href="<%= campaign_path(sub.caffeinate_campaign.slug) %>">Campaign details</a>)
+          </h6>
+          <small class="d-block text-gray-400 lh-lg"><%= subscription_status(sub) %></small>
+        </div>
+        <div class="ml-auto">
+          <a class="btn btn-info" href="<%= campaign_subscription_path(token: sub.token) %>">Subscription details</a>
+        </div>
+      </div>
+    </div>
+    <hr class="bg-gray-200 my-0">
+  <% end %>
+</div>
+
+<%= button_to "Delete my account and all the data please", "/users", method: :delete %>

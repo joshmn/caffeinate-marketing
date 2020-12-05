@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Legal - Muse Documentation | Muse - Responsive Website Template</title>
+  <title><%= @page_title %> - Caffeinate</title>
   <meta charset="UTF-8">
-  <meta name="description" content="Muse">
-  <meta name="keywords" content="Muse">
-  <meta name="author" content="Muse">
+  <meta name="description" content="Caffeinate is a drip campaign/scheduled email sequence engine for Ruby on Rails.">
+  <meta name="author" content="Josh Brody">
+  <meta property="og:title" content="Caffeinate" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Caffeinate is a drip campaign/scheduled email sequence engine for Ruby on Rails." />
+  <meta property="og:description" content="Caffeinate is a drip campaign/scheduled email sequence engine for Ruby on Rails." />
+  <link rel="canonical" href="<%= request.url %>" />
+  <meta property="og:url" content="https://caffeinate.email/" />
+  <meta property="og:site_name" content="Ruby on Rails" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/4223" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/4223" />
+  <meta property="twitter:title" content="Josh Brody" />
+  <meta name="twitter:site" content="@joshmn" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag    'application', media: 'all' %>
 </head>
-<body class="bg-black-800 saas-template">
+<body class="<%= body_class %>">
 <%= render 'layouts/header' %>
 <%= yield %>
-
 <%= render 'layouts/footer' %>
 </body>
 </html>

@@ -1,5 +1,4 @@
 <div class="container">
-  <!-- Muse Section-->
   <section class="muse-section">
     <div class="row align-items-center">
       <div class="col-lg-10 m-auto text-center">
@@ -7,10 +6,7 @@
           <h1 class="display-2">Email sequences <br>for your Rails app.</h1>
           <h2 class="mb-0 pb-md-3 mt-2">
             Create, manage, and send timed email sequences in just a few lines of code.</h2>
-          <a href="#" class="btn btn-xl btn-danger rounded-pill my-4">It's free, and open-source</a>
-        </div>
-        <div class="mt-1 mt-md-5 overlay-center"  data-aos="fade-up" data-aos-delay="100">
-          <img src="../../assets/img/templates/saas-banner.jpg" class="img-fluid shadow-dark-80 rounded-6" alt="Figma">
+          <a href="https://github.com/joshmn/caffeinate" class="btn btn-xl btn-primary rounded-pill my-4">It's free, and open-source</a>
         </div>
       </div>
     </div>
@@ -29,29 +25,7 @@
         </div>
       </div>
       <div class="col-lg-6 pt-5">
-        <ul class="tech-list" data-aos="fade-up" data-aos-delay="100">
-          <li>
-            <a href="#" class="avatar avatar-xl bg-black-800 avatar-circle avatar-center"><img src="../../assets/img/templates/sass.svg" alt="img"></a>
-          </li>
-          <li>
-            <a href="#" class="avatar avatar-xl bg-black-800 avatar-circle avatar-center"><img src="../../assets/img/templates/python.svg" alt="img"></a>
-          </li>
-          <li>
-            <a href="#" class="avatar avatar-xl bg-black-800 avatar-circle avatar-center"><img src="../../assets/img/templates/bootstrap.svg" alt="img"></a>
-          </li>
-          <li>
-            <a href="#" class="avatar avatar-xl bg-black-800 avatar-circle avatar-center"><img src="../../assets/img/templates/vue.svg" alt="img"></a>
-          </li>
-          <li>
-            <a href="#" class="avatar avatar-xl bg-black-800 avatar-circle avatar-center"><img src="../../assets/img/templates/angular.svg" alt="img"></a>
-          </li>
-          <li>
-            <a href="#" class="avatar avatar-xl bg-black-800 avatar-circle avatar-center"><img src="../../assets/img/templates/html5.svg" alt="img"></a>
-          </li>
-          <li>
-            <a href="#" class="avatar avatar-xl bg-black-800 avatar-circle avatar-center"><img src="../../assets/img/templates/react2.svg" alt="img"></a>
-          </li>
-        </ul>
+        <%= image_tag "Ruby_On_Rails_Logo.svg" %>
       </div>
     </div>
   </section>
@@ -239,16 +213,16 @@
 
   <!-- Muse Section -->
   <section class="muse-section px-3 px-md-0 py-md-5  rounded-12 " data-aos="fade-up" data-aos-delay="100">
-    <div class="col-12 col-md-9 col-xl-5 m-auto text-center py-md-4">
+    <div class="col-12 col-md-9 col-xl-8 m-auto text-center py-md-4">
       <h2 class="h1 mb-0">Give it a try</h2>
       <p class="big text-white-600">This marketing site runs Caffeinate under the hood. Sign up, sign in, and see a demo app in action. Unsubscribe any time, and even delete your account!</p>
-      <form class="mt-4 mx-lg-4 px-md-2 pt-2">
+      <form class="mt-4 mx-lg-4 px-md-2 pt-2" action="/users/sign_in" method="get">
         <div class="input-group input-group-xl">
-          <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="button-addon2">
+          <input type="text" class="form-control" placeholder="Email" aria-label="Email" name="user[email]" aria-describedby="button-addon2">
           <button class="btn btn-xl btn-warning text-uppercase caption px-3" type="button" id="button-addon2">Sign up</button>
         </div>
       </form>
-      <p class="small text-gray-600 mt-2 pt-1 lh-sm">By joining our newsletter you agree to our <a href="#0" class="text-gray-600 font-weight-bold">Privacy</a> and <a href="#0" class="text-gray-600 font-weight-bold">Terms</a></p>
+      <p class="small text-gray-600 mt-2 pt-1 lh-sm">Questions? Comments? I'm <a href="https://twitter.com/joshmn">@joshmn</a> on Twitter (and all over the internet except Instagram.) </p>
     </div>
   </section>
 </div>

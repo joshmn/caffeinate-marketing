@@ -1,9 +1,10 @@
-class CampaignSubscriptionsController < ApplicationController
+class CampaignSubscriptionsController < DemoController
   before_action :authenticate_user!
   before_action :find_campaign!, only: [:create]
   before_action :find_campaign_subscription!, only: [:show, :destroy]
 
   def index
+    set_page_title("My Subscriptions")
     @subscriptions = current_user.caffeinate_campaign_subscriptions.includes(:caffeinate_campaign)
   end
 
@@ -16,6 +17,7 @@ class CampaignSubscriptionsController < ApplicationController
   end
 
   def show
+    set_page_title("Viewing #{@campaign_subscription.caffeinate_campaign.name} Subscription")
   end
 
   def destroy
