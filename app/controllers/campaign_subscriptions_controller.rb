@@ -1,4 +1,4 @@
-class CampaignSubscriptionsController < DemoController
+class ::CampaignSubscriptionsController < DemoController
   before_action :authenticate_user!
   before_action :find_campaign!, only: [:create]
   before_action :find_campaign_subscription!, only: [:show, :destroy]

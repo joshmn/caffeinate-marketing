@@ -10,11 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_05_220255) do
+ActiveRecord::Schema.define(version: 2020_12_05_233244) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "ahoy_events", force: :cascade do |t|
-    t.integer "visit_id"
-    t.integer "user_id"
+    t.bigint "visit_id"
+    t.bigint "user_id"
     t.string "name"
     t.text "properties"
     t.datetime "time"
@@ -26,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_12_05_220255) do
   create_table "ahoy_visits", force: :cascade do |t|
     t.string "visit_token"
     t.string "visitor_token"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "ip"
     t.text "user_agent"
     t.text "referrer"
@@ -54,7 +57,7 @@ ActiveRecord::Schema.define(version: 2020_12_05_220255) do
   end
 
   create_table "caffeinate_campaign_subscriptions", force: :cascade do |t|
-    t.integer "caffeinate_campaign_id", null: false
+    t.bigint "caffeinate_campaign_id", null: false
     t.string "subscriber_type", null: false
     t.string "subscriber_id", null: false
     t.string "user_type"
@@ -82,7 +85,7 @@ ActiveRecord::Schema.define(version: 2020_12_05_220255) do
   end
 
   create_table "caffeinate_mailings", force: :cascade do |t|
-    t.integer "caffeinate_campaign_subscription_id", null: false
+    t.bigint "caffeinate_campaign_subscription_id", null: false
     t.datetime "send_at"
     t.datetime "sent_at"
     t.datetime "skipped_at"
@@ -90,7 +93,7 @@ ActiveRecord::Schema.define(version: 2020_12_05_220255) do
     t.string "mailer_action", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index "\"campaign_subscription_id\", \"mailer_class\", \"mailer_action\"", name: "index_caffeinate_mailings"
+    t.index ["caffeinate_campaign_subscription_id", "mailer_class", "mailer_action"], name: "index_caffeinate_mailings"
     t.index ["caffeinate_campaign_subscription_id"], name: "index_caffeinate_mailings_on_campaign_subscription"
     t.index ["send_at"], name: "index_caffeinate_mailings_on_send_at"
     t.index ["sent_at"], name: "index_caffeinate_mailings_on_sent_at"

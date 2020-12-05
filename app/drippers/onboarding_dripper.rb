@@ -25,19 +25,20 @@ class OnboardingDripper < ApplicationDripper
     ahoy.track("$before_drip", { campaign_subscription_id: campaign_subscription.id, mailing: mailing.id, drip: drip.action })
   end
 
-  before_send do |campaign_subscription, mailing, message|
-    ahoy.track("$before_send", { campaign_subscription_id: campaign_subscription.id, mailing: mailing.id, message_id: message.message_id })
+  before_send do |mailing, mail|
+    ahoy.track("$before_send", { mailing_id: mailing.id, message_id: mail.message_id })
   end
 
-  after_send do |campaign_subscription, mailing, message|
-    ahoy.track("$after_send", { campaign_subscription_id: campaign_subscription.id, mailing: mailing.id, message_id: message.message_id })
+  after_send do |mailing, mail|
+    ahoy.track("$after_send", { mailing_id: mailing.id, message_id: mail.message_id })
   end
 
-  on_complete do |campaign_subscription|
+  on_complete do |campaign_subscription, mailing, message|
     ahoy.track("$on_complete", { campaign_subscription_id: campaign_subscription.id, mailing: mailing.id, message_id: message.message_id })
   end
 
   on_unsubscribe do |campaign_subscription|
+    UnsubscribeMailer.thanks(campaign_subscription.subscriber.email).deliver
     ahoy.track("$on_unsubscribe", { campaign_subscription_id: campaign_subscription.id })
   end
 

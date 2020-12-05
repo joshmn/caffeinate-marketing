@@ -1,4 +1,4 @@
-class CampaignsController < DemoController
+class ::CampaignsController < DemoController
   before_action :find_campaign!, only: [:show]
 
   def index
