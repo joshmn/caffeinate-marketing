@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="48px" viewBox="0 0 55 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>google-drive</title>
+    <g id="Templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="maindemo" transform="translate(-1218.000000, -2463.000000)" fill-rule="nonzero">
+            <g id="Group-63" transform="translate(0.000000, 1966.000000)">
+                <g id="Group-7" transform="translate(405.000000, 120.000000)">
+                    <g id="Group-61" transform="translate(570.000000, 0.000000)">
+                        <g id="Group-59" transform="translate(208.000000, 340.000000)">
+                            <g id="google-drive" transform="translate(35.000000, 37.000000)">
+                                <polygon id="Path" fill="#3777E3" points="9.05660377 47.3261887 18.1126352 31.9299623 54.3396226 31.9299623 45.2827628 47.3261887"></polygon>
+                                <polygon id="Path" fill="#FFCF63" points="36.2270176 31.9299623 54.3396226 31.9299623 36.2270176 0.231849057 18.1132075 0.231849057"></polygon>
+                                <polygon id="Path" fill="#11A861" points="0 31.628088 9.05715606 47.3261887 27.1698113 15.9299874 18.1130695 0.231849057"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

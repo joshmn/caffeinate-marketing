@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="icons_tabler_mail" data-name="icons/tabler/mail" transform="translate(0)">
+    <rect id="Icons_Tabler_Mail_background" data-name="Icons/Tabler/Mail background" width="16" height="16" fill="none"/>
+    <path id="Color" d="M2.256,12.718A2.259,2.259,0,0,1,0,10.462V2.274c0-.013,0-.026,0-.038A2.259,2.259,0,0,1,2.256,0H13.744A2.259,2.259,0,0,1,16,2.256v8.205a2.259,2.259,0,0,1-2.256,2.256ZM1.231,10.462a1.027,1.027,0,0,0,1.025,1.026H13.744a1.027,1.027,0,0,0,1.025-1.026V3.406L8.341,7.691a.613.613,0,0,1-.6.045l-.08-.045L1.231,3.407ZM8,6.439l6.724-4.482a1.027,1.027,0,0,0-.98-.726H2.256a1.027,1.027,0,0,0-.98.726Z" transform="translate(0 2)" fill="#1e1e1e"/>
+  </g>
+</svg>

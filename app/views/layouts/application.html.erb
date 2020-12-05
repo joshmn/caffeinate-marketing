@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Legal - Muse Documentation | Muse - Responsive Website Template</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Muse">
+  <meta name="keywords" content="Muse">
+  <meta name="author" content="Muse">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag    'application', media: 'all' %>
+</head>
+<body class="bg-black-800 saas-template">
+<%= render 'layouts/header' %>
+<%= yield %>
+
+<%= render 'layouts/footer' %>
+</body>
+</html>

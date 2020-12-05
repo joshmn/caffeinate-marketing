@@ -1,0 +1,14 @@
+<svg id="Illustration" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="180" viewBox="0 0 180 180">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Oval_Copy" data-name="Oval Copy" cx="90" cy="90" r="90" fill="#44d2a8"/>
+    </clipPath>
+  </defs>
+  <circle id="Oval_Copy-2" data-name="Oval Copy" cx="90" cy="90" r="90" fill="#44d2a8"/>
+  <g id="Illustration-2" data-name="Illustration" clip-path="url(#clip-path)">
+    <g id="heart-2" transform="translate(49 52)">
+      <path id="Path_Copy" data-name="Path Copy" d="M75.221,6.775a23.218,23.218,0,0,0-32.782,0Q41.688,7.526,41,8.356c-.458-.554-.938-1.08-1.441-1.582A23.174,23.174,0,0,0,6.778,39.537l32.96,32.941a1.783,1.783,0,0,0,2.521,0L75.22,39.537A23.179,23.179,0,0,0,75.221,6.775Z" transform="matrix(0.966, 0.259, -0.259, 0.966, 19.844, 0.632)" fill="#e25563" opacity="0.1"/>
+      <path id="Path" d="M75.221,6.775a23.218,23.218,0,0,0-32.782,0Q41.688,7.526,41,8.356c-.458-.554-.938-1.08-1.441-1.582A23.174,23.174,0,0,0,6.778,39.537l32.96,32.941a1.783,1.783,0,0,0,2.521,0L75.22,39.537A23.179,23.179,0,0,0,75.221,6.775Z" transform="translate(0 10)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

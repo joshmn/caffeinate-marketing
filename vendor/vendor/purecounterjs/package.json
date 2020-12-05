@@ -1,0 +1,69 @@
+{
+  "_from": "@srexi/purecounterjs",
+  "_id": "@srexi/purecounterjs@1.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-Cd9gnNrZuExssfIf2g99P1VWfZdQY6L9ppRFeACZEx9n48L8jr3bfJQ1WKiJhV75FPO+vowvi+oU3GeTgDWdsQ==",
+  "_location": "/@srexi/purecounterjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@srexi/purecounterjs",
+    "name": "@srexi/purecounterjs",
+    "escapedName": "@srexi%2fpurecounterjs",
+    "scope": "@srexi",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@srexi/purecounterjs/-/purecounterjs-1.1.1.tgz",
+  "_shasum": "4ed749f22200a7a229d62e14ded7092252071a75",
+  "_spec": "@srexi/purecounterjs",
+  "_where": "C:\\Projects\\Kamal-mehta\\backbone",
+  "author": {
+    "name": "Stig Rex"
+  },
+  "bugs": {
+    "url": "https://github.com/srexi/purecounterjs/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "A simple yet configurable native javascript counter which you can count on.",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "laravel-mix": "^4.0.16",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "homepage": "https://github.com/srexi/purecounterjs#readme",
+  "keywords": [
+    "javascript",
+    "simple",
+    "counter",
+    "fast",
+    "lightweight",
+    "easy",
+    "nojquery",
+    "noquery"
+  ],
+  "license": "MIT",
+  "main": "dist/purecounter.js",
+  "name": "@srexi/purecounterjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srexi/purecounterjs.git"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch"
+  },
+  "version": "1.1.1"
+}

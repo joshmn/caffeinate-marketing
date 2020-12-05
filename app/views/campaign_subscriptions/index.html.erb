@@ -1,0 +1,6 @@
+<h2>Your subscriptions</h2>
+<ul>
+  <% current_user.caffeinate_campaign_subscriptions.includes(:caffeinate_campaign).each do |sub| %>
+    <li><%= link_to sub.caffeinate_campaign.name, campaign_subscription_path(token: sub.token) %> <%= subscription_status(sub) %></li>
+  <% end %>
+</ul>

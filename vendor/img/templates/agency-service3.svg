@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="244.68" height="217.178" viewBox="0 0 244.68 217.178">
+  <defs>
+    <clipPath id="clip-path">
+      <path d="M3.5,195.48a3.5,3.5,0,0,1-3.5-3.5V3.5A3.5,3.5,0,0,1,3.5,0H110.935a3.5,3.5,0,0,1,3.5,3.5V191.98a3.5,3.5,0,0,1-3.5,3.5Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_3" data-name="Group 3" transform="translate(-44.66 -148.963)">
+    <path id="Path" d="M160.728.139c21.5-1.21,46.176,5.446,47.236,21.18s-21.65,40.545-26.8,62.179c-5.148,21.785,6.964,40.394,3.936,52.648s-21.347,18.155-37.547,21.18-30.279,3.48-46.176,6.2c-15.745,2.874-33.156,8.17-47.539,4.085-14.534-4.085-26.04-17.549-32.55-32.678s-8.024-31.77-13.02-51.286S-4.9,41.743,3.881,30.548C12.51,19.353,38.4,19.5,57.778,19.5s32.4.151,47.842-4.387C121.213,10.578,139.381,1.349,160.728.139Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 44.66, 202.798)" fill="#afb2ff"/>
+    <g id="Rectangle" transform="translate(110 158)">
+      <rect id="Rectangle-2" data-name="Rectangle" width="114.435" height="195.48" rx="3.5" fill="#1e1e1e"/>
+      <g id="Rectangle-3" data-name="Rectangle" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5">
+        <rect width="114.435" height="195.48" rx="3.5" stroke="none"/>
+        <rect x="-0.25" y="-0.25" width="114.935" height="195.98" rx="3.75" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_67" data-name="Group 67" transform="translate(110 158)" clip-path="url(#clip-path)">
+      <g id="gameboy-monochrome" transform="translate(-6.981)">
+        <path id="Path-2" data-name="Path" d="M.085.26C.131.19.173.117.219.044.173.12.131.19.085.26Z" transform="translate(5.209 146.186)" fill="#f2f2f2"/>
+        <path id="Path-3" data-name="Path" d="M.074.276.229.027Z" transform="translate(4.728 146.971)" fill="#f2f2f2"/>
+        <path id="Path-4" data-name="Path" d="M.065.288.238.015Z" transform="translate(4.248 147.739)" fill="#f2f2f2"/>
+        <path id="Path-5" data-name="Path" d="M.1.234.2.07Z" transform="translate(5.69 145.396)" fill="#f2f2f2"/>
+        <path id="Path-6" data-name="Path" d="M.152.159v0Z" transform="translate(6.147 144.629)" fill="#f2f2f2"/>
+        <path id="Path-7" data-name="Path" d="M.152.162h0v0Z" transform="translate(7.133 142.966)" fill="#f2f2f2"/>
+        <path id="Path-8" data-name="Path" d="M.061.294.243.009Z" transform="translate(3.77 148.492)" fill="#f2f2f2"/>
+        <path id="Path-9" data-name="Path" d="M.047.3.256,0Z" transform="translate(1.486 151.919)" fill="#f2f2f2"/>
+        <path id="Path-10" data-name="Path" d="M.039.3.264,0Z" transform="translate(0.622 153.118)" fill="#f2f2f2"/>
+        <path id="Path-11" data-name="Path" d="M.044.3.26,0Z" transform="translate(1.052 152.529)" fill="#f2f2f2"/>
+        <path id="Path-12" data-name="Path" d="M.009.37.294,0Z" transform="translate(0.179 153.676)" fill="#f2f2f2"/>
+        <path id="Path-13" data-name="Path" d="M.053.3.25,0Z" transform="translate(2.837 149.93)" fill="#f2f2f2"/>
+        <path id="Path-14" data-name="Path" d="M.055.3.249,0Z" transform="translate(3.299 149.22)" fill="#f2f2f2"/>
+        <path id="Path-15" data-name="Path" d="M.05.3l.2-.3Z" transform="translate(2.378 150.619)" fill="#f2f2f2"/>
+        <path id="Path-16" data-name="Path" d="M.049.3.255,0Z" transform="translate(1.927 151.284)" fill="#f2f2f2"/>
+        <path id="Path-17" data-name="Path" d="M.131.2.173.106" transform="translate(7.154 103.917)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.875"/>
+        <path id="Path-18" data-name="Path" d="M0,.152H114" transform="translate(7.282 11.34)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.875"/>
+        <path id="Path-19" data-name="Path" d="M.152,0V11.416" transform="translate(16.346 0.076)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.875"/>
+        <path id="Path-20" data-name="Path" d="M.152,0V11.416" transform="translate(114.823 0.076)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.875"/>
+        <rect id="Rectangle-4" data-name="Rectangle" width="63.385" height="57.527" transform="translate(34.467 26.511)"/>
+        <circle id="Oval" cx="1.748" cy="1.748" r="1.748" transform="translate(21.952 45.082)"/>
+        <rect id="Rectangle-5" data-name="Rectangle" width="13.687" height="3.524" rx="1.762" transform="matrix(0.898, -0.439, 0.439, 0.898, 47.552, 167.561)"/>
+        <rect id="Rectangle-6" data-name="Rectangle" width="13.687" height="3.524" rx="1.762" transform="matrix(0.898, -0.439, 0.439, 0.898, 67.499, 167.559)"/>
+        <circle id="Oval-2" data-name="Oval" cx="6.951" cy="6.951" r="6.951" transform="translate(79.346 130.651)"/>
+        <circle id="Oval_Copy_10" data-name="Oval Copy 10" cx="6.951" cy="6.951" r="6.951" transform="translate(97.079 119.988)" fill="#fff"/>
+        <rect id="Rectangle-7" data-name="Rectangle" width="10.32" height="29.443" rx="1.05" transform="translate(30.712 118.988)" fill="#fff"/>
+        <path id="Path-21" data-name="Path" d="M15.08,0H3.066C2.24,3.36,1.187,6.963,0,10.512H15.08a1.16,1.16,0,0,0,1.16-1.16v-8.2A1.16,1.16,0,0,0,15.08,0Z" transform="translate(34.175 128.494)" fill="#fff"/>
+        <path id="Path_Copy_2" data-name="Path Copy 2" d="M-15.08,0H-3.066C-2.24,3.36-1.187,6.963,0,10.512H-15.08a1.16,1.16,0,0,1-1.16-1.16v-8.2A1.16,1.16,0,0,1-15.08,0Z" transform="translate(37.238 128.494)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

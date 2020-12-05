@@ -1,0 +1,4 @@
+<svg id="icons_tabler_tablet" data-name="icons/tabler/tablet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <rect id="Icons_Tabler_Tablet_background" data-name="Icons/Tabler/Tablet background" width="16" height="16" fill="none"/>
+  <path id="Color" d="M1.355,16A1.4,1.4,0,0,1,0,14.564V1.436A1.4,1.4,0,0,1,1.355,0h9.291A1.4,1.4,0,0,1,12,1.436V14.564A1.4,1.4,0,0,1,10.645,16ZM1.161,1.436V14.564a.2.2,0,0,0,.194.205h9.291a.2.2,0,0,0,.193-.205V1.436a.2.2,0,0,0-.193-.2H1.355A.2.2,0,0,0,1.161,1.436ZM5,12.25A1.25,1.25,0,1,1,6.25,13.5,1.249,1.249,0,0,1,5,12.25Z" transform="translate(2)" fill="#1e1e1e"/>
+</svg>

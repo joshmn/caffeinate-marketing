@@ -1,0 +1,5120 @@
+/* Muse Templates CSS */
+/* Muse Color Variables */
+$danger: $red-400;
+$success: $teal-500;
+$warning: $yellow-500;
+$secondary: $gray-700;
+$dark: $gray-900;
+$light-gray: #e4eaec;
+
+/*
+1. Maindemo Page CSS
+    1. 1. Header CSS
+    1. 2. Footer CSS
+2. Travel Page CSS
+3. Portfolio Page CSS
+4. Clinic Page CSS
+5. Saas Page CSS
+6. Ecommerce Page CSS
+7. Education Page CSS
+8. Studio Page CSS
+9. Magazine Page CSS
+10. Saas3 Page CSS
+11. Agency Page CSS
+12. About Page CSS
+13. Login Cover Page CSS
+14. Login Simple Page CSS
+15. Coming Soon Page CSS
+16. Maintenance Page CSS
+17. Job Opening Page CSS
+18. Gallery Mansorny Page CSS
+19. Contact Page CSS
+20. Account Profile Page CSS
+21. Pricing Page CSS
+22. Help Center Page CSS
+23. Blog Page CSS
+24. Blog Post Page CSS
+25. Blog Home2 Page CSS
+26. Header Footer Page CSS
+*/
+
+/* 1.  Maindemo Page CSS */
+.muse-section {
+  padding: 85px 0;
+}
+hr {
+  border-color: $gray-200;
+  background-color: $gray-200;
+  opacity: 1;
+}
+/* 1.  1.  Header CSS */
+header {
+  .navbar-brand {
+    margin-top: -5px;
+  }
+  .navbar-nav {
+    .nav-item {
+      padding: 0 25px;
+      > .dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .dropdown-menu {
+        border: none;
+        min-width: 240px;
+        border-radius: 6px;
+        margin-top: 0;
+        margin-left: 0;
+        .dropdown-item {
+          font-size: 14px;
+          font-family: $montserrat-font;
+          font-weight: $font-weight-semibold;
+          padding: 8px 20px;
+          color: $gray-700;
+          margin: 0;
+          .badge {
+            position: relative;
+            top: -1px;
+          }
+          .mt-2 {
+            margin-top: 0.40rem !important;
+          }
+          &:hover {
+            color: $success;
+            background-color: transparent;
+            svg path {
+              fill: $success;
+            }
+          }
+          &:focus {
+            background-color: transparent;
+          }
+        }
+      }
+      &.horizontal-menu {
+        .dropdown-menu {
+          padding: 13px 15px;
+         > li {
+            list-style: none;
+            small {
+              padding: 6px 20px;
+              color: $gray-600;
+            }
+            ul {
+              padding-left: 0;
+              li {
+                list-style: none;
+                .dropdown-item {
+                  padding: 6px 20px;
+                }
+              }
+            }
+          }
+          &.show {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 13px 15px;
+          }
+        }
+      }
+    }
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .nav-link {
+    color: $black-600;
+    font-family: $montserrat-font;
+    font-weight: $font-weight-semibold;
+    font-size: 14px;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.overlay-center {
+  position: relative;
+  .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+}
+.link-success {
+  &:hover, &:focus {
+    color: $dark;
+    svg path {
+      fill: $dark;
+    }
+  }
+}
+.maindemo-template {
+  .btn-close {
+    background: transparent;
+    padding: 0;
+  }
+  .nav-link {
+    &:hover {
+      color: $success;
+      svg path {
+        fill: $success;
+      }
+    }
+  }
+  .text-success:not(.bi):hover {
+    color: $dark !important;
+  }
+  .bg-dark {
+    .text-success:hover {
+      color: $white !important;
+    }
+  }
+  .btn-outline-dark {
+    &:hover {
+      background-color: $success;
+      border-color: $success;
+    }
+  }
+  .form-switch {
+    .form-check-input:checked {
+      background-color: $success;
+      border-color: $success;
+    }
+  }
+  .btn-success:hover {
+    background-color: $dark !important;
+    border-color: $dark !important;
+    color: $white !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: $success;
+  }
+  .bg-black-600 {
+    .text-success {
+      &:hover {
+        color: $white !important;
+      }
+    }
+    a {
+      &:hover {
+        svg path {
+          fill: $gray-400 !important;
+        }
+      }
+    }
+  }
+}
+.yearly {
+  display: none;
+}
+.switch-hide {
+  .yearly {
+    display: inline-block;
+  }
+  .monthly {
+    display: none;
+  }
+}
+#switch-content {
+  a {
+    &.text-gray-600 {
+      &:hover {
+        color: $success;
+      }
+    }
+  }
+}
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    list-style: none;
+    width: 33.333%;
+    padding: 20px 30px;
+    text-align: center;
+    a {
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba($black, 0.04);
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      max-width: 125px;
+      padding: 37px 10px;
+      justify-content: center;
+    }
+  }
+}
+.plan-list {
+  li {
+    line-height: 28px;
+    color: $gray-700;
+    i {
+      width: 15px;
+      font-size: 12px;
+    }
+    span {
+      width: calc(100% - 15px);
+      padding-left: 6px;
+    }
+    + li {
+      margin-top: 10px;
+    }
+  }
+}
+.form-switch {
+  .form-check-input {
+    &.bg-gray-300 {
+      border-color: $gray-300;
+    }
+  }
+}
+.get-started-img {
+  position: absolute;
+  bottom: -240px;
+  right: -198px;
+}
+/* 1.  2.  Footer CSS */
+.footer-link {
+  li {
+    a {
+      color: $gray-700;
+      &:hover {
+        color: $success;
+      }
+      .badge-success {
+        background-color: $teal-500;
+      }
+    }
+    + li {
+      margin-top: 8px;
+    }
+  }
+}
+.third-footer {
+  .footer-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      margin: 10px 25px;
+    }
+  }
+  .social-icons {
+    svg path {
+      fill: $black-600;
+    }
+  }
+}
+.second-footer {
+  .social-icons {
+    svg path {
+      fill: $black-600;
+    }
+  }
+}
+.social-icons {
+  text-align: right;
+  a {
+    &:hover {
+      color: $success;
+      svg path {
+        fill: $teal-500;
+      }
+    }
+    + a {
+      margin-left: 20px;
+    }
+    svg path {
+      fill: $gray-600;
+    }
+  }
+}
+.type-line {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $success;
+  }
+}
+.muse-animation {
+  display: block;
+  overflow: hidden;
+}
+.muse-animation > img {
+  transform: scale(1);
+  transition: $transition4;
+}
+.muse-card:hover, .card:hover {
+  .muse-animation > img {
+    transform: scale(1.1);
+  }
+}
+.muse-cookie {
+  border-radius: 0;
+}
+
+/* 2. Travel Page CSS */
+.travel-template {
+  a:not(.btn):hover {
+    color: $warning !important;
+  }
+  .footer-link {
+    li {
+      a:hover {
+        color: $warning;
+      }
+    }
+  }
+  .social-icons {
+    a {
+      &:hover {
+        color: $warning;
+        svg path {
+          fill: $warning;
+        }
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $warning;
+    svg path {
+      fill: $warning;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item:hover {
+          color: $warning;
+          svg path {
+            fill: $warning;
+          }
+        }
+      }
+    }
+  }
+  .muse-card:hover {
+    a {
+      color: $warning;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background: $warning;
+  }
+}
+.travel-booking {
+  border-radius: 6px;
+  background-color: $white;
+  padding: 18px 35px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.booking-box {
+  padding: 15px 75px;
+  span {
+    display: block;
+    text-transform: uppercase;
+    color: $gray-900;
+    font-size: 13px;
+    margin-bottom: 3px;
+    letter-spacing: -0.15px;
+  }
+  input {
+    border: none;
+    padding: 0;
+    color: $dark;
+    font-size: 13px;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $gray-600;
+      opacity: 1;
+      font-size: 13px;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $gray-600;
+      opacity: 1;
+      font-size: 13px;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $gray-600;
+      opacity: 1;
+      font-size: 13px;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $gray-600;
+      opacity: 1;
+      font-size: 13px;
+    }
+  }
+  + .booking-box {
+    border-left: 1px solid $gray-300;
+  }
+}
+
+/* 3. Portfolio Page CSS */
+.portfolio-template {
+  overflow-x: hidden;
+  hr {
+    border-color: $gray-200;
+  }
+  a:not(.btn) {
+    color: $dark;
+    &:hover {
+      color: $primary;
+    }
+  }
+  .social-icons {
+    a {
+      color: $secondary;
+      + a {
+        margin-left: 20px;
+      }
+      &:hover {
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  .bg-black-600 {
+    background-color: $black-600;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+  .menu-close {
+    display: none;
+    transition: all 500ms ease-in-out;
+  }
+  .aside-toggle {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 15;
+  }
+  &.manage-page {
+    .menu-close {
+      display: block;
+    }
+    .menu-icon {
+      transition: all 500ms ease-in-out;
+      display: none;
+    }
+  }
+}
+.manage-page {
+  .menu-full-width {
+    transform: translate(0, 0);
+  }
+}
+.menu-full-width {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $blue-400;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  overflow: auto;
+  transition: all 500ms ease-in-out;
+  transform: translate(100%, -100%);
+  .navbar {
+    flex-direction: column;
+    padding-left: 0;
+    align-items: flex-start;
+    border-bottom: 1px solid $blue-200;
+    padding-bottom: 40px;
+    margin-bottom: 45px;
+    li {
+      list-style: none;
+      a {
+        font-size: 56px;
+        font-weight: $font-weight-bold;
+        color: $white;
+        font-family: $montserrat-font;
+        &:hover {
+          color: $white;
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      svg path {
+        fill: $white;
+      }
+      &:hover {
+        svg path {
+          fill: $white;
+          opacity: 0.5;
+        }
+      }
+      + a {
+        margin-left: 30px;
+      }
+    }
+  }
+  .mail-text {
+    font-size: 28px;
+    color: $white !important;
+    font-weight: $font-weight-bold;
+    &:hover {
+      color: rgba($white, 0.5) !important;
+    }
+  }
+}
+/* 4. Clinic Page CSS */
+.h-md-100 {
+  height: 100%;
+}
+.clinic-template {
+  .text-primary {
+    color: $blue-400 !important;
+  }
+  a:not(.btn):hover {
+    color: $primary !important;
+  }
+  .docs-menu > a {
+    &:hover {
+      color: $dark !important;
+    }
+  }
+  .footer-link {
+    li {
+      a:hover {
+        color: $primary;
+      }
+    }
+  }
+  .social-icons {
+    a {
+      &:hover {
+        color: $primary;
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $primary;
+    svg path {
+      fill: $primary;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item:hover {
+          color: $primary;
+          svg path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+  .muse-card:hover {
+    a {
+      color: $primary;
+    }
+  }
+  .team-card {
+    .team-overlay {
+      background-color: rgba($blue-900, 0.7);
+    }
+  }
+}
+.number-list {
+  padding-left: 0;
+  padding-right: 70px;
+  margin-bottom: 0;
+  li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    line-height: 28px;
+    margin-top: 22px;
+    color: $black-600;
+    padding-bottom: 10px;
+    small {
+      background-color: $blue-400;
+      color: $white;
+      font-size: 24px;
+      font-weight: $font-weight-bold;
+      border-radius: 50%;
+      margin-right: 25px;
+    }
+    span {
+      width: calc(100% - 64px);
+    }
+  }
+}
+.team-card {
+  border: none;
+  &:hover {
+    .team-overlay {
+      transform: translate(0, 0);
+      bottom: 0;
+    }
+  }
+  .muse-animation {
+    position: relative;
+    overflow: hidden;
+  }
+  .team-overlay {
+    background-color: rgba($blue-900, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -5px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition4;
+    transform: translate(0%, 100%);
+    .btn {
+      display: inline-flex;
+      border-radius: 50%;
+      margin: 8px;
+      width: 38px;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      &.btn-light {
+        &:hover {
+          background-color: $primary !important;
+          border-color: $primary !important;
+          svg path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  figcaption {
+    a {
+      color: $dark;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+.hours-list {
+  padding-left: 0;
+  li {
+    list-style: none;
+    color: $white;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid $blue-300;
+  }
+}
+.dept-card {
+  transition: $transition4;
+  &:hover {
+    background-color: $blue-400;
+  }
+  h5 {
+    a {
+      color: $dark;
+    }
+  }
+}
+.dept-circle {
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: $blue-400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: $transition4;
+}
+.line-form {
+  .form-select {
+    color: $gray-600;
+  }
+  .form-check {
+    margin-top: 12px;
+  }
+  .form-check-input {
+    margin-top: 0.35em;
+  }
+}
+.docs-menu {
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+  font-family: $montserrat-font;
+  > a {
+    padding: 10px 0;
+  }
+  .dropdown-menu {
+    border: none;
+    min-width: 240px;
+    border-radius: 6px;
+    margin-top: 0;
+    .dropdown-item {
+      font-size: 14px;
+      font-family: $montserrat-font;
+      font-weight: $font-weight-medium;
+      padding: 8px 20px;
+      color: $dark;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+/* 5. Saas Page CSS */
+.muse-brands {
+  img {
+    opacity: 0.5;
+    transition: $transition4;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &:hover {
+    .brand-sub-title {
+      padding-left: 0;
+      &:after {
+        width: 0;
+      }
+    }
+    svg {
+      &:hover {
+        opacity: 1;
+        * {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  svg, svg * {
+    transition: $transition4;
+  }
+}
+.brand-sub-title {
+  padding: 0 0 40px 95px;
+  color: $white;
+  display: block;
+  font-weight: $font-weight-semibold;
+  position: relative;
+  transition: $transition4;
+  &:after {
+    content: '';
+    width: 80px;
+    height: 1px;
+    background-color: $white;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    transition: $transition4;
+  }
+}
+.has-line {
+  &:hover {
+    &:before {
+      background-color: $gray-400;
+    }
+  }
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 40px;
+    height: 1px;
+    background-color: $white;
+    content: '';
+    transition: $transition4;
+  }
+}
+.icon-circle {
+  display: inline-flex;
+  width: 180px;
+  height: 180px;
+  align-items: center;
+  justify-content: center;
+}
+.saas-template {
+  color: $white;
+  h1, .h1, .h1, h2, .h2, .h2, h3, .h3, .h3, h4, .h4, .h4, h5, .h5, .h5, h6, .h6, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    color: inherit;
+  }
+  .docs-menu {
+    > a {
+      color: $white;
+    }
+  }
+  .text-muted {
+    color: $gray-500 !important;
+  }
+  header {
+    .nav-link {
+      color: $white;
+    }
+  }
+  a:not(.btn):not(.nav-link):hover {
+    color: $danger !important;
+  }
+  .muse-brands {
+    &:hover {
+      svg {
+        &:hover {
+          fill: $white;
+          * {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  p a.text-danger, .text-danger {
+    &:hover {
+      color: $white !important;
+    }
+  }
+  footer {
+    h6 {
+      color: $white;
+    }
+    hr {
+      border-color: $gray-800;
+      background-color: $gray-800;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        color: $gray-600;
+        &:hover {
+          color: $danger;
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      color: $gray-600;
+      &:hover {
+        color: $danger;
+        svg path {
+          fill: $danger;
+        }
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $danger;
+    svg path {
+      fill: $danger;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item:hover {
+          color: $danger;
+          svg path {
+            fill: $danger;
+          }
+        }
+      }
+    }
+  }
+  .muse-card:hover {
+    a {
+      color: $danger;
+    }
+  }
+  .play-btn {
+    &:hover {
+      background-color: $red-400 !important;
+      color: $white;
+      border-color: $red-400 !important;
+    }
+  }
+  .bg-gray-800 {
+    background-color: $black-600;
+  }
+  .intigration-element {
+    a {
+      &:hover {
+        background-color: $black-700;
+        border-radius: 36px;
+      }
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background: $danger;
+  }
+  .has-theme-hover {
+    &:hover {
+      background: $danger;
+      .btn-danger {
+        background-color: $gray-800 !important;
+        border-color: $gray-800 !important;
+      }
+    }
+  }
+  .nav-pills {
+    padding: 6px;
+    .nav-link {
+      font-weight: $font-weight-semibold;
+      padding: 0.37rem 1rem;
+      color: $white;
+      border-radius: 50px;
+      &.active {
+        background-color: $danger;
+      }
+    }
+  }
+  .tabs-has {
+    padding: 6px;
+    .nav-link {
+      background-color: $black-600;
+      @include border-radius(12px);
+      padding: 28px 35px 35px;
+      color: $white;
+      margin-bottom: 25px;
+      &.active {
+        background-color: $danger;
+      }
+    }
+  }
+  .less-value {
+    font-weight: $font-weight-normal;
+    margin-left: 8px;
+    color: $gray-500;
+  }
+  .swiper-pagination {
+    &.swiper-pagination-clickable {
+      position: static;
+      margin-top: 35px;
+      .swiper-pagination-bullet {
+        background-color: $gray-200;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $danger;
+      }
+    }
+  }
+  .users-watch {
+    a {
+      &:hover {
+        .circle {
+          background-color: $danger !important;
+          svg path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  .btn-link {
+    &.link-danger {
+      &:hover {
+        color: $white;
+        svg path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+.play-btn {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  font-size: 32px;
+  &:focus {
+    box-shadow: none;
+  }
+}
+.play-btn.circle-lg {
+  width: 80px;
+  height: 80px;
+  font-size: 25px;
+}
+
+/* 6. Ecommerce Page CSS */
+.ls-3 {
+  letter-spacing: 3px;
+}
+.ecommerce-template {
+  .link-dark {
+    &:hover {
+      color: $success;
+      svg path {
+        fill: $success;
+      }
+    }
+  }
+  .btn-success {
+    &:hover {
+      background-color: $black-800 !important;
+      border-color: $black-800 !important;
+    }
+  }
+  header {
+    .nav-link {
+      color: $dark;
+    }
+  }
+  a:not(.btn):not(.nav-link):hover {
+    color: $teal-400 !important;
+  }
+  .btn-dark {
+    background-color: $black-800 !important;
+    border-color: $black-800 !important;
+    &:hover {
+      background-color: $success !important;
+      border-color: $success !important;
+    }
+  }
+  .badge-success {
+    background-color: $success;
+  }
+  .docs-menu > a {
+    color: $dark;
+    &:hover {
+      color: $success !important;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        color: $gray-700;
+        &:hover {
+          color: $success;
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      color: $gray-500;
+      &:hover {
+        color: $success;
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $success;
+    svg path {
+      fill: $success;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item:hover {
+          color: $success;
+        }
+      }
+    }
+  }
+  .muse-card:hover {
+    a {
+      color: $success;
+    }
+  }
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    color: $black-600;
+  }
+  .card {
+    &:hover {
+      figcaption {
+        a {
+          color: $success;
+        }
+      }
+    }
+    .title-box {
+      a {
+        color: $black-600;
+      }
+    }
+  }
+  .muse-animation {
+    &.has-height {
+      min-height: 230px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .text-success {
+    color: $teal-400 !important;
+    &:hover {
+      color: $black-600 !important;
+    }
+  }
+  .bg-gray-900 {
+    background-color: $black-600;
+  }
+  .signup-form {
+    width: 80%;
+    .form-control {
+      font-size: 16px;
+      padding-left: 16px;
+    }
+    .btn-xl {
+      padding-left: 11px;
+      padding-right: 11px;
+      color: $black-600;
+      font-weight: $font-weight-semibold;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+.add-cart {
+  background-color: $white;
+  @include border-radius(4px);
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  &:hover {
+    background-color: $success;
+    
+  }
+}
+.star-icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  span {
+    width: 24px;
+    height: 24px;
+    background-color: $orange-400;
+    display: inline-flex;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: $black-600;
+    margin-right: 6px !important;
+    i {
+      font-size: 14px;
+      color: $white;
+    }
+  }
+}
+.swiper-pagination {
+  &.swiper-pagination-clickable {
+    padding-top: 0;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    left: auto;
+    width: auto;
+    bottom: auto;
+    .swiper-pagination-bullet {
+      background-color: $gray-300;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $teal-400;
+    }
+  }
+}
+.swiper-button-next, .swiper-button-prev {
+  background-color: #ffffff;
+  height: 32px;
+  width: 77px;
+  top: auto;
+  bottom: 25px;
+  right: 25px;
+  &:after {
+    background-image: url(../img/templates/next-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 41px;
+    height: 9px;
+    font-size: 0;
+  }
+  &:hover {
+    background-color: $teal-400;
+  }
+}
+.swiper-button-prev {
+  left: auto;
+  right: 110px;
+  &:after {
+    background-image: url(../img/templates/prev-arrow.svg);
+  }
+}
+.perfection-list {
+  padding: 35px 0;
+  margin-bottom: 0;
+  li {
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    .perfection-right {
+      width: calc(100% - 65px);
+      padding-left: 20px;
+    }
+  }
+}
+/* 7. Education Page CSS */
+.education-template {
+  .play-btn {
+    width: auto;
+    height: auto;
+    min-width: auto !important;
+    padding: 0;
+    &:hover {
+      svg path {
+        fill: $red-500;
+      }
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  .btn-danger {
+    background-color: $red-500 !important;
+    border-color: $red-500 !important;
+    &:hover {
+      background-color: $gray-900 !important;
+      border-color: $gray-900 !important;
+    }
+  }
+  .btn-link.text-white {
+    &:hover {
+      color: $red-500 !important;
+    }
+  }
+  .badge-danger {
+    background-color: $red-500 !important;
+  }
+  header {
+    .nav-link {
+      color: $white;
+      &:hover {
+        color: $red-500;
+        svg path {
+          fill: $red-500;
+        }
+      }
+    }
+    .docs-menu > a {
+      color: $white;
+      &:hover {
+        color: $red-500;
+      }
+    }
+    .docs-menu {
+      .dropdown-menu {
+        .dropdown-item {
+          &:hover {
+            color: $red-500 !important;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    h6 {
+      color: $white;
+    }
+    hr {
+      background-color: $gray-500;
+      opacity: 1;
+    }
+    .text-muted {
+      color: $gray-400 !important;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        color: $gray-500;
+        &:hover {
+          color: $red-500;
+        }
+      }
+    }
+  }
+  .avatar-xxl {
+    width: 104px;
+    height: 104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar-danger {
+    background-color: $red-500;
+  }
+  .social-icons {
+    a {
+      color: $gray-400;
+      svg path {
+        fill: $gray-400;
+      }
+      &:hover {
+        color: $red-500;
+        svg path {
+          fill: $red-500;
+        }
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $red-500;
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item:hover {
+          color: $red-500;
+          svg path {
+            fill: $red-500;
+          }
+        }
+      }
+    }
+  }
+  .muse-card {
+    &:hover {
+      figcaption {
+        a {
+          color: $red-500;
+        }
+      }
+    }
+    .avatar.avatar-xs {
+      width: 24px;
+      height: 24px;
+    } 
+  }
+  .nav-tabs {
+    border-bottom: 2px solid $gray-200;
+    .nav-link {
+      font-size: 16px;
+      font-weight: $font-weight-bold;
+      color: $black-600;
+      padding: 18px 40px;
+      border: none;
+      &.active {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $red-500;
+      }
+      &:hover {
+        color: $red-500;
+      }
+    }
+  }
+  .text-danger {
+    color: $red-500 !important;
+  }
+  .bg-red-light {
+    background-color: $red-light;
+  }
+  .badge-light {
+    background-color: $gray-200;
+    color: $blue-800;
+    font-weight: $font-weight-semibold;
+    padding: 4px 8px;
+  }
+  .btn-dark {
+    background-color: $blue-600 !important;
+    border-color: $blue-600 !important;
+    color: $white;
+    &:hover {
+      background-color: $red-500 !important;
+      border-color: $red-500 !important;
+    }
+  }
+}
+.muse-card-footer {
+  padding-bottom: 70px;
+  position: relative;
+  .card-footerbox {
+    position: absolute;
+    bottom: 26px;
+    left: 33px;
+  }
+}
+.has-cricle {
+  position: absolute;
+  top: -30px;
+  right: 50px;
+  background-color: $blue-400;
+  .avatar-initials {
+    color: $white;
+    i {
+      font-size: 28px;
+    }
+  }
+}
+.has-border {
+  background-color: $red-500;
+  opacity: 1;
+}
+.text-gray-600 {
+  color: $gray-600;
+}
+.text-blue-800 {
+  color: $blue-800;
+}
+.philo-section {
+  position: relative;
+  z-index: 1;
+  &:after {
+    content: '';
+    background-color: $gray-100;
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .has-shape {
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+.card-plan {
+  border: none;
+}
+.card-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.opacity-1 {
+  opacity: 1;
+}
+.plan-features {
+  padding-left: 0;
+  li {
+    font-size: 24px;
+    font-family: $montserrat-font;
+    font-weight: $font-weight-bold;
+    color: $blue-600;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 0;
+    small {
+      width: 32px;
+      height: 32px;
+      background-color: $blue-600;
+      border-radius: 50%;
+      color: $white;
+      font-size: 13px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    span, .feature-right {
+      width: calc(100% - 32px);
+      padding-left: 15px;
+    }
+  }
+}
+/* 8. Studio Page CSS */
+.studio-template {
+  position: relative;
+  z-index: 1;
+  &:before {
+    content: '';
+    background-image: url(../../assets/img/templates/banner-bg.png);
+    background-repeat: no-repeat;
+    width: 1165px;
+    height: 800px;
+    background-size: 80%;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .btn-success {
+    &:hover {
+      background-color: $dark !important;
+      border-color: $dark !important;
+    }
+  }
+  .play-btn {
+    &.btn-light {
+      background-color: rgba(255,255,255,0.8) !important;
+      border-color: rgba(255,255,255,0.8) !important;
+    }
+    &:hover {
+      background-color: $teal-500 !important;
+      border-color: $teal-500 !important;
+      color: $white;
+    }
+  }
+  .btn-link.text-white {
+    &:hover {
+      color: $teal-500 !important;
+    }
+  }
+  .has-line::before {
+    background-color: $black-600;
+  }
+  header {
+    .nav-link {
+      color: $black-500;
+      &:hover {
+        color: $teal-500;
+      }
+    }
+    .docs-menu > a {
+      color: $black-500;
+      &:hover {
+        color: $teal-500;
+      }
+    }
+    .docs-menu {
+      .dropdown-menu {
+        .dropdown-item {
+          &:hover {
+            color: $teal-500 !important;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    h6 {
+      color: $black-600;
+    }
+    hr {
+      background-color: $gray-300;
+      opacity: 1;
+    }
+    .text-muted {
+      color: $gray-500 !important;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        color: $gray-700;
+        &:hover {
+          color: $teal-500;
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      color: $gray-500;
+      &:hover {
+        color: $teal-500;
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $teal-500;
+    svg path {
+      fill: $teal-500;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item:hover {
+          color: $teal-500;
+        }
+      }
+    }
+  }
+  .form-control-lg {
+    font-size: 16px;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba($gray-100, 0.7);
+    bottom: auto;
+    top: 50%;
+    right: 30px;
+    &:after {
+      background-image: url(../img/templates/chevron-right.svg);
+      height: 14px;
+      width: 14px;
+    }
+  }
+  .swiper-button-prev {
+    right: auto;
+    left: 30px;
+    &:after {
+      transform: rotate(-180deg);
+    }
+  }
+  .tetsimonial-swiper {
+    .swiper-button-prev {
+      left: auto;
+      right: 90px;
+    }
+  }
+  .padding-space {
+    padding: 0 250px;
+  }
+  .form-check-input:checked {
+    background-color: $success;
+    border-color: $success;
+  }
+  .form-check-label {
+    a {
+      &:hover {
+        color: $success;
+      }
+    }
+  }
+}
+.swiper-hover {
+  .on-hover {
+    display: none;
+    .badge {
+      opacity: 0.6;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .swiper-slide {
+    &:hover {
+      .on-hover {
+        display: block;
+      }
+    }
+  }
+}
+.branding-tag {
+  text-transform: uppercase;
+  color: $white;
+}
+.branding-card {
+  &:hover {
+    .avatar {
+      display: flex;
+    }
+  }
+}
+.brand-data {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  h5 {
+    width: calc(100% - 70px);
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+  .avatar {
+    background-color: rgba($white, 1);
+    display: none;
+    transition: all 0.2s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &.avatar-xs {
+      width: 38px;
+      height: 38px;
+      font-size: 14px;
+    }
+  }
+}
+.apply-btn {
+  position: absolute;
+  top: 45%;
+  right: 53px;
+  padding-left: 15px;
+  padding-right: 13px;
+}
+.tetsimonial-swiper {
+  p {
+    padding-right: 180px;
+  }
+}
+/* 9. Magazine Page CSS */
+.magazine-template {
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    color: $black-600;
+  }
+  p.small {
+    line-height: 21px;
+  }
+  .btn-warning {
+    background-color: $yellow-100 !important;
+    border-color: $yellow-100 !important;
+    color: $purple-500;
+    &:hover {
+      background-color: $gray-900 !important;
+      border-color: $gray-900 !important;
+      color: $white;
+    }
+  }
+  .btn-light {
+    &:hover {
+      background-color: $yellow-200 !important;
+      border-color: $yellow-200 !important;
+    }
+  }
+  .card-img-overlay {
+    top: auto;
+    border-radius: 0;
+  }
+  .magazine-play-btn {
+    background-color: rgba($white, 0.7);
+    &:hover {
+      background-color: $purple-500;
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+  .play-btn {
+    background-color: rgba($white, 0.5);
+    border-color: rgba($white, 0.5);
+    &:hover {
+      background-color: $yellow-100;
+      border-color: $yellow-100;
+    }
+    &.btn-sm {
+      width: 56px;
+      height: 56px;
+      font-size: 18px;
+    }
+  }
+  .btn-link.text-white {
+    &:hover {
+      color: $purple-500 !important;
+      svg path {
+        fill: $purple-500;
+      }
+    }
+  }
+  .has-line::before {
+    background-color: $black-600;
+  }
+  header {
+    .nav-link {
+      color: $white;
+      &:hover {
+        color: $yellow-200;
+        svg path {
+          fill: $yellow-200;
+        }
+      }
+    }
+    .docs-menu > a {
+      color: $white;
+      &:hover {
+        color: $yellow-100;
+      }
+    }
+    .docs-menu {
+      .dropdown-menu {
+        .dropdown-item {
+          &:hover {
+            color: $purple-500 !important;
+            svg path {
+              fill: $purple-500;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    h6 {
+      color: $black-600;
+    }
+    hr {
+      background-color: $gray-300;
+      opacity: 1;
+    }
+    .text-muted {
+      color: $gray-500 !important;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        color: $gray-700;
+        &:hover {
+          color: $purple-500;
+        }
+      }
+    }
+  }
+  a.text-gray-600 {
+    &:hover {
+      color: $purple;
+    }
+  }
+  .social-icons {
+    a {
+      color: $gray-500;
+      &:hover {
+        color: $purple-500;
+        svg path {
+          fill: $purple;
+        }
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $purple-500;
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item:hover {
+          color: $purple-500;
+          svg path {
+            fill: $purple-500;
+          }
+        }
+      }
+    }
+  }
+  .swiper-button-next, .swiper-button-prev {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba($gray-100, 0.7);
+    bottom: auto;
+    top: 50%;
+    right: 30px;
+    &:after {
+      background-image: url(../img/templates/chevron-right-solid.svg);
+      height: 15px;
+      width: 9px;
+    }
+  }
+  .swiper-button-prev {
+    right: auto;
+    left: 30px;
+    &:after {
+      transform: rotate(-180deg);
+    }
+  }
+  .btn-link {
+    &.text-black-600 {
+      &:hover {
+        color: $purple-500;
+        svg path {
+          fill: $purple-500;
+        }
+      }
+    }
+  }
+  .card {
+    &:hover {
+      .title-box {
+        a {
+          color: $purple-600;
+        }
+      }
+    }
+    .title-box {
+      a {
+        color: $black-600;
+      }
+    }
+  }
+}
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &:hover, &.active {
+    svg, svg * {
+      fill: $purple-400;
+    }
+    span {
+      color: $purple-400;
+      font-weight: $font-weight-bold;
+    }
+  }
+  span {
+    color: $black-600;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+}
+.text-gray-600 {
+  color: $gray-600;
+}
+.btn-purple {
+  background-color: $purple-500;
+  border-color: $purple-500;
+  color: $white;
+  &:hover {
+    background-color: $yellow-200;
+    border-color: $yellow-200;
+    color: $purple-500;
+  }
+}
+.fire-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -25px;
+  right: 20px;
+  i {
+    font-size: 24px;
+    color: $yellow-100;
+  }
+}
+/* 10. Saas3 Page CSS */
+.saas3-template {
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    color: $black-600;
+  }
+  hr {
+    background-color: $gray-300;
+    opacity: 1;
+  }
+  .text-info {
+    color: $cyan-400 !important;
+  }
+  p.small {
+    line-height: 21px;
+  }
+  .btn-light {
+    &:hover {
+      background-color: $orange-100 !important;
+      border-color: $orange-100 !important;
+    }
+  }
+  .btn-info {
+    background-color: $cyan-600 !important;
+    border-color: $cyan-600 !important;
+    color: $white;
+    &:hover {
+      background-color: $gray-900 !important;
+      border-color: $gray-900 !important;
+    }
+  }
+  .badge-info {
+    background-color: $cyan-600 !important;
+  }
+  .link-dark {
+    &:hover {
+      color: $cyan-600;
+      svg path {
+        fill: $cyan-600;
+      }
+    }
+  }
+  .card-img-overlay {
+    top: auto;
+    border-radius: 0;
+  }
+  .play-btn {
+    background-color: rgba($black, 0.89) !important;
+    border-color: rgba($black, 0.89) !important;
+    color: $white;
+    &:hover {
+      background-color: $cyan-400 !important;
+      border-color: $cyan-400 !important;
+    }
+    &.btn-sm {
+      width: 56px;
+      height: 56px;
+      font-size: 18px;
+    }
+  }
+  .btn-link.text-white {
+    &:hover {
+      color: $cyan-600 !important;
+    }
+  }
+  .has-line::before {
+    background-color: $black-600;
+  }
+  header {
+    .nav-link {
+      color: $white;
+      &:hover {
+        color: $orange-300;
+      }
+    }
+    .docs-menu > a {
+      color: $white;
+      &:hover {
+        color: $orange-100;
+      }
+    }
+    .docs-menu {
+      .dropdown-menu {
+        .dropdown-item {
+          &:hover {
+            color: $cyan-600 !important;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    h6 {
+      color: $black-600;
+    }
+    hr {
+      background-color: $gray-300;
+      opacity: 1;
+    }
+    .text-muted {
+      color: $gray-500 !important;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        color: $gray-700;
+        &:hover {
+          color: $cyan-600;
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      color: $gray-500;
+      &:hover {
+        color: $cyan-600;
+        svg path {
+          fill: $cyan-600;
+        }
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $cyan-600;
+    svg path {
+      fill: $orange-300;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item:hover {
+          color: $cyan-600;
+          svg path {
+            fill: $cyan-600;
+          }
+        }
+      }
+    }
+  }
+  .swiper-button-next, .swiper-button-prev {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba($gray-100, 0.7);
+    bottom: auto;
+    top: 30%;
+    right: 2px;
+    z-index: 1;
+    &:after {
+      background-image: url(../img/templates/chevron-right.svg);
+      height: 14px;
+      width: 9px;
+      background-size: cover;
+    }
+  }
+  .swiper-button-prev {
+    right: auto;
+    left: 2px;
+    &:after {
+      transform: rotate(-180deg);
+    }
+  }
+  .swiper-clients {
+    .swiper-button-next, .swiper-button-prev {
+      background-color: $white;
+      box-shadow: 0 8px 16px rgba($black, 0.04);
+    }
+  }
+  .tetsimonial-swiper {
+    .swiper-button-next, .swiper-button-prev {
+      top: auto;
+      bottom: 20px;
+    }
+    .swiper-button-prev {
+      left: auto;
+      right: 100px;
+    }
+  }
+  .btn-link {
+    &.text-black-600 {
+      &:hover {
+        color: $purple-500;
+      }
+    }
+  }
+  .avatar.avatar-xs {
+    width: 24px;
+    height: 24px;
+  }
+  .card {
+    &:hover {
+      figcaption {
+        .title-box {
+          a {
+            color: $cyan-600;
+          }
+        }
+      }
+    }
+    figcaption {
+      .title-box {
+        a {
+          color: $black-600;
+        }
+      }
+    }
+  }
+  .plan-features {
+    li {
+      align-items: flex-start;
+      padding: 18px 0;
+    }
+    span, .feature-right {
+      padding-left: 21px;
+      p {
+        font-weight: $font-weight-normal;
+        font-size: 16px;
+        color: $gray-700;
+        margin-bottom: 0;
+      }
+    }
+    small {
+      background-color: $white;
+    }
+  }
+  .swiper-clients {
+    .muse-animation {
+      .badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+      }
+    }
+  }
+  .avatar-lg {
+    width: 58px;
+    height: 58px;
+  }
+  .banner-section {
+    position: relative;
+    z-index: 1;
+    .has-shape {
+      position: absolute;
+      bottom: -45px;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      svg {
+        margin-top: -4px;
+        path, g {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+  #switch-content {
+    a.text-gray-600 {
+      &:hover {
+        color: $cyan-600;
+      }
+    }
+  }
+  .form-switch {
+    .form-check-input {
+      &:checked {
+        background-color: $cyan-600;
+        border-color: $cyan-600;
+      }
+    }
+  }
+}
+.swiper-slider-box {
+  overflow: hidden;
+  margin: 0 -19px;
+  .swiper-container {
+    overflow: visible;
+    padding: 0 20px;
+  }
+}
+.performance-card {
+  padding: 95px 20px;
+  .circle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+.step-list {
+  display: flex;
+  padding-left: 0;
+  li {
+    position: relative;
+    list-style: none;
+    width: 33.33%;
+    text-align: center;
+    &:before {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background-color: $gray-200;
+      position: absolute;
+      left: -50%;
+      top: 25px;
+      z-index: -1;
+    }
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+    &.active {
+      .avatar {
+        background-color: $cyan-400;
+      }
+      &:before {
+        background-color: $cyan-200;
+      }
+    }
+  }
+  .circle {
+    color: $white;
+    margin: 0 auto;
+  }
+}
+.has-circle {
+  position: relative;
+  z-index: 1;
+  &:before {
+    content: '';
+    width: 107px;
+    height: 107px;
+    background-color: $orange-150;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: -50px;
+    z-index: -1;
+  }
+  &:after {
+    content: '';
+    width: 78px;
+    height: 78px;
+    background-color: $orange-150;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -15px;
+    right: -45px;
+    z-index: -1;
+  }
+}
+.inner-has-circle {
+  position: relative;
+  z-index: 1;
+  &:before {
+    content: '';
+    width: 39px;
+    height: 39px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    right: -120px;
+    z-index: -1;
+  }
+  &:after {
+    content: '';
+    width: 23px;
+    height: 23px;
+    background-color: rgba($cyan-light, 0.6);
+    border-radius: 50%;
+    position: absolute;
+    top: -90px;
+    right: 0px;
+    z-index: -1;
+  }
+}
+/* 11. Agency Page CSS */
+.agency-template {
+  color: $white;
+  .bg-dark {
+    background-color: $black-600;
+  }
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    color: $white;
+  }
+  hr {
+    background-color: $gray-800;
+    opacity: 1;
+  }
+  .text-info {
+    color: $cyan-400 !important;
+  }
+  p.small {
+    line-height: 21px;
+  }
+  .btn-light {
+    background-color: $white !important;
+    border-color: $white !important;
+    color: $gray-900;
+    &:hover {
+      background-color: $orange-100 !important;
+      border-color: $orange-100 !important;
+    }
+  }
+  .card-img-overlay {
+    top: auto;
+    border-radius: 0;
+  }
+  .play-btn {
+    background-color: rgba($black, 0.89) !important;
+    border-color: rgba($black, 0.89) !important;
+    color: $white;
+    &:hover {
+      background-color: $cyan-400 !important;
+      border-color: $cyan-400 !important;
+    }
+    &.btn-sm {
+      width: 56px;
+      height: 56px;
+      font-size: 18px;
+    }
+  }
+  .btn-link.text-white {
+    &:hover {
+      color: $red-400 !important;
+    }
+  }
+  .has-line::before {
+    background-color: $black-600;
+  }
+  header {
+    .nav-link {
+      color: $white;
+      &:hover {
+        color: $red-400;
+        svg path {
+          fill: $red-400;
+        }
+      }
+    }
+    .docs-menu > a {
+      color: $white;
+      &:hover {
+        color: $red-400;
+      }
+    }
+    .docs-menu {
+      .dropdown-menu {
+        background-color: $black-800;
+        .dropdown-item {
+          color: $gray-200;
+          &:hover {
+            color: $red-400 !important;
+          }
+        }
+      }
+    }
+  }
+  .text-secondary {
+    color: $gray-600 !important;
+  }
+  footer {
+    .text-muted {
+      color: $gray-600 !important;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        color: $gray-600;
+        &:hover {
+          color: $red-400;
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      color: $gray-600;
+      &:hover {
+        color: $red-400;
+        svg path {
+          fill: $red-400;
+        }
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $red-400;
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        background-color: $black-800;
+        .dropdown-item {
+          color: $gray-200;
+          &:hover {
+            color: $red-400;
+            svg path {
+              fill: $red-400;
+            }
+          }
+        }
+      }
+    }
+  }
+  .avatar.avatar-xs {
+    width: 32px;
+    height: 32px;
+  }
+  .card {
+    &:hover {
+      figcaption {
+        .title-box {
+          a {
+            color: $purple-600;
+          }
+        }
+      }
+    }
+    figcaption {
+      .title-box {
+        a {
+          color: $black-600;
+        }
+      }
+    }
+  }
+  .avatar-xl {
+    width: 128px;
+    height: 128px;
+  }
+  .branding-card {
+    &:hover {
+      .circle {
+        opacity: 1;
+      }
+    }
+    .circle {
+      opacity: 0;
+      &:hover {
+        &.bg-gray-800 {
+          background-color: $red-400;
+          svg path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  .btn-link {
+    color: $white;
+    &:hover {
+      color: $red-400;
+      svg path {
+        fill: $red-400;
+      }
+    }
+  }
+  .form-control-lg {
+    height: 48px;
+  }
+}
+.dark-form {
+  .form-control {
+    border-radius: 4px;
+    background-color: $black-600;
+    border-color: $black-600;
+    font-size: 16px;
+    color: $gray-600;
+  }
+}
+.tech-list {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  li {
+    list-style: none;
+    width: 33.333%;
+    padding: 30px;
+    .avatar {
+      margin: auto;
+    }
+    &:nth-child(2), &:nth-child(5) {
+      margin-top: -190px;
+    }
+    &:nth-child(7) {
+      margin-top: -90px;
+    }
+  }
+}
+.lh-xl {
+  line-height: 2.5 !important;
+}
+.shape-box {
+  position: relative;
+  &:before {
+    content: '';
+    width: 181px;
+    height: 181px;
+    background-color: rgba($black, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: -90px;
+    z-index: -1;
+  }
+  &:after {
+    content: '';
+    width: 129px;
+    height: 129px;
+    background-color: rgba($black, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -40px;
+    right: 28px;
+    z-index: -1;
+  }
+}
+/* 12. About Page CSS */
+.about-template {
+  .position-relative {
+    z-index: 1;
+  }
+  header {
+    .nav-link {
+      &:hover {
+        color: $primary;
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+    .docs-menu > a {
+      &:hover {
+        color: $primary;
+      }
+    }
+    .docs-menu {
+      .dropdown-menu {
+        .dropdown-item {
+          &:hover {
+            color: $primary !important;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .text-muted {
+      color: $gray-500 !important;
+    }
+    hr {
+      background-color: $gray-300;
+      opacity: 1;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        color: $gray-700;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      color: $gray-500;
+      &:hover {
+        color: $primary;
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $primary;
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item {
+          &:hover {
+            color: $primary;
+            svg path {
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.team-card {
+  position: relative;
+  .team-overlay {
+    background-color: rgba($black-600, 0.6);
+  }
+}
+.btn-blue-50 {
+  background-color: $blue-50;
+  border-color: $blue-50;
+  color: $blue-500;
+  &:hover {
+    background-color: $white;
+    border-color: $white;
+    color: $blue-500;
+  }
+}
+.position-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+/* 13. Login Cover Page CSS */
+.login-template {
+  .cover-fit {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  .form-control-lg {
+    height: 58px;
+  }
+  .login-form {
+    max-width: 380px;
+  }
+  .form-check-sm {
+    .form-check-input {
+      margin-top: 6px;
+    }
+  }
+}
+/* 14. Login Simple Page CSS */
+.login-simple-template {
+  a {
+    &.text-secondary {
+      &:hover {
+        color: $primary !important;
+      }
+    }
+  }
+  .form-control-lg {
+    height: 58px;
+  }
+  .social-login {
+    a {
+      width: calc(50% - 20px);
+      margin: 10px;
+    }
+  }
+}
+/* 15. Coming Soon Page CSS */
+.coming-soon-template {
+  .social-icons {
+    a {
+      &:hover {
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  .comingsoon-email {
+    max-width: 400px;
+  }
+}
+/* 16. Maintenance Page CSS */
+.maintenance-template {
+  .maintenance-left {
+    max-width: 560px;
+    padding-top: 30px;
+    margin-left: auto;
+    position: relative;
+  }
+}
+/* 17. Job Opening Page CSS */
+.pages-template {
+  header {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          &:hover {
+            svg path {
+              fill: $primary;
+            }
+          }
+        }
+        .dropdown-menu {
+          li {
+            a {
+              &:hover {
+                color: $primary;
+                svg path {
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .footer-link {
+      li {
+        a {
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      &:hover {
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    font-size: 14px;
+  }
+}
+.job-opening-template {
+  .plan-features {
+    li {
+      align-items: flex-start;
+      small {
+        background-color: $blue-50;
+        margin-top: 3px;
+      }
+      .feature-right {
+        p {
+          font-size: 16px;
+          font-weight: normal;
+          color: $gray-700;
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+  .form-file-text {
+    color: $gray-600;
+  }
+}
+.form-file-button {
+  font-family: $montserrat-font;
+}
+/* 18. Gallery Mansorny Page CSS */
+.masonry-filters {
+  text-align: center;
+  padding-bottom: 40px;
+  button {
+    border: 1px solid $gray-200;
+    background-color: $white;
+    font-family: $montserrat-font;
+    font-size: 14px;
+    padding: 7px 18px 9px;
+    color: $gray-700;
+    @include border-radius(4px);
+    font-weight: $font-weight-semibold;
+    margin: 8px;
+    &.active, &:hover {
+      background-color: $primary;
+      color: $white;
+      border-color: $primary;
+    }
+  }
+  span {
+    display: none;
+    clear: both;
+    width: 100%;
+    border-bottom: 1px solid $gray-200;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+    text-align: left;
+    position: relative;
+    padding-right: 30px;
+    font-weight: $font-weight-semibold;
+    &:after {
+      content: '';
+      background-image: url(../svg/icons/chevron-down.svg);
+      width: 12px;
+      height: 10px;
+      position: absolute;
+      top: 7px;
+      right: 5px;
+      background-size: 12px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.work-small-thumb {
+  margin: 0 -15px;
+}
+.masonry-item {
+  margin-bottom: 30px;
+  width: 33.333333%;
+  padding: 0 15px;
+  &.onethird {
+    width: 66.68%;
+  }
+  &:hover {
+    .masonary-info {
+      bottom: 0;
+    }
+  }
+  .masonary-info {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    transition: all ease .4s;
+    a {
+      color: $black-600;
+      &:hover {
+        color: $primary;
+      }
+    }
+    svg {
+      margin-bottom: -2px;
+    }
+    .info-inner {
+      background-color: $white;
+      padding: 5px 25px 30px;
+    }
+  }
+}
+/* 19. Contact Page CSS */
+.contact-template {
+  .nav-pills {
+    justify-content: center;
+    border-bottom: 1px solid $gray-200;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    .nav-item {
+      .nav-link {
+        color: $gray-700;
+        border-radius: 24px;
+        padding: 9px 26px;
+        font-size: 15px;
+        &.active {
+          color: $white;
+          font-weight: $font-weight-semibold;
+        }
+      }
+    }
+  }
+}
+.form-check {
+  label {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+/* 20. Account Profile Page CSS */
+.sidebar-nav {
+  padding-left: 0;
+  margin-bottom: 20px;
+  li {
+    list-style: none;
+    padding: 5px 0;
+    a {
+      font-size: 16px;
+      color: $gray-700;
+      padding: 0 13px;
+      border-left: 3px solid transparent;
+      &:hover, &.active {
+        border-color: $primary;
+      }
+    }
+  }
+}
+.muse-profile {
+  position: relative;
+  .btn-light {
+    background-color: rgba($white, 0.6) !important;
+    border: none !important;
+    &.position-absolute {
+      right: 30px;
+      bottom: 30px;
+    }
+    &:hover {
+      background-color: rgba($white, 1) !important;
+    }
+  }
+}
+.btn.tiny {
+  font-size: 10px;
+}
+/* 21. Pricing Page CSS */
+.pricing-template {
+  header {
+    .btn-light {
+      color: $primary;
+      &:hover {
+        background-color: $blue-50 !important;
+        border-color: $blue-50 !important;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $white;
+          svg path {
+            fill: $white;
+          }
+          &:hover {
+            color: $blue-50;
+            svg path {
+              fill: $blue-50;
+            }
+          }
+        }
+      }
+    }
+  }
+  .plan-list {
+    li {
+      span {
+        padding-left: 13px;
+      }
+      + li {
+        margin-top: 15px;
+      }
+    }
+  }
+  .top-less {
+    margin-top: -165px;
+  }
+  .badge.position-absolute {
+    &.top-0 {
+      top: 16px !important;
+    }
+    &.right-0 {
+      right: 16px !important;
+    }
+  }
+  .swiper-pagination {
+    &.swiper-pagination-clickable {
+      top: auto;
+      bottom: 0;
+      .swiper-pagination-bullet-active {
+        background-color: $primary;
+      }
+    }
+  }
+}
+.square-box-100 {
+  width: 100px;
+  height: 100px;
+}
+.muse-collapes {
+  .card {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $gray-200 !important;
+    padding: 0.5rem 0;
+    .card-header {
+      background-color: transparent;
+      border: none;
+      margin-bottom: 0;
+      .btn-light {
+        background-color: transparent !important;
+        border: none !important;
+        padding: 0.75rem 2rem 0.75rem 0 !important;
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: none;
+        position: relative;
+        &[aria-expanded="true"] {
+          &:before {
+            display: none;
+          }
+        }
+        &:after {
+          content: '';
+          height: 2px;
+          width: 20px;
+          background-color: $black-600;
+          border-radius: 10px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+        }
+        &:before {
+          content: '';
+          height: 20px;
+          width: 2px;
+          background-color: $black-600;
+          border-radius: 10px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 9px;
+        }
+      }
+    }
+    .card-body {
+      padding: 0 0 1.25rem;
+    }
+  }
+}
+/* 22. Help Center Page CSS */
+.help-center-template {
+  header {
+    .btn-light {
+      color: $primary;
+      &:hover {
+        background-color: $blue-50 !important;
+        border-color: $blue-50 !important;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $white;
+          svg path {
+            fill: $white;
+          }
+          &:hover {
+            color: $blue-50;
+            svg path {
+              fill: $blue-50;
+            }
+          }
+        }
+      }
+    }
+  }
+  .search-left {
+    width: calc(100% - 105px);
+  }
+}
+.search-less {
+  margin-top: -40px;
+}
+/* 23. Blog Page CSS */
+.circle-arrow {
+  .swiper-button-next, .swiper-button-prev {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: $white;
+    background-image: url(../svg/icons/chevron-right@24.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 48%;
+    right: 40px;
+    bottom: auto;
+    transition: all ease .4s;
+    opacity: 0.6;
+    &:after {
+      display: none;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .swiper-button-prev {
+    left: 40px;
+    transform: rotate(-180deg);
+  }
+}
+.blog-template {
+  .swiper-navication {
+    &.circle-arrow {
+      .swiper-wrapper {
+        .swiper-slide {
+          img {
+            max-width: inherit;
+          }
+        }
+      }
+    }
+  }
+  .muse-card {
+    a {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .form-control {
+    &.form-control-lg {
+      height: 48px;
+    }
+  }
+  header {
+    .navbar {
+      .navbar-nav {
+        .nav-link {
+          &:hover {
+            svg path {
+              fill: $primary
+            }
+          }
+        }
+        .dropdown-menu {
+          li {
+            .dropdown-item {
+              &:hover {
+                color: $primary;
+                svg path {
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .footer-link {
+      li {
+        a {
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      &:hover {
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+.tag-list {
+  a {
+    margin: 8px 6px;
+    border-color: $gray-200;
+    color: $gray-700;
+    &:hover {
+      border-color: $blue-50;
+      background-color: $blue-50;
+      color: $primary;
+    }
+  }
+}
+.blog-overlay {
+  max-width: 445px;
+  right: 28px;
+  bottom: 28px;
+}
+.blogbanner-overlay {
+  background-color: rgba($white, 0.9);
+  max-width: 620px;
+  padding: 30px 50px;
+  margin-bottom: 40px;
+}
+.position-absolute {
+  &.z-index {
+    z-index: 1;
+  }
+}
+/* 24. Blog Post Page CSS */
+.share-dropdown {
+  .dropdown-menu {
+    border: none;
+    min-width: 144px;
+    box-shadow: 0 16px 48px rgba($black, 0.17);
+    padding: 0;
+    overflow: hidden;
+    .dropdown-item {
+      font-weight: $font-weight-semibold;
+      font-size: 14px;
+      padding: 10px 16px;
+      &.active, &:active {
+        svg path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+.blog-post-template {
+  header {
+    .navbar {
+      .navbar-nav {
+        .nav-link {
+          &:hover {
+            svg path {
+              fill: $primary
+            }
+          }
+        }
+        .dropdown-menu {
+          li {
+            .dropdown-item {
+              &:hover {
+                color: $primary;
+                svg path {
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .footer-link {
+      li {
+        a {
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      &:hover {
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  .muse-animation {
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .muse-card {
+    a {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .overlay-center {
+    a {
+      transition: all ease .4s;
+      &:hover {
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  .form-control {
+    &.form-control-lg {
+      height: 48px;
+    }
+  }
+  .badge-absolute {
+    top: 15px;
+    right: 15px;
+  }
+}
+.blog-feature-list {
+  padding-left: 0;
+  li {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    .feature-right {
+      width: calc(100% - 32px);
+      padding-left: 15px;
+      font-size: 20px;
+      color: $black-600;
+    }
+    + li {
+      margin-top: 20px;
+    }
+    .form-check {
+      .form-check-input {
+        margin-right: 0;
+        margin-top: 9px;
+        &:checked[type="checkbox"] {
+          ~ .form-check-label {
+            color: $gray-500;
+          }
+        }
+      }
+      .form-check-label {
+        padding-left: 15px;
+        font-size: 20px;
+        line-height: 40px;
+        color: $black-600;
+      }
+    }
+  }
+}
+/* 25. Blog Home2 Page CSS */
+.blog-home2-template {
+  .swiper-navication {
+    &.circle-arrow {
+      .swiper-wrapper {
+        .swiper-slide {
+          img {
+            max-width: inherit;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .dropdown-menu {
+    border: none;
+    min-width: 144px;
+    box-shadow: 0 16px 48px rgba($black, 0.17);
+    padding: 10px 0;
+    .dropdown-item {
+      font-weight: $font-weight-semibold;
+      font-size: 14px;
+      margin: 8px 0;
+    }
+  }
+  header {
+    .navbar {
+      .navbar-nav {
+        .nav-link {
+          &:hover {
+            svg path {
+              fill: $primary
+            }
+          }
+        }
+        .dropdown-menu {
+          li {
+            .dropdown-item {
+              &:hover {
+                color: $primary;
+                svg path {
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .footer-link {
+      li {
+        a {
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      &:hover {
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  .muse-animation {
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .muse-card {
+    a {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .circle-arrow {
+    .swiper-button-prev {
+      left: 5px;
+      box-shadow: 0 8px 16px rgba($black, 0.04);
+    }
+    .swiper-button-next {
+      right: 5px;
+    }
+  }
+  .blogbanner-overlay {
+    margin: 0 auto -100px;
+    background-color: $white;
+    text-align: center;
+  }
+  .form-control {
+    &.form-control-lg {
+      height: 48px;
+    }
+  }
+}
+/* 26. Header Footer Page CSS */
+.header-footer-template {
+  header {
+    .navbar {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            &:hover {
+              svg path {
+                fill: $primary;
+              }
+            }
+          }
+          .dropdown-menu {
+            .dropdown-item {
+              &:hover {
+                color: $primary;
+                svg path {
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .dropdown-menu {
+      .dropdown-item {
+        font-size: 14px;
+        font-family: $montserrat-font;
+        font-weight: 600;
+        padding: 8px 20px;
+        color: $gray-700;
+      }
+    }
+  }
+  footer {
+    .footer-link {
+      a {
+        &:hover {
+          color: $primary;
+          svg path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+    .social-icons {
+      a {
+        &:hover {
+          svg path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+  .menu-full-width {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    position: static;
+  }
+}
+.header-icon {
+  a {
+    &:hover {
+      svg path {
+        fill: $primary;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1441px) {
+  .studio-template {
+    &:before {
+      background-size: 93%;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .booking-box {
+    &:first-child {
+      padding-left: 0px;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  header {
+    .navbar-nav {
+      .nav-item {
+        &.horizontal-menu {
+          .dropdown-menu {
+            &.show {
+              flex-wrap: nowrap;
+            }
+          }
+        }
+      }
+    }
+    .dropdown {
+      &:hover {
+        > .dropdown-menu {
+          display: block;
+        }
+        &.horizontal-menu {
+          .dropdown-menu, .dropdown-menu.show {
+            display: flex;
+            flex-wrap: nowrap;
+          }
+        }
+      }
+      > .dropdown-menu {
+        .dropright{
+          &:hover {
+            .dropdown-menu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .navbar-nav {
+      li {
+        &:first-child {
+          .dropdown-menu {
+            .dropright {
+              .dropdown-menu {
+                margin-top: -8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1399px) {
+  /* Travel Page CSS */
+  .booking-box {
+    padding: 15px 50px;
+  }
+  /* Blog Page CSS */
+  .blogbanner-overlay {
+    margin-bottom: 30px;
+    padding: 22px 40px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  /* Normal CSS */
+  h5 {
+    font-size: 1.05rem;
+  }
+  /* Travel Page CSS */
+  .booking-box {
+    padding: 15px 40px;
+  }
+  .number-list {
+    padding-right: 0;
+    li {
+      small, .small{
+        margin-right: 18px;
+      }
+    }
+  }
+  .booking-box:first-child {
+    padding-left: 0;
+  }
+  /* Ecommerce Page CSS */
+  .ecommerce-template {
+    .signup-form {
+      width: 100%;
+    }
+    .muse-animation.has-height {
+      min-height: initial;
+    }
+    .perfection-section {
+      .border-left {
+        border-left: none !important;
+      }
+    }
+  }
+  /* Education Page CSS */
+  .education-template {
+    .nav-tabs {
+      .nav-link {
+        padding: 18px 30px;
+      }
+    }
+    h1.display-3 {
+      font-size: 3.5rem;
+      line-height: 4.5rem;
+    }
+    .philo-section {
+      .has-shape {
+        top: -70px;
+      }
+    }
+  }
+  /* Magazine Page CSS */
+  .fire-avatar {
+    right: 10px;
+  }
+  /* Saas3 Page CSS */
+  .performance-card {
+    .display-3 {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  }
+  .inner-has-circle {
+    &:before {
+      right: -80px;
+    }
+  }
+  /* Login Simple Page CSS */
+  .login-simple-template {
+    .social-login {
+      a {
+        width: calc(50% - 10px);
+        margin: 5px;
+      }
+    }
+  }
+  /* Maintenance Page CSS */
+  .maintenance-template {
+    .maintenance-left {
+      max-width: 470px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  /* Maindemo Page CSS */
+  /* Normal CSS */
+  .display-3 {
+    font-size: 3.5rem;
+    line-height: 4.125rem;
+  }
+  .lh-lg {
+    line-height: 1.5 !important;
+  }
+  h4, .h4 {
+    line-height: 1.75rem;
+  }
+  p {
+    line-height: 24px;
+  }
+  /* Header CSS */
+  .navbar-toggler {
+    padding: 0;
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  .feature-list {
+    padding-left: 0;
+  }
+  header {
+    .navbar-nav {
+      .nav-item {
+        padding: 15px 0;
+        border-bottom: 1px solid $gray-300;
+        .dropdown-menu {
+          left: 0;
+          transform: translateX(0);
+        }
+        svg {
+          float: right;
+          margin-top: 7px;
+        }
+        &.horizontal-menu {
+          .dropdown-menu {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            &.show {
+            padding-left: 0;
+            padding-right: 0;
+            }
+            > li {
+              small {
+                padding: 8px 10px;
+              }
+              ul {
+                li {
+                  .dropdown-item {
+                    padding: 8px 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      ~ .btn {
+        width: 100%;
+      }
+    }
+  }
+  .muse-header {
+    position: relative;
+    .navbar {
+      position: static;
+    }
+    .navbar-collapse {
+      position: absolute;
+      top: 51px;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-shadow: 0 2px 3px rgba($black, 0.04);
+      left: 0;
+      right: 0;
+      background-color: $white;
+      border-top: 1px solid $gray-300;
+      z-index: 9;
+    }
+  }
+  .muse-section {
+    padding: 40px 0;
+  }
+  .get-started-img {
+    bottom: -165px;
+    right: -70px;
+    max-width: 450px;
+  }
+  /* Saas Page CSS */
+  .saas-template {
+    header {
+      .navbar-nav {
+        .nav-item {
+          border-color: $gray-700;
+          .dropdown-menu {
+            .dropdown-item {
+              color: $white;
+              svg path {
+                fill: $white;
+              }
+            }
+            li {
+              small {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .muse-header {
+      .navbar-collapse {
+        background-color: $black-600;
+        border-color: $gray-700;
+      }
+    }
+    h1.display-2 {
+      br {
+        display: none;
+      }
+    }
+    .fs-20 {
+      font-size: 17px;
+    }
+  }
+  /* Travel Page CSS */
+  .travel-booking {
+    padding: 15px;
+  }
+  .booking-box {
+    padding: 15px;
+    width: 28%;
+  }
+  header {
+    .navbar-nav {
+      .nav-link {
+        padding: 0;
+      }
+      .nav-item {
+        .dropdown-menu {
+          box-shadow: none !important;
+          border-radius: 0;
+          padding: 6px 0 0;
+          background-color: transparent;
+          .dropdown-item {
+            padding: 8px 10px;
+          }
+        }
+      }
+    }
+  }
+  .navbar-toggler {
+    &.collapsed {
+      .menu-close {
+        display: none;
+      }
+      .menu-icon {
+        display: block;
+      }
+    }
+    .menu-icon {
+      display: none;
+    }
+    .menu-close {
+      display: block;
+    }
+  }
+  .number-list {
+    margin-bottom: 30px;
+  }
+  .brand-sub-title {
+    padding-left: 40px;
+    &:after {
+      width: 35px;
+    }
+  }
+  .tabs-has {
+    margin-bottom: 25px;
+    padding: 0 !important;
+  }
+  /* Ecommerce Page CSS */
+  .perfection-list {
+    li {
+      padding: 10px 15px;
+      flex-direction: row;
+      .perfection-right {
+        width: calc(100% - 50px);
+        padding-left: 13px;
+        padding-top: 0;
+      }
+    }
+  }
+  /* Education Page CSS */
+  .education-template {
+    .muse-header {
+      .navbar-collapse {
+        background-color: $blue-900;
+      }
+    }
+    .nav-tabs {
+      .nav-link {
+        padding: 15px;
+      }
+    }
+    .plan-features {
+      li {
+        font-size: 20px;
+      }
+    }
+    header {
+      .navbar-nav {
+        .nav-item {
+          .dropdown-menu {
+            .dropdown-item {
+              color: $white;
+              svg path {
+                fill: $white;
+              }
+            }
+            li {
+              small {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .philo-section {
+      .has-shape {
+        top: -60px;
+      }
+    }
+  }
+  .has-cricle {
+    right: 0;
+  }
+  /* Magazine Page CSS */
+  .magazine-template {
+    header {
+      .nav-link {
+        color: $purple-500;
+        svg path {
+          fill: $purple;
+        }
+        &:hover {
+          color: $black-600;
+          svg path {
+            fill: $black-600;
+          }
+        }
+      }
+      .btn-light {
+        background-color: $purple !important;
+        border-color: $purple !important;
+        color: $white;
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+  }
+  /* Saas3 Page CSS */
+  .saas3-template {
+    header {
+      .nav-link {
+        color: $black-600;
+        svg path {
+          fill: $black-600;
+        }
+      }
+      .navbar-nav {
+        .nav-item {
+          color: $black-600;
+        }
+      }
+      .btn-light {
+        background-color: $cyan-600 !important;
+        border-color: $cyan-600 !important;
+        color: $white;
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+  }
+  .inner-has-circle {
+    &:before {
+      right: -30px;
+    }
+  }
+  .has-circle {
+    &:after {
+      right: -20px;
+      height: 60px;
+      width: 60px;
+    }
+  }
+  /* Agency Page CSS */
+  .agency-template {
+    .muse-header {
+      .navbar-collapse {
+        background-color: $dark;
+        border-color: $gray-700;
+      }
+      .navbar-nav {
+        .nav-item {
+          border-color: $gray-700;
+          .dropdown-menu {
+            background-color: $dark;
+          }
+        }
+      }
+    }
+  }
+  /* Login Simple Page CSS */
+  .login-simple-template {
+    .social-login {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+      a {
+        width: calc(50% - 10px);
+        margin: 5px;
+      }
+    }
+  }
+  /* Maintenance Page CSS */
+  .maintenance-template {
+    .maintenance-left {
+      max-width: 350px;
+    }
+  }
+  /* Gallery Mansorny Page CSS */
+  .work-small-thumb {
+    margin: 0 -10px;
+  }
+  .masonry-item {
+    padding: 0 10px;
+    width: 50%;
+    margin-bottom: 20px;
+    .masonary-info {
+      .info-inner {
+        padding: 5px 25px 30px;
+      }
+    }
+  }
+  .masonry-filters {
+    padding-bottom: 25px;
+    button {
+      padding: 7px 14px 9px;
+      margin: 4px;
+    }
+  }
+  /* Pricing Page CSS */
+  .pricing-template {
+    header {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $black-600;
+            svg path {
+              fill: $black-600;
+            }
+            &:hover {
+              color: $primary;
+              svg path {
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+      .btn-light {
+        background-color: $primary !important;
+        border-color: $primary !important;
+        color: $white;
+        &:hover {
+          background-color: $dark !important;
+          border-color: $dark !important;
+        }
+      }
+    }
+  }
+  /* Help Center Page CSS */
+  .help-center-template {
+    header {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $black-600;
+            svg path {
+              fill: $black-600;
+            }
+            &:hover {
+              color: $primary;
+              svg path {
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+      .btn-light {
+        background-color: $primary !important;
+        border-color: $primary !important;
+        color: $white;
+      }
+    }
+  }
+  
+  /* Studio Page CSS */
+  .tetsimonial-swiper {
+    p {
+      padding-right: 80px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  /* Maindemo Page CSS */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .h-md-100 {
+    height: auto;
+  }
+  h1, h3 {
+    br {
+      display: none;
+    }
+  }
+  /* Normal CSS */
+  .h5, h5 {
+    font-size: 1.20rem;
+  }
+  .fs-32 {
+    font-size: 24px !important;
+  }
+  .display-2 {
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+  .display-3 {
+    font-size: 3rem;
+    line-height: 3.75rem;
+  }
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  p.big {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  h3, .h3 {
+    line-height: 1.75rem;
+  }
+  h2, .h2 {
+    line-height: 2rem;
+  }
+  .card.h-100 {
+    height: auto !important;
+    margin-bottom: 20px;
+  }
+  .feature-list {
+    margin-bottom: 0px;
+    padding-left: 0;
+    li {
+      padding: 18px;
+    }
+  }
+  /* Travel Page CSS */
+  .booking-box {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    + .booking-box {
+      border-left: none;
+      border-top: 1px solid $gray-300;
+    }
+  }
+  .travel-booking {
+    .btn {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  .guest-booking {
+    border-left: none !important;
+  }
+  /* Portfolio Page CSS */
+  .aside-toggle {
+    svg {
+      max-width: 24px;
+    }
+  }
+  .menu-full-width {
+    justify-content: flex-start;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: auto;
+    bottom: auto;
+    .navbar {
+      li {
+        padding: 6px 0;
+        a {
+          font-size: 30px;
+        }
+      }
+    }
+    .mail-text {
+      font-size: 20px;
+    }
+  }
+  .number-list {
+    li {
+      font-size: 18px;
+      margin-top: 15px;
+      font-weight: $font-weight-semibold;
+    }
+  }
+  .perfection-section {
+    .border-top, .border-left {
+      border: none !important;
+    }
+  }
+  .perfection-list {
+    padding-bottom: 0;
+    padding-top: 0;
+    li {
+      padding: 10px 0;
+    }
+  }
+  /* Education Page CSS */
+  .education-template {
+    .nav-tabs {
+      position: relative;
+      z-index: 1;
+      .nav-link {
+        padding: 10px;
+        margin-right: 10px;
+        border-bottom: 2px solid transparent;
+        &.active {
+          border-color: $red-500;
+        }
+      }
+    }
+    .plan-features {
+      li {
+        font-size: 20px;
+      }
+    }
+    .muse-card {
+      padding-bottom: 10px;
+    }
+    .card-plan {
+      margin-bottom: 20px;
+    }
+    .muse-card-footer {
+      padding-bottom: 70px;
+    }
+    h1.display-3 {
+      font-size: 3rem;
+      line-height: 3.75rem;
+    }
+    .philo-section {
+      .has-shape {
+        top: -50px;
+      }
+    }
+  }
+  .has-cricle {
+    right: 20px;
+  }
+  /* Studio Page CSS */
+  .studio-template {
+    &:before {
+      background-size: 66%;
+    }
+    .padding-space {
+      padding: 0 50px;
+    }
+    .tetsimonial-swiper {
+      padding-bottom: 16px;
+      p {
+        padding-right: 0;
+      }
+      .swiper-button-next, .swiper-button-prev {
+        top: auto;
+        bottom: 0px;
+        right: 0;
+      }
+      .swiper-button-prev {
+        right: 60px;
+      }
+    }
+    .apply-btn {
+      right: auto;
+      left: 0;
+      position: static;
+      margin-left: 25px;
+      float: left;
+    }
+  }
+  /* Magazine Page CSS */
+  .magazine-template {
+    .magazine-play-btn {
+      min-width: initial !important;
+    }
+  }
+  /* Saas3 Page CSS */
+  .saas3-template {
+    .tetsimonial-swiper {
+      p {
+        padding-right: 0;
+      }
+    }
+    .inner-has-circle {
+      overflow: hidden;
+      &:before {
+        right: -90px;
+      }
+    }
+    .has-circle {
+      &:after {
+        right: -30px;
+        bottom: -30px;
+      }
+    }
+    .swiper-clients {
+      .swiper-slide {
+        &.h-100 {
+          height: auto !important;
+        }
+      }
+    }
+  }
+  /* Login Cover Page CSS */
+  .login-template {
+    .cover-fit {
+      height: auto;
+    }
+    .login-form {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
+  /* Login Simple Page CSS */
+  .login-simple-template {
+    .social-login {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      a {
+        margin: 5px;
+      }
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .muse-collapes {
+    .card {
+      .card-header {
+        .btn-light {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  /* Maintenance Page CSS */
+  .maintenance-template {
+    .maintenance-left {
+      max-width: 515px;
+      margin: 0 auto !important;
+      padding-top: 90px;
+      padding-bottom: 60px;
+    }
+    .maintenance-right {
+      &.vh-100 {
+        height: auto !important;
+      }
+    }
+  }
+  /* Gallery Mansorny Page CSS */
+  .masonry-item {
+    width: 100%;
+    &.onethird {
+      width: 100%;
+    }
+    .masonary-info {
+      .info-inner {
+        padding: 5px 15px 20px;
+      }
+    }
+  }
+  .masonry-filters {
+    span {
+      display: block;
+      position: relative;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+    button {
+      display: none;
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: left;
+      border: none;
+      padding: 5px 10px;
+      font-size: 16px;
+      color: $gray-600;
+    }
+    &.display {
+      button {
+        display: block;
+      }
+    }
+  }
+  /* Account Profile Page CSS */
+  .muse-profile {
+    .btn-light {
+      &.position-absolute {
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+  }
+  /* Help Center Page CSS */
+  .help-center-template {
+    .search-left {
+      width: 100%;
+    }
+    .btn {
+      width: 100%;
+    }
+    .search-less {
+      margin-top: -63px;
+    }
+  }
+  /* Blog Page CSS */
+  .blog-overlay {
+    right: 15px;
+    bottom: 15px;
+    h4 {
+      font-size: 16px;
+      line-height: 1.5rem;
+    }
+  }
+  .blog-post-template {
+    .overlay-center {
+      a img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .circle-lg {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+    strong.h2.mb-0.ml-3 {
+      margin-left: 10px !important;
+      font-size: 20px;
+    }
+  }
+  .blog-feature-list {
+    li {
+      .feature-right {
+        font-size: 16px;
+      }
+      .form-check {
+        .form-check-label {
+          padding-top: 7px;
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  .blog-home2-template {
+    .blogbanner-overlay {
+      max-width: 320px;
+      padding: 15px;
+      h2 {
+        font-size: 20px;
+        line-height: 1.65rem;
+      }
+    }
+    .card {
+      h5 {
+        font-size: 1.20rem;
+      }
+      h4 {
+        font-size: 1.10rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+  /* Header Footer Page CSS */
+  .header-footer-template {
+    .menu-full-width {
+      height: auto;
+      padding-bottom: 20px;
+    }
+    .navbar-user, .back-arrow {
+      display: none !important;
+    }
+    .dashboard-template {
+      .navbar-brand {
+        &.mx-auto {
+          margin-left: 25px !important;
+        }
+      }
+      &.sidebar-icons {
+        .navbar-brand {
+          &.mx-auto {
+            margin-left: auto !important;
+          }
+          img {
+            display: none;
+          }
+          .muse-icon {
+            display: block;
+          }
+        }
+        .signout {
+          padding: 0 16px;
+          .btn-lg {
+            padding: 8px 13px
+          }
+          img {
+            display: block;
+          }
+          span {
+            display: none;
+          }
+        }
+        .navbar {
+          width: auto;
+        }
+        .navbar-vertical {
+          &.navbar-expand-md {
+            max-width: 80px;
+            padding: 0.5rem 0;
+            .navbar-nav {
+              .nav-link {
+                text-align: center;
+                img {
+                  &.mr-2 {
+                    margin: 0 auto !important;
+                  }
+                }
+                &:after {
+                  display: none;
+                }
+                span {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .navbar {
+        width: 250px;
+        padding: 0;
+      }
+      .navbar-collapse {
+        max-width: 100%;
+        transform: translateX(0%);
+        position: static;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+  .third-footer {
+    .footer-link {
+      li {
+        margin: 5px 18px;
+      }
+    }
+  }
+  .users-watch {
+    &.h-100 {
+      height: auto !important;
+    }
+  }
+  /* Ecommerce Page CSS */
+  .perfection-section {
+    .border-bottom {
+      border-bottom: none !important;
+    }
+  }
+  .ecommerce-template {
+    .btn {
+      &.btn-xl.btn-dark {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+      }
+    }
+  }
+  .star-icon {
+    &.big {
+      font-size: 16px;
+    }
+  }
+  .plan-features {
+    margin-bottom: 0;
+  }
+  /* Saas Page CSS */
+  .saas-template {
+    .intigration-element {
+      padding-top: 20px;
+    }
+    .overlay-center {
+      .btn {
+        min-width: initial;
+        &.play-btn {
+          font-size: 24px;
+          height: 75px;
+          width: 75px;
+        }
+      }
+    }
+    .tabs-has {
+      .nav-link {
+        padding: 28px 25px 30px;
+      }
+    }
+    .muse-brands {
+      .swiper-clients {
+        .swiper-slide {
+          text-align: center;
+        }
+      }
+    }
+    #switch-content {
+      .text-gray-600 {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  /* Coming Soon Page CSS */
+  .muse-coming-soon {
+    overflow: hidden;
+    img {
+      &.w-100 {
+        width: 850px !important;
+        max-width: inherit;
+      }
+    }
+    .position-absolute {
+      img {
+        max-width: 105px;
+      }
+    }
+  }
+  
+  /* Clinic Page CSS */
+  .clinic-template {
+    .circle-lg {
+      width: 40px;
+      height: 40px;
+    }
+    .number-list {
+      li {
+        font-size: 16px;
+        line-height: 24px;
+        .small, small {
+          font-size: 16px;
+          margin-right: 15px;
+        }
+        span {
+          width: calc(100% - 56px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* Maindemo Page CSS */
+  /* Normal CSS */
+  .display-3 {
+    font-size: 2rem;
+    line-height: 2.75rem;
+  }
+  .display-2 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  h3 {
+    line-height: 2rem;
+  }
+  .display-4 {
+    font-size: 2rem;
+  }
+  .btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btn {
+    height: 42px;
+    font-size: 15px;
+  }
+  .btn-xl, .btn-group-xl > .btn {
+    height: 52px;
+    padding: 6px 22px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .btn-xl {
+    height: 58px;
+  }
+  p.big {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .input-group-lg .btn-lg {
+    height: 48px;
+  }
+  /* Footer CSS */
+  .social-icons {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  /* Travel Page CSS */
+  .swiper-pagination.swiper-pagination-clickable {
+    position: static;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    bottom: 10px;
+    right: 10px;
+  }
+  .swiper-button-prev {
+    right: 95px;
+  }
+  /* Education Page CSS */
+  .has-cricle {
+    right: 15px;
+  }
+  .education-template {
+    .play-btn {
+      svg {
+        height: 40px !important;
+        width: 40px !important;
+      }
+    }
+    .philo-section .has-shape {
+      top: -30px;
+    }
+    h1.display-3 {
+      font-size: 2.5rem;
+      line-height: 3.25rem;
+    }
+  }
+  /* Agency Page CSS */
+  .agency-template {
+    .tech-list {
+      li {
+        padding: 15px;
+      }
+    }
+    .avatar-xl {
+      width: 110px;
+      height: 110px;
+    }
+  }
+  /* Maintenance Page CSS */
+  .maintenance-template {
+    .container {
+      max-width: 100%;
+    }
+    .maintenance-left {
+      max-width: 100%;
+      padding: 90px 13px 60px;
+      margin: 0 auto !important;
+    }
+  }
+  /* Account Profile Page CSS */
+  .muse-profile {
+    overflow: hidden;
+    text-align: center;
+    img {
+      height: 120px;
+      max-width: initial;
+      width: auto !important;
+      position: relative;
+      left: 50%;
+      margin-left: -100%;
+    }
+  }
+   /* Blog Page CSS */
+   .blogbanner-overlay {
+     padding: 20px;
+     margin-bottom: 15px;
+   }
+   .overlay-remove {
+     .rounded-12 {
+       border-radius: 12px 12px 0 0 !important;
+     }
+     .position-absolute {
+      position: relative !important;
+     }
+   }
+   .blog-overlay {
+     position: static !important;
+     max-width: 100%;
+   }
+   .tag-list {
+     a {
+       margin: 4px 2px;
+     }
+   }
+   .circle-arrow {
+    .swiper-button-prev {
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background-size: 16px;
+    }
+    .swiper-button-next {
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-size: 16px;
+    }
+   }
+   .swiper-slider-box {
+     margin: 0;
+   }
+   /* Studio Page CSS */
+   .studio-template {
+    &:before {
+      background-size: 44%;
+    }
+  }
+}
+@media screen and (max-width:575px) {
+  /* Education Page CSS */
+  .muse-card-footer {
+    .card-footerbox {
+      left: 25px;
+    }
+  }
+
+  /* Saas Style Three Page CSS */
+  .saas3-template {
+    .has-circle {
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  /* Maindemo Page CSS */
+  /* Normal CSS */
+  .btn-xl {
+    height: 52px;
+  }
+  .display-2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .display-4 {
+    font-size: 1.75rem;
+  }
+  .muse-section {
+    .input-group {
+      flex-direction: column;
+      .form-control {
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 0.3rem !important;
+        font-size: 16px;
+      }
+      .btn {
+        margin-left: 0;
+        border-radius: 0.3rem !important;
+        &.btn-lg {
+          height: 42px;
+        }
+      }
+    }
+  }
+  h2 br {
+    display: none;
+  }
+  .muse-section {
+    padding: 20px 0;
+  }
+  .feature-list {
+    margin: 0 -10px;
+    li {
+      width: 50%;
+      padding: 13px 15px;
+      a {
+        max-width: 100%;
+      }
+    }
+  }
+  .plan-list {
+    li {
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+  .get-started-img {
+    bottom: -130px;
+    right: -60px;
+    max-width: 365px;
+  }
+  .footer-link {
+    li {
+      a {
+        font-size: 14px;
+      }
+      + li {
+        margin-top: 6px;
+      }
+    }
+  }
+  /* Saas3 Page CSS */
+  .saas3-template {
+    .banner-section {
+      .has-shape {
+        bottom: -20px;
+      }
+    }
+    .step-list {
+      li{
+        h5 {
+          font-size: 14px;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+    .has-circle {
+      &:after {
+        right: -8px;
+        bottom: -20px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  /* Agency Page CSS */
+  .agency-template {
+    .tech-list {
+      margin-bottom: 0;
+      li {
+        padding: 8px 3px;
+        img {
+          max-width: 40px;
+        }
+        &:nth-child(2),&:nth-child(5) {
+          margin-top: -125px;
+        }
+        &:nth-child(7) {
+          margin-top: -60px;
+        }
+      }
+    }
+    .avatar-xl {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  /* Login Simple Page CSS */
+  .login-simple-template {
+    .social-login {
+      a {
+        width: 95%;
+        margin: 10px auto;
+      }
+    }
+  }
+  /* Gallery Mansorny Page CSS */
+  .masonry-item {
+    width: 100%;
+  }
+  /* Blog Home2 Page CSS */
+  .blog-home2-template {
+    .swiper-navication {
+      border-radius: 12px;
+      &.circle-arrow {
+        .swiper-wrapper {
+          .swiper-slide {
+            img {
+              max-width: inherit;
+              width: auto;
+              height: 270px;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Contact Page CSS */
+  .contact-template {
+    .nav-pills {
+      .nav-item {
+        .nav-link {
+          padding: 8px 22px;
+        }
+      }
+    }
+  }
+  /* Education Page CSS */ 
+  .education-template {
+    .philo-section {
+      .has-shape {
+        top: -20px;
+      }
+    }
+    h1 {
+      &.display-3 {
+        font-size: 2rem;
+        line-height: 2.6rem;
+      }
+    }
+    .circle-xl {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  /* Studio Page CSS */
+  .studio-template {
+    &:before {
+      background-size: 30%;
+    }
+  }
+  .blog-post-template {
+    .overlay-center {
+      svg {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+  .blog-feature-list {
+    li {
+      + li {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

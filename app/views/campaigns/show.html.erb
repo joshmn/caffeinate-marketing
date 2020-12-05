@@ -1,0 +1,15 @@
+<h2><%= @campaign.name %></h2>
+<h5>Drips in this campaign:</h5>
+<ul>
+  <% @campaign.to_dripper.drips.each do |drip| %>
+    <li><%= drip.options[:mailer_class] %>#<%= drip.action %> gets sent <%= drip.options[:delay].inspect %> after a user subscribes.</li>
+  <% end %>
+</ul>
+
+<h5>Manage your subscription</h5>
+<% if @campaign.subscribes?(current_user) %>
+  <p>You've already subscribed to this campaign!</p>
+  <p><%= link_to "Manage my subscription", campaign_subscription_path(token: @campaign.subscriber(current_user).token) %>
+<% else %>
+  <p><%= button_to "Subscribe", campaign_subscriptions_path(campaign_slug: @campaign.slug) %></p>
+<% end %>

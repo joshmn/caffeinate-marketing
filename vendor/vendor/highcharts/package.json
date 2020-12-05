@@ -1,0 +1,56 @@
+{
+  "_from": "highcharts",
+  "_id": "highcharts@8.2.2",
+  "_inBundle": false,
+  "_integrity": "sha512-F63TXO7RxsvTcpO/KOubQZWualYpCMyCTuKtoWbt7KCsfQ3Kl7Fr6HEyyJdjkYl+XlnmnKlSRi9d3HjLK9Q0wg==",
+  "_location": "/highcharts",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "highcharts",
+    "name": "highcharts",
+    "escapedName": "highcharts",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/highcharts/-/highcharts-8.2.2.tgz",
+  "_shasum": "3eb1a694cff013d3385c3ca8e58e69a27be52cab",
+  "_spec": "highcharts",
+  "_where": "C:\\Projects\\Kamal-mehta\\backbone",
+  "author": {
+    "name": "Highsoft AS",
+    "email": "support@highcharts.com",
+    "url": "http://www.highcharts.com/about"
+  },
+  "bugs": {
+    "url": "https://github.com/highcharts/highcharts/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "JavaScript charting framework",
+  "homepage": "http://www.highcharts.com",
+  "keywords": [
+    "charts",
+    "dataviz",
+    "graphs",
+    "visualization",
+    "data",
+    "browserify",
+    "webpack"
+  ],
+  "license": "https://www.highcharts.com/license",
+  "main": "highcharts.js",
+  "name": "highcharts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/highcharts/highcharts-dist.git"
+  },
+  "types": "highcharts.d.ts",
+  "version": "8.2.2"
+}

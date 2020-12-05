@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="60px" viewBox="0 0 57 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>angular-icon-1</title>
+    <g id="Finals" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="agency" transform="translate(-1208.000000, -1775.000000)" fill-rule="nonzero">
+            <g id="Group-35" transform="translate(403.000000, 1544.000000)">
+                <g id="Group-4" transform="translate(2.000000, 0.000000)">
+                    <g id="Group-16" transform="translate(549.000000, 0.000000)">
+                        <g id="Group-9" transform="translate(217.000000, 194.000000)">
+                            <g id="angular-icon-1" transform="translate(37.000000, 37.000000)">
+                                <polygon id="Path" fill="#E23237" points="0.0221746834 9.94960664 27.9197003 0.00980482886 56.5685042 9.77287442 51.9297822 46.6826349 27.9197003 59.9799055 4.28525756 46.8593671"></polygon>
+                                <polygon id="Path" fill="#B52E31" points="56.5685042 9.77287442 27.9197003 0.00980482886 27.9197003 59.9799055 51.9297822 46.7048095"></polygon>
+                                <path d="M27.9638279,7.01190459 L10.5804284,45.6887655 L17.0742844,45.5783356 L20.5643578,36.853263 L36.1587039,36.853263 L39.9800671,45.6887655 L46.186761,45.7991955 L27.9638279,7.01190459 Z M28.0081773,19.4035611 L33.8835814,31.684566 L22.8392586,31.684566 L28.0081773,19.4035611 Z" id="Shape" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

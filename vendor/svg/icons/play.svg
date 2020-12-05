@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="icons_tabler_play" data-name="icons/tabler/play" transform="translate(0 0)">
+    <rect id="Icons_Tabler_Play_background" data-name="Icons/Tabler/Play background" width="16" height="16" fill="none"/>
+    <path id="Path" d="M.674,16A.681.681,0,0,1,0,15.314V.687A.681.681,0,0,1,.674,0a.661.661,0,0,1,.351.1L12.68,7.416a.693.693,0,0,1,0,1.168L1.025,15.9A.661.661,0,0,1,.674,16Zm.67-14.087V14.086L11.044,8Z" transform="translate(3)" fill="#1e1e1e"/>
+  </g>
+</svg>

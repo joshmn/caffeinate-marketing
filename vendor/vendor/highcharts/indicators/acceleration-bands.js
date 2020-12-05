@@ -1,0 +1,17 @@
+/*
+ Highstock JS v8.2.2 (2020-10-22)
+
+ Indicator series type for Highstock
+
+ (c) 2010-2019 Daniel Studencki
+
+ License: www.highcharts.com/license
+*/
+(function(a){"object"===typeof module&&module.exports?(a["default"]=a,module.exports=a):"function"===typeof define&&define.amd?define("highcharts/indicators/acceleration-bands",["highcharts","highcharts/modules/stock"],function(d){a(d);a.Highcharts=d;return a}):a("undefined"!==typeof Highcharts?Highcharts:void 0)})(function(a){function d(a,e,n,g){a.hasOwnProperty(e)||(a[e]=g.apply(null,n))}a=a?a._modules:{};d(a,"Mixins/MultipleLines.js",[a["Core/Globals.js"],a["Core/Utilities.js"]],function(a,e){var n=
+e.defined,g=e.error,d=e.merge,k=a.seriesTypes.sma;return{pointArrayMap:["top","bottom"],pointValKey:"top",linesApiNames:["bottomLine"],getTranslatedLinesNames:function(f){var a=[];(this.pointArrayMap||[]).forEach(function(b){b!==f&&a.push("plot"+b.charAt(0).toUpperCase()+b.slice(1))});return a},toYData:function(f){var a=[];(this.pointArrayMap||[]).forEach(function(b){a.push(f[b])});return a},translate:function(){var f=this,a=f.pointArrayMap,g=[],p;g=f.getTranslatedLinesNames();k.prototype.translate.apply(f,
+arguments);f.points.forEach(function(b){a.forEach(function(a,k){p=b[a];null!==p&&(b[g[k]]=f.yAxis.toPixels(p,!0))})})},drawGraph:function(){var a=this,b=a.linesApiNames,e=a.points,p=e.length,l=a.options,x=a.graph,v={options:{gapSize:l.gapSize}},q=[],m;a.getTranslatedLinesNames(a.pointValKey).forEach(function(a,c){for(q[c]=[];p--;)m=e[p],q[c].push({x:m.x,plotX:m.plotX,plotY:m[a],isNull:!n(m[a])});p=e.length});b.forEach(function(b,c){q[c]?(a.points=q[c],l[b]?a.options=d(l[b].styles,v):g('Error: "There is no '+
+b+' in DOCS options declared. Check if linesApiNames are consistent with your DOCS line names." at mixin/multiple-line.js:34'),a.graph=a["graph"+b],k.prototype.drawGraph.call(a),a["graph"+b]=a.graph):g('Error: "'+b+" doesn't have equivalent in pointArrayMap. To many elements in linesApiNames relative to pointArrayMap.\"")});a.points=e;a.options=l;a.graph=x;k.prototype.drawGraph.call(a)}}});d(a,"Stock/Indicators/ABIndicator.js",[a["Core/Series/Series.js"],a["Mixins/MultipleLines.js"],a["Core/Utilities.js"]],
+function(a,e,d){var g=d.correctFloat;d=d.merge;var n=a.seriesTypes.sma;a.seriesType("abands","sma",{params:{period:20,factor:.001,index:3},lineWidth:1,topLine:{styles:{lineWidth:1}},bottomLine:{styles:{lineWidth:1}},dataGrouping:{approximation:"averages"}},d(e,{pointArrayMap:["top","middle","bottom"],pointValKey:"middle",nameBase:"Acceleration Bands",nameComponents:["period","factor"],linesApiNames:["topLine","bottomLine"],getValues:function(a,f){var b=f.period,d=f.factor;f=f.index;var e=a.xData,
+l=(a=a.yData)?a.length:0,k=[],v=[],q=[],m=[],w=[],c;if(!(l<b)){for(c=0;c<=l;c++){if(c<l){var h=a[c][2];var r=a[c][1];var u=d;h=g(r-h)/(g(r+h)/2)*1E3*u;k.push(a[c][1]*g(1+2*h));v.push(a[c][2]*g(1-2*h))}if(c>=b){h=e.slice(c-b,c);var t=a.slice(c-b,c);u=n.prototype.getValues.call(this,{xData:h,yData:k.slice(c-b,c)},{period:b});r=n.prototype.getValues.call(this,{xData:h,yData:v.slice(c-b,c)},{period:b});t=n.prototype.getValues.call(this,{xData:h,yData:t},{period:b,index:f});h=t.xData[0];u=u.yData[0];r=
+r.yData[0];t=t.yData[0];q.push([h,u,t,r]);m.push(h);w.push([u,t,r])}}return{values:q,xData:m,yData:w}}}}));""});d(a,"masters/indicators/acceleration-bands.src.js",[],function(){})});
+//# sourceMappingURL=acceleration-bands.js.map

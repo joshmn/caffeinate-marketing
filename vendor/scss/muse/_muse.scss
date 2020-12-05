@@ -1,0 +1,2615 @@
+/* Muse Basic Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+/* Muse Color Variables */
+$danger: $red-400;
+$success: $teal-400;
+$warning: $yellow-500;
+$secondary: $gray-700;
+$dark: $gray-900;
+/*
+1.  Muse Normal CSS
+2.  Muse Components CSS
+    2.  1.  Muse Colors CSS
+    2.  1.  1. Muse Selection Color CSS
+    2.  1.  2. Muse Background Color CSS
+    2.  1.  3. Muse Color CSS
+    2.  1.  4. Muse Border Color CSS
+    2.  2.  Muse Font Family CSS
+    2.  3.  Muse Font Weights CSS
+    2.  4.  Muse Font Sizes CSS
+    2.  5.  Muse After CSS
+    2.  6.  Muse Shapes CSS
+    2.  7.  Muse Box Shadow CSS
+    2.  8.  Muse Typography Page CSS
+    2.  9.  Muse Avaters CSS
+    2.  10.  Muse Button CSS
+    2.  11.  Muse Badge CSS
+    2.  12.  Muse Cards CSS
+    2.  13.  Muse Alerts CSS
+    2.  14.  Muse Checks CSS
+    2.  15.  Muse Navbars CSS
+    2.  16.  Muse Popovers CSS
+    2.  17.  Muse Transition CSS
+    2.  18.  Muse Multiple Select CSS
+    2.  19.  Muse Overflow CSS
+    2.  20.  Muse Progress Bar CSS
+    2.  21.  Muse Circle CSS
+    2.  22.  Muse Tabs CSS
+    2.  22.  1.  Muse Tabs Gray CSS
+    2.  23.  Muse Swiper Slider CSS
+    2.  24.  Muse Tabler Icons CSS
+    2.  25.  Muse Modal Popup CSS
+    2.  26.  Muse Table CSS
+    2.  27.  Muse List Group CSS
+    2.  28.  Muse Btn Close CSS
+  3. Muse Links Page CSS
+  4. Muse Dropzone Page CSS
+*/
+/* 1. Muse Normal CSS */
+body {
+  color: $gray-700;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+a {
+  text-decoration: none;
+  transition: all ease .4s;
+  &:focus {
+      outline: none;
+      outline-offset: 0;
+  }
+  &:hover, &:focus {
+      text-decoration: none;
+      color: $primary;
+  }
+}
+b, strong, .dropdown-menu span.strong {
+  font-weight: $font-weight-bold;
+}
+p {
+  line-height: 28px;
+}
+img {
+  max-width: 100%;
+  transition: all ease .4s;
+  user-select: none;
+}
+iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+}
+video {
+  display: block;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  background: $light;
+}
+audio, canvas, progress, video {
+  vertical-align: middle;
+}
+button {
+  outline: none;
+  outline-offset: 0;
+  transition: all ease .4s;
+  &:focus {
+    outline: none;
+    outline-offset: 0;
+    transition: all ease .4s;
+  }
+}
+label {
+  cursor: pointer;
+  &.disable {
+    cursor: none;
+    opacity: 0.3;
+  }
+}
+sup {
+  vertical-align: super;
+  font-size: 0.27em;
+}
+.has-unalignment-cards [class*="col-"] .card {
+  height: auto;
+}
+[data-highcharts-chart] {
+  width: 100%;
+}
+.vertical-none {
+  vertical-align: unset;
+}
+.mw-auto {
+  max-width: none;
+}
+.direction-rtl {
+  direction: rtl;
+}
+/* 2. Muse Components CSS */
+/* 2. 1. Muse Colors CSS */
+/* 2. 1. 1. Muse Selection Color CSS  */
+::selection, ::-webkit-selection, ::-moz-selection, ::-o-selection, ::-ms-selection {
+  background: $dark;
+  color: $white;
+}
+select::-ms-expand {
+  display: none;
+}
+/* 2.  1. 2. Muse Background Color CSS */
+.link-dark {
+  color: $black-600;
+  &:hover {
+    color: $gray-700;
+    svg path {
+      fill: $gray-700;
+    }
+  }
+  svg path {
+    fill: $black-600;
+  }
+}
+.link-primary {
+  &:hover {
+    svg path {
+      fill: $blue-600;
+    }
+  }
+  svg path {
+    fill: $blue-500;
+  }
+}
+.bg-secondary {
+  background-color: $secondary !important;
+}
+.bg-success {
+  background-color: $success !important;
+}
+.bg-danger {
+  background-color: $danger !important;
+}
+.bg-warning {
+  background-color: $warning !important;
+}
+.bg-info {
+  background-color: $info !important;
+}
+.bg-light {
+  background-color: $gray-100 !important;
+}
+.bg-lighter-light {
+  background-color: $lighter-light;
+}
+.bg-dark {
+  background-color: $dark !important;
+}
+.btn-soft-primary {
+  background-color: $blue-50;
+  &:hover {
+    background-color: $primary !important;
+    color: $white;
+    svg path {
+      fill: $white;
+    }
+  }
+}
+.btn-secondary {
+  background-color: $secondary !important;
+  border-color: $secondary !important;
+}
+.btn-success {
+  background-color: $success !important;
+  border-color: $success !important;
+  &:hover {
+    background-color: $green-600 !important;
+    border-color: $green-600 !important;
+  }
+}
+.btn-danger {
+  background-color: $danger !important;
+  border-color: $danger !important;
+}
+.btn-danger:hover {
+  background-color: $red-500 !important;
+  border-color: $red-500 !important;
+}
+.btn-warning {
+  color: $black-600;
+}
+.btn-info {
+  color: $white;
+}
+.btn-light {
+  background-color: $white !important;
+  border-color: $white !important;
+  color: $black-600;
+}
+.btn-dark {
+  background-color: $black-600 !important;
+  border-color: $black-600 !important;
+}
+.btn-soft-secondary {
+  background-color: rgba($secondary, 0.1);
+  color: $secondary;
+}
+.btn-soft-success {
+  background-color: rgba($success, 0.1);
+  color: $success;
+}
+.btn-soft-danger {
+  background-color: rgba($danger, 0.1);
+  color: $danger;
+}
+.btn-soft-warning {
+  background-color: rgba($warning, 0.1);
+  color: $dark;
+}
+.btn-soft-info {
+  background-color: rgba($info, 0.1);
+  color: $info;
+}
+.btn-soft-light {
+  background-color: rgba($light, 0.1);
+}
+.btn-soft-dark {
+  background-color: rgba($dark, 0.1);
+}
+.btn-outline-secondary {
+  border-color: $secondary;
+  color: $secondary;
+}
+.btn-outline-success {
+  border-color: $success;
+  color: $success;
+}
+.btn-outline-danger {
+  border-color: $danger;
+  color: $danger;
+}
+.btn-outline-warning {
+  border-color: $warning;
+  color: $warning;
+}
+.btn-outline-info {
+  border-color: $info;
+  color: $info;
+}
+.btn-outline-light {
+  border-color: $light;
+  color: $light;
+}
+.btn-outline-dark {
+  border-color: $dark;
+  color: $dark;
+}
+.bg-purple-light {
+  background-color: $purple-light;
+}
+.bg-purple-80 {
+  background-color: $purple-80;
+}
+.bg-green-light {
+  background-color: $green-light;
+}
+.bg-green-80 {
+  background-color: $green-80;
+}
+.bg-orange-light {
+  background-color: $orange-light;
+}
+.bg-orange-80 {
+  background-color: $orange-80;
+}
+.bg-black-800 {
+  background-color: $black-800;
+}
+.bg-black-600 {
+  background-color: $black-600;
+}
+.text-black-800 {
+  color: $black-800;
+}
+.text-black-600 {
+  color: $black-600;
+}
+.text-gray-150 {
+  color: $gray-150;
+}
+.btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .btn input[type="checkbox"], .btn-group-toggle > .btn-group > .btn input[type="radio"], .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.green-hover:hover {
+  background-color: $success;
+  svg path {
+    fill: $white;
+  }
+}
+.bg-white-90 {
+  background-color: rgba($white, 0.9) !important;
+}
+.bg-gray-100 {
+  background-color: $gray-100 !important;
+}
+.bg-gray-200 {
+  background-color: $gray-200;
+}
+.bg-gray-300 {
+  background-color: $gray-300;
+}
+.bg-gray-400 {
+  background-color: $gray-400;
+}
+.bg-gray-500 {
+  background-color: $gray-500;
+}
+.bg-gray-600 {
+  background-color: $gray-600;
+}
+.bg-gray-700 {
+  background-color: $gray-700;
+}
+.bg-gray-800 {
+  background-color: $gray-800;
+}
+.bg-gray-900 {
+  background-color: $gray-900;
+}
+.bg-blue-50 {
+  background-color: $blue-50;
+}
+.bg-blue-100 {
+  background-color: $blue-100;
+}
+.bg-blue-200 {
+  background-color: $blue-200;
+}
+.bg-blue-300 {
+  background-color: $blue-300;
+}
+.bg-blue-400 {
+  background-color: $blue-400;
+}
+.bg-blue-500 {
+  background-color: $blue-500;
+}
+.bg-blue-600 {
+  background-color: $blue-600;
+}
+.bg-blue-700 {
+  background-color: $blue-700;
+}
+.bg-blue-800 {
+  background-color: $blue-800;
+}
+.bg-blue-900 {
+  background-color: $blue-900;
+}
+.bg-indigo-50 {
+  background-color: $indigo-50;
+}
+.bg-indigo-100 {
+  background-color: $indigo-100;
+}
+.bg-indigo-200 {
+  background-color: $indigo-200;
+}
+.bg-indigo-300 {
+  background-color: $indigo-300;
+}
+.bg-indigo-400 {
+  background-color: $indigo-400;
+}
+.bg-indigo-500 {
+  background-color: $indigo-500;
+}
+.bg-indigo-600 {
+  background-color: $indigo-600;
+}
+.bg-indigo-700 {
+  background-color: $indigo-700;
+}
+.bg-indigo-800 {
+  background-color: $indigo-800;
+}
+.bg-indigo-900 {
+  background-color: $indigo-900;
+}
+.bg-purple-50 {
+  background-color: $purple-50;
+}
+.bg-purple-100 {
+  background-color: $purple-100;
+}
+.bg-purple-200 {
+  background-color: $purple-200;
+}
+.bg-purple-300 {
+  background-color: $purple-300;
+}
+.bg-purple-400 {
+  background-color: $purple-400;
+}
+.bg-purple-500 {
+  background-color: $purple-500;
+}
+.bg-purple-600 {
+  background-color: $purple-600;
+}
+.bg-purple-700 {
+  background-color: $purple-700;
+}
+.bg-purple-800 {
+  background-color: $purple-800;
+}
+.bg-purple-900 {
+  background-color: $purple-900;
+}
+.bg-pink-50 {
+  background-color: $pink-50;
+}
+.bg-pink-100 {
+  background-color: $pink-100;
+}
+.bg-pink-200 {
+  background-color: $pink-200;
+}
+.bg-pink-300 {
+  background-color: $pink-300;
+}
+.bg-pink-400 {
+  background-color: $pink-400;
+}
+.bg-pink-500 {
+  background-color: $pink-500;
+}
+.bg-pink-600 {
+  background-color: $pink-600;
+}
+.bg-pink-700 {
+  background-color: $pink-700;
+}
+.bg-pink-800 {
+  background-color: $pink-800;
+}
+.bg-pink-900 {
+  background-color: $pink-900;
+}
+.bg-red-50 {
+  background-color: $red-50;
+}
+.bg-red-100 {
+  background-color: $red-100;
+}
+.bg-red-200 {
+  background-color: $red-200;
+}
+.bg-red-300 {
+  background-color: $red-300;
+}
+.bg-red-400 {
+  background-color: $red-400;
+}
+.bg-red-500 {
+  background-color: $red-500;
+}
+.bg-red-600 {
+  background-color: $red-600;
+}
+.bg-red-700 {
+  background-color: $red-700;
+}
+.bg-red-800 {
+  background-color: $red-800;
+}
+.bg-red-900 {
+  background-color: $red-900;
+}
+.bg-orange-50 {
+  background-color: $orange-50;
+}
+.bg-orange-100 {
+  background-color: $orange-100;
+}
+.bg-orange-200 {
+  background-color: $orange-200;
+}
+.bg-orange-300 {
+  background-color: $orange-300;
+}
+.bg-orange-400 {
+  background-color: $orange-400;
+}
+.bg-orange-500 {
+  background-color: $orange-500;
+}
+.bg-orange-600 {
+  background-color: $orange-600;
+}
+.bg-orange-700 {
+  background-color: $orange-700;
+}
+.bg-orange-800 {
+  background-color: $orange-800;
+}
+.bg-orange-900 {
+  background-color: $orange-900;
+}
+.bg-yellow-50 {
+  background-color: $yellow-50;
+}
+.bg-yellow-100 {
+  background-color: $yellow-100;
+}
+.bg-yellow-200 {
+  background-color: $yellow-200;
+}
+.bg-yellow-300 {
+  background-color: $yellow-300;
+}
+.bg-yellow-400 {
+  background-color: $yellow-400;
+}
+.bg-yellow-500 {
+  background-color: $yellow-500;
+}
+.bg-yellow-600 {
+  background-color: $yellow-600;
+}
+.bg-yellow-700 {
+  background-color: $yellow-700;
+}
+.bg-yellow-800 {
+  background-color: $yellow-800;
+}
+.bg-yellow-900 {
+  background-color: $yellow-900;
+}
+.bg-green-50 {
+  background-color: $green-50;
+}
+.bg-green-100 {
+  background-color: $green-100;
+}
+.bg-green-200 {
+  background-color: $green-200;
+}
+.bg-green-300 {
+  background-color: $green-300;
+}
+.bg-green-400 {
+  background-color: $green-400;
+}
+.bg-green-500 {
+  background-color: $green-500;
+}
+.bg-green-600 {
+  background-color: $green-600;
+}
+.bg-green-700 {
+  background-color: $green-700;
+}
+.bg-green-800 {
+  background-color: $green-800;
+}
+.bg-green-900 {
+  background-color: $green-900;
+}
+.bg-teal-50 {
+  background-color: $teal-50;
+}
+.bg-teal-100 {
+  background-color: $teal-100;
+}
+.bg-teal-200 {
+  background-color: $teal-200;
+}
+.bg-teal-300 {
+  background-color: $teal-300;
+}
+.bg-teal-400 {
+  background-color: $teal-400;
+}
+.bg-teal-500 {
+  background-color: $teal-500;
+}
+.bg-teal-600 {
+  background-color: $teal-600;
+}
+.bg-teal-700 {
+  background-color: $teal-700;
+}
+.bg-teal-800 {
+  background-color: $teal-800;
+}
+.bg-teal-900 {
+  background-color: $teal-900;
+}
+.bg-cyan-50 {
+  background-color: $cyan-50;
+}
+.bg-cyan-100 {
+  background-color: $cyan-100;
+}
+.bg-cyan-200 {
+  background-color: $cyan-200;
+}
+.bg-cyan-300 {
+  background-color: $cyan-300;
+}
+.bg-cyan-400 {
+  background-color: $cyan-400;
+}
+.bg-cyan-500 {
+  background-color: $cyan-500;
+}
+.bg-cyan-600 {
+  background-color: $cyan-600;
+}
+.bg-cyan-700 {
+  background-color: $cyan-700;
+}
+.bg-cyan-800 {
+  background-color: $cyan-800;
+}
+.bg-cyan-900 {
+  background-color: $cyan-900;
+}
+.bg-black {
+  background-color: $black;
+}
+.btn-check:checked + .btn-secondary, .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active, .show > .btn-secondary.dropdown-toggle, .btn-secondary:hover {
+  background-color: $gray-800 !important;
+  border-color: $gray-800 !important;
+}
+.bg-light-100 {
+  background-color: $light-100;
+}
+/* 2.  1. 3. Muse Color CSS */
+.text-muted {
+  color: $gray-500 !important;
+}
+.text-black {
+  color: $black;
+}
+.blue-dark {
+  color: $secondary;
+}
+.link-success {
+  color: $success;
+}
+.btn-soft-primary {
+  color: $blue;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  color: $black-600;
+}
+.text-secondary {
+  color: $secondary !important;
+}
+.text-danger {
+  color: $danger !important;
+}
+.text-success {
+  color: $success !important;
+}
+.text-blue-600 {
+  color: $blue-600;
+}
+.text-warning {
+  color: $warning !important;
+}
+.text-info {
+  color: $info !important;
+}
+.text-light {
+  color: $light !important;
+}
+.text-dark {
+  color: $dark !important;
+}
+/* 2.  1.  4. Muse Border Color CSS */
+hr {
+  border-color: $gray-300;
+}
+.border-black {
+  border-color: $black !important;
+}
+.border-secondary {
+  border-color: $secondary !important;
+}
+.border-success {
+  border-color: $success !important;
+}
+.border-danger {
+  border-color: $danger !important;
+}
+.border-warning {
+  border-color: $warning !important;
+}
+.border-dark {
+  border-color: $dark !important;
+}
+.border-gray-100 {
+  border-color: $gray-100 !important;
+}
+.border-gray-200 {
+  border-color: $gray-200 !important;
+}
+.border-gray-300 {
+  border-color: $gray-300 !important;
+}
+.border-gray-400 {
+  border-color: $gray-400 !important;
+}
+.border-gray-500 {
+  border-color: $gray-500 !important;
+}
+.border-gray-600 {
+  border-color: $gray-600 !important;
+}
+.border-gray-700 {
+  border-color: $gray-700 !important;
+}
+.border-gray-800 {
+  border-color: $gray-800 !important;
+}
+.border-gray-900 {
+  border-color: $gray-900 !important;
+}
+.border-blue-50 {
+  border-color: $blue-50 !important;
+}
+.border-blue-100 {
+  border-color: $blue-100 !important;
+}
+.border-blue-200 {
+  border-color: $blue-200 !important;
+}
+.border-blue-300 {
+  border-color: $blue-300 !important;
+}
+.border-blue-400 {
+  border-color: $blue-400 !important;
+}
+.border-blue-500 {
+  border-color: $blue-500 !important;
+}
+.border-blue-600 {
+  border-color: $blue-600 !important;
+}
+.border-blue-700 {
+  border-color: $blue-700 !important;
+}
+.border-blue-800 {
+  border-color: $blue-800 !important;
+}
+.border-blue-900 {
+  border-color: $blue-900 !important;
+}
+.border-indigo-50 {
+  border-color: $indigo-50 !important;
+}
+.border-indigo-100 {
+  border-color: $indigo-100 !important;
+}
+.border-indigo-200 {
+  border-color: $indigo-200 !important;
+}
+.border-indigo-300 {
+  border-color: $indigo-300 !important;
+}
+.border-indigo-400 {
+  border-color: $indigo-400 !important;
+}
+.border-indigo-500 {
+  border-color: $indigo-500 !important;
+}
+.border-indigo-600 {
+  border-color: $indigo-600 !important;
+}
+.border-indigo-700 {
+  border-color: $indigo-700 !important;
+}
+.border-indigo-800 {
+  border-color: $indigo-800 !important;
+}
+.border-indigo-900 {
+  border-color: $indigo-900 !important;
+}
+.border-purple-50 {
+  border-color: $purple-50 !important;
+}
+.border-purple-100 {
+  border-color: $purple-100 !important;
+}
+.border-purple-200 {
+  border-color: $purple-200 !important;
+}
+.border-purple-300 {
+  border-color: $purple-300 !important;
+}
+.border-purple-400 {
+  border-color: $purple-400 !important;
+}
+.border-purple-500 {
+  border-color: $purple-500 !important;
+}
+.border-purple-600 {
+  border-color: $purple-600 !important;
+}
+.border-purple-700 {
+  border-color: $purple-700 !important;
+}
+.border-purple-800 {
+  border-color: $purple-800 !important;
+}
+.border-purple-900 {
+  border-color: $purple-900 !important;
+}
+.border-pink-50 {
+  border-color: $pink-50 !important;
+}
+.border-pink-100 {
+  border-color: $pink-100 !important;
+}
+.border-pink-200 {
+  border-color: $pink-200 !important;
+}
+.border-pink-300 {
+  border-color: $pink-300 !important;
+}
+.border-pink-400 {
+  border-color: $pink-400 !important;
+}
+.border-pink-500 {
+  border-color: $pink-500 !important;
+}
+.border-pink-600 {
+  border-color: $pink-600 !important;
+}
+.border-pink-700 {
+  border-color: $pink-700 !important;
+}
+.border-pink-800 {
+  border-color: $pink-800 !important;
+}
+.border-pink-900 {
+  border-color: $pink-900 !important;
+}
+.border-red-50 {
+  border-color: $red-50 !important;
+}
+.border-red-100 {
+  border-color: $red-100 !important;
+}
+.border-red-200 {
+  border-color: $red-200 !important;
+}
+.border-red-300 {
+  border-color: $red-300 !important;
+}
+.border-red-400 {
+  border-color: $red-400 !important;
+}
+.border-red-500 {
+  border-color: $red-500 !important;
+}
+.border-red-600 {
+  border-color: $red-600 !important;
+}
+.border-red-700 {
+  border-color: $red-700 !important;
+}
+.border-red-800 {
+  border-color: $red-800 !important;
+}
+.border-red-900 {
+  border-color: $red-900 !important;
+}
+.border-orange-50 {
+  border-color: $orange-50 !important;
+}
+.border-orange-100 {
+  border-color: $orange-100 !important;
+}
+.border-orange-200 {
+  border-color: $orange-200 !important;
+}
+.border-orange-300 {
+  border-color: $orange-300 !important;
+}
+.border-orange-400 {
+  border-color: $orange-400 !important;
+}
+.border-orange-500 {
+  border-color: $orange-500 !important;
+}
+.border-orange-600 {
+  border-color: $orange-600 !important;
+}
+.border-orange-700 {
+  border-color: $orange-700 !important;
+}
+.border-orange-800 {
+  border-color: $orange-800 !important;
+}
+.border-orange-900 {
+  border-color: $orange-900 !important;
+}
+.border-yellow-50 {
+  border-color: $yellow-50 !important;
+}
+.border-yellow-100 {
+  border-color: $yellow-100 !important;
+}
+.border-yellow-200 {
+  border-color: $yellow-200 !important;
+}
+.border-yellow-300 {
+  border-color: $yellow-300 !important;
+}
+.border-yellow-400 {
+  border-color: $yellow-400 !important;
+}
+.border-yellow-500 {
+  border-color: $yellow-500 !important;
+}
+.border-yellow-600 {
+  border-color: $yellow-600 !important;
+}
+.border-yellow-700 {
+  border-color: $yellow-700 !important;
+}
+.border-yellow-800 {
+  border-color: $yellow-800 !important;
+}
+.border-yellow-900 {
+  border-color: $yellow-900 !important;
+}
+.border-green-50 {
+  border-color: $green-50 !important;
+}
+.border-green-100 {
+  border-color: $green-100 !important;
+}
+.border-green-200 {
+  border-color: $green-200 !important;
+}
+.border-green-300 {
+  border-color: $green-300 !important;
+}
+.border-green-400 {
+  border-color: $green-400 !important;
+}
+.border-green-500 {
+  border-color: $green-500 !important;
+}
+.border-green-600 {
+  border-color: $green-600 !important;
+}
+.border-green-700 {
+  border-color: $green-700 !important;
+}
+.border-green-800 {
+  border-color: $green-800 !important;
+}
+.border-green-900 {
+  border-color: $green-900 !important;
+}
+.border-teal-50 {
+  border-color: $teal-50 !important;
+}
+.border-teal-100 {
+  border-color: $teal-100 !important;
+}
+.border-teal-200 {
+  border-color: $teal-200 !important;
+}
+.border-teal-300 {
+  border-color: $teal-300 !important;
+}
+.border-teal-400 {
+  border-color: $teal-400 !important;
+}
+.border-teal-500 {
+  border-color: $teal-500 !important;
+}
+.border-teal-600 {
+  border-color: $teal-600 !important;
+}
+.border-teal-700 {
+  border-color: $teal-700 !important;
+}
+.border-teal-800 {
+  border-color: $teal-800 !important;
+}
+.border-teal-900 {
+  border-color: $teal-900 !important;
+}
+.border-cyan-50 {
+  border-color: $cyan-50 !important;
+}
+.border-cyan-100 {
+  border-color: $cyan-100 !important;
+}
+.border-cyan-200 {
+  border-color: $cyan-200 !important;
+}
+.border-cyan-300 {
+  border-color: $cyan-300 !important;
+}
+.border-cyan-400 {
+  border-color: $cyan-400 !important;
+}
+.border-cyan-500 {
+  border-color: $cyan-500 !important;
+}
+.border-cyan-600 {
+  border-color: $cyan-600 !important;
+}
+.border-cyan-700 {
+  border-color: $cyan-700 !important;
+}
+.border-cyan-800 {
+  border-color: $cyan-800 !important;
+}
+.border-cyan-900 {
+  border-color: $cyan-900 !important;
+}
+/* 2. 2. Muse Font Family CSS  */
+.Montserrat-font {
+  font-family: $montserrat-font;
+}
+/* 2. 3. Muse Font Weights CSS  */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: $font-weight-bold;
+  font-family: $montserrat-font;
+}
+.btn, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: $montserrat-font;
+}
+.font-weight-semibold {
+  font-weight: $font-weight-semibold !important;
+}
+.font-weight-medium {
+  font-weight: $font-weight-medium !important;
+}
+.font-weight-regular {
+  font-weight: $font-weight-normal !important;
+}
+.font-weight-light {
+  font-weight: $font-weight-light !important;
+}
+/* 2. 4. Muse Font Sizes CSS  */
+.display-1 {
+  font-size: 6rem;
+  font-weight: $font-weight-bold;
+}
+.display-2 {
+  font-size: 5.5rem;
+  line-height: 5.75rem;
+  font-weight: $font-weight-bold;
+}
+.display-3 {
+  font-size: 4.5rem;
+  line-height: 5rem;
+  font-weight: $font-weight-bold;
+}
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: $font-weight-bold;
+}
+.display-5 {
+  font-size: 2.875rem;
+  font-weight: $font-weight-bold;
+}
+.display-6 {
+  font-size: 2.25rem;
+  font-weight: $font-weight-bold;
+}
+.fs-24 {
+  font-size: 24px !important;
+}
+.fs-32 {
+  font-size: 32px !important;
+}
+.fs-20 {
+  font-size: 20px;
+}
+h2 {
+  line-height: 3rem;
+}
+h3 {
+  line-height: 2.5rem;
+}
+h4 {
+  line-height: 2.25rem;
+}
+body, big.font-size-16, .font-size-16 {
+  font-size: 16px;
+}
+big, .big {
+  font-size: 20px;
+  line-height: 32px;
+}
+.fs-18 {
+  font-size: 18px !important;
+}
+.fs-16 {
+  font-size: 16px !important;
+}
+small, .small {
+  font-size: 13px;
+}
+caption, .caption {
+  font-size: 14px !important;
+}
+.fs-11 {
+  font-size: 11px !important;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.tiny {
+  font-size: 10px;
+}
+/* 2. 5. Muse After CSS  */
+.component-list:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+/* 2. 6. Muse Shapes CSS  */
+.rounded-3 {
+  @include border-radius(3px !important);
+}
+.rounded-6 {
+  @include border-radius(6px !important);
+}
+.rounded-12 {
+  @include border-radius(12px !important);
+}
+.rounded-24 {
+  @include border-radius(24px !important);
+}
+.rounded-29 {
+  @include border-radius(29px !important);
+}
+.rounded-40 {
+  @include border-radius(40px !important);
+}
+.rounded-top {
+  @include border-radius(4px 4px 0 0 !important);
+}
+.rounded-top-6 {
+  @include border-radius(6px 6px 0 0 !important);
+}
+.rounded-bottom {
+  @include border-radius(0 0 4px 4px !important);
+}
+.rounded-left {
+  @include border-radius(4px 0 0 4px !important);
+}
+.rounded-left-6 {
+  @include border-radius(6px 0 0 6px !important);
+}
+.rounded-right-6 {
+  @include border-radius(0 6px 6px 0 !important);
+}
+.rounded-right {
+  @include border-radius(0 4px 4px 0 !important);
+}
+.rounded-pill-left {
+  @include border-radius(50px 0 0 50px !important);
+}
+.rounded-top-left {
+  border-radius: 13px 0 0 0;
+}
+/* 2. 7. Muse Box Shadow CSS */
+.shadow-none {
+  box-shadow: none;
+}
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1) !important;
+}
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.04) !important
+}
+.hover-shadow-primary:hover, .hover-shadow-primary:focus {
+  box-shadow: 0 4px 11px rgba($primary, 0.35);
+}
+.hover-shadow-success:hover, .hover-shadow-success:focus {
+  box-shadow: 0 4px 11px rgba($success, 0.35);
+}
+.hover-shadow-danger:hover, .hover-shadow-danger:focus {
+  box-shadow: 0 4px 11px rgba($danger, 0.35);
+}
+.hover-shadow-info:hover, .hover-shadow-info:focus {
+  box-shadow: 0 4px 11px rgba($info, 0.35);
+}
+.hover-shadow-secondary:hover, .hover-shadow-secondary:focus {
+  box-shadow: 0 4px 11px rgba($secondary, 0.35);
+}
+.hover-shadow-warning:focus {
+  box-shadow: 0 4px 11px rgba($warning, 0.35);
+}
+.hover-shadow-dark:hover, .hover-shadow-dark:focus {
+  box-shadow: 0 4px 11px rgba($dark, 0.35);
+}
+.hover-shadow-light:hover, .hover-shadow-light:focus {
+  box-shadow: 0 4px 11px rgba($light, 0.35);
+}
+.btn-outline-secondary:hover, .btn-check:checked + .btn-outline-secondary, .btn-check:active + .btn-outline-secondary, .btn-outline-secondary:active, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show {
+  background-color: $secondary;
+  border-color: $secondary;
+}
+.btn-outline-danger:hover, .btn-check:checked + .btn-outline-danger, .btn-check:active + .btn-outline-danger, .btn-outline-danger:active, .btn-outline-danger.active, .btn-outline-danger.dropdown-toggle.show {
+  background-color: $danger;
+  border-color: $danger;
+}
+.btn-outline-success:hover, .btn-check:checked + .btn-outline-success, .btn-check:active + .btn-outline-success, .btn-outline-success:active, .btn-outline-success.active, .btn-outline-success.dropdown-toggle.show {
+  background-color: $success;
+  border-color: $success;
+}
+.btn-outline-warning:hover, .btn-check:checked + .btn-outline-warning, .btn-check:active + .btn-outline-warning, .btn-outline-warning:active, .btn-outline-warning.active, .btn-outline-warning.dropdown-toggle.show {
+  background-color: $warning;
+  border-color: $warning;
+}
+.btn-outline-info:hover, .btn-check:checked + .btn-outline-info, .btn-check:active + .btn-outline-info, .btn-outline-info:active, .btn-outline-info.active, .btn-outline-info.dropdown-toggle.show {
+  background-color: $info;
+  border-color: $info;
+}
+.btn-outline-dark:hover, .btn-check:checked + .btn-outline-dark, .btn-check:active + .btn-outline-dark, .btn-outline-dark:active, .btn-outline-dark.active, .btn-outline-dark.dropdown-toggle.show {
+  background-color: $dark;
+  border-color: $dark;
+}
+.card-hover:hover {
+  box-shadow: 0 4px 11px rgba($dark, 0.15);
+}
+.shadow-20 {
+  box-shadow: 0 0 2px rgba($purple-600, 0.2);
+}
+.shadow-40 {
+  box-shadow: 0 2px 4px rgba($purple-600, 0.2);
+}
+.shadow-60 {
+  box-shadow: 0 4px 7px rgba($purple-600, 0.2);
+}
+.shadow-80 {
+  box-shadow: 0 5px 10px rgba($purple-600, 0.2);
+}
+.shadow-100 {
+  box-shadow: 0 6px 14px rgba($purple-600, 0.2);
+}
+.shadow-top-20 {
+  box-shadow: 0 -0.5px 2px rgba($purple-600, 0.2);
+}
+.shadow-top-40 {
+  box-shadow: 0 -2px 4px rgba($purple-600, 0.2);
+}
+.shadow-top-60 {
+  box-shadow: 0 -4px 8px rgba($purple-600, 0.2);
+}
+.shadow-top-80 {
+  box-shadow: 0 -8px 16px rgba($purple-600, 0.2);
+}
+.shadow-top-100 {
+  box-shadow: 0 -16px 24px rgba($purple-600, 0.2);
+}
+.shadow-dark-20 {
+  box-shadow: 0 1px 2px rgba($black, 0.4);
+}
+.shadow-dark-40 {
+  box-shadow: 0 2px 4px rgba($black, 0.4);
+}
+.shadow-dark-60 {
+  box-shadow: 0 4px 8px rgba($black, 0.4);
+}
+.shadow-dark-80 {
+  box-shadow: 0 8px 16px rgba($black, 0.04);
+}
+.shadow-dark-100 {
+  box-shadow: 0 16px 24px rgba($black, 0.4);
+}
+.shadow-dark-top-20 {
+  box-shadow: 0 -1px 2px rgba($black, 0.4);
+}
+.shadow-dark-top-40 {
+  box-shadow: 0 -2px 4px rgba($black, 0.4);
+}
+.shadow-dark-top-60 {
+  box-shadow: 0 -4px 8px rgba($black, 0.4);
+}
+.shadow-dark-top-80 {
+  box-shadow: 0 -8px 16px rgba($black, 0.4);
+}
+.shadow-dark-top-100 {
+  box-shadow: 0 -16px 24px rgba($black, 0.4);
+}
+.shadow-light-top {
+  box-shadow: 0 -6px 12px rgba($purple-600, 0.2);
+}
+.shadow-light-bottom {
+  box-shadow: 0 6px 12px rgba($purple-600, 0.2);
+}
+.shadow-dark-top {
+  box-shadow: 0 -6px 12px rgba($black, 0.4);
+}
+.shadow-dark-bottom {
+  box-shadow: 0 6px 12px rgba($black, 0.4);
+}
+/* 2. 8. Muse Typography Page CSS */
+.Fabrx-components {
+  + .Fabrx-components {
+    padding-top: 100px;
+  }
+}
+.component-item {
+  + .component-item {
+    padding-top: 50px;
+  }
+}
+.Fabrx-section {
+  padding: 80px 0;
+}
+/* 2.  9. Muse Avaters CSS */
+.avatar {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  .avatar-img {
+    border-radius: 6px;
+    max-width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  &.avatar-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &.avatar-circle {
+    border-radius: 50%;
+    .avatar-img, .avatar-initials {
+      border-radius: 50%;
+    }
+    .avatar-status {
+      bottom: 0px;
+      right: -2px;
+    }
+    .avatar-xxl-status {
+      bottom: 0px;
+      right: 2px;
+    }
+    .avatar-xl-status {
+      bottom: 0;
+      right: 1px;
+    }
+    .avatar-lg-status {
+      bottom: 0px;
+      right: 0px;
+    }
+    .avatar-sm-status {
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &.avatar-xxl {
+    width: 112px;
+    height: 112px;
+  }
+  &.avatar-xl {
+    width: 90px;
+    height: 90px;
+    .avatar-initials {
+      font-size: 32px;
+    }
+  }
+  &.avatar-lg {
+    width: 68px;
+    height: 68px;
+    .avatar-initials {
+      font-size: 20px;
+    }
+  }
+  &.avatar-sm {
+    width: 43px;
+    height: 43px;
+    .avatar-initials {
+      font-size: 13px;
+    }
+  }
+  &.avatar-xs {
+    width: 28px;
+    height: 28px;
+    .avatar-initials {
+      font-size: 12px;
+    }
+  }
+}
+.avatar-primary, .avatar-secondary, .avatar-success, .avatar-danger, .avatar-info, .avatar-dark {
+  color: $white;
+}
+.avatar-warning, .avatar-light {
+  color: $black;
+}
+.avatar-primary {
+  background-color: $primary;
+}
+.avatar-dark-light{
+  background-color: $gray-50
+}
+.avatar-secondary {
+  background-color: $secondary;
+}
+.avatar-offline {
+  background-color: $gray-500;
+}
+.avatar-success {
+  background-color: $green-400;
+}
+.avatar-white {
+  background-color: $white;
+}
+.avatar-danger {
+  background-color: $danger;
+}
+.avatar-warning {
+  background-color: $orange-500;
+}
+.avatar-info {
+  background-color: $info;
+}
+.avatar-light {
+  background-color: $light;
+}
+.avatar-dark {
+  background-color: $dark;
+}
+.avatar-soft-primary {
+  background-color: rgba($primary, 0.1);
+  color: $primary;
+}
+.avatar-soft-secondary {
+  background-color: rgba($secondary, 0.1);
+  color: $secondary;
+}
+.avatar-soft-success {
+  background-color: rgba($success, 0.1);
+  color: $success;
+}
+.avatar-soft-danger {
+  background-color: rgba($danger, 0.1);
+  color: $danger;
+}
+.avatar-soft-warning {
+  background-color: rgba($warning, 0.1);
+  color: $warning;
+}
+.avatar-soft-info {
+  background-color: rgba($info, 0.1);
+  color: $info;
+}
+.avatar-soft-light {
+  background-color: rgba($light, 0.1);
+  color: $light;
+}
+.avatar-soft-dark {
+  background-color: rgba($dark, 0.1);
+  color: $dark;
+}
+.avatar-initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: $font-weight-semibold;
+}
+.avatar-status {
+  position: absolute;
+  bottom: -8.4px;
+  right: -8.4px;
+  display: inline-flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: baseline;
+  border: 2px solid $white;
+  width: 14px;
+  height: 14px;
+  line-height: 1;
+  font-size: 10px;
+  border-radius: 50%;
+}
+.avatar-lg-status {
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+}
+.avatar-xl-status {
+  width: 22px;
+  height: 22px;
+  border-width: 3px;
+}
+.avatar-xxl-status {
+  width: 25px;
+  height: 25px;
+  border-width: 3px;
+}
+.avatar-sm-status {
+  bottom: -4.2px;
+  right: -4.2px;
+  width: 12px;
+  height: 12px;
+  font-size: 8px;
+  border-width: 1px;
+}
+.avatar-xs-status {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+}
+.avatar-group {
+  display: flex;
+  .avatar-xxl {
+    .avatar-img, .avatar-initials {
+      border: 5px solid $white;
+      font-size: 40px;
+      font-weight: $font-weight-bold;
+    }
+  }
+  .avatar-xl {
+    .avatar-img, .avatar-initials {
+      border: 4px solid $white;
+      font-size: 32px;
+      font-weight: $font-weight-bold;
+    }
+  }
+  .avatar-lg {
+    .avatar-img, .avatar-initials {
+      border: 3px solid $white;
+      font-size: 28px;
+      font-weight: $font-weight-bold;
+    }
+  }
+  .avatar-img, .avatar-initials {
+    border: 3px solid $white;
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+  }
+  .avatar-sm {
+    .avatar-img, .avatar-initials {
+      border: 2px solid $white;
+      font-size: 16px;
+      font-weight: $font-weight-bold;
+    }
+  }
+  .avatar-xs {
+    .avatar-img, .avatar-initials {
+      border: 1px solid $white;
+      font-size: 10px;
+      font-weight: $font-weight-semibold;
+    }
+  }
+  .avatar + .avatar {
+    margin-left: -23px;
+  }
+  .avatar-xxl + .avatar-xxl {
+    margin-left: -40px;
+  }
+  .avatar-xl + .avatar-xl {
+    margin-left: -32px;
+  }
+  .avatar-lg + .avatar-lg {
+    margin-left: -20px;
+  }
+  .avatar-sm + .avatar-sm {
+    margin-left: -16px;
+  }
+  .avatar-xs + .avatar-xs {
+    margin-left: -10px;
+  }
+}
+.border-transprant {
+  border-color: transparent !important;
+}
+.avatar-border-xs {
+  border: 1px solid $white;
+}
+.avatar-border-sm {
+  border: 2px solid $white;
+}
+.avatar-border-lg, .avatar-border {
+  border: 3px solid $white;
+}
+.avatar-border-xl {
+  border: 4px solid $white;
+}
+.avatar-border-xxl {
+  border: 5px solid $white;
+}
+.avatar-centered {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* 2.  10. Muse Button CSS */
+.btn {
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+  text-decoration: none;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 17px;
+}
+.btn[data-toggle="collapse"] {
+  justify-content: flex-start;
+  height: auto;
+}
+.btn-lg, .btn-group-lg > .btn {
+  font-size: 16px;
+  height: 48px;
+  line-height: 30px;
+  padding: 8px 23px;
+}
+.btn-group > .btn[type="button"] {
+  padding: 6px 29.5px;
+}
+.btn-group-lg > .btn[type="button"] {
+  padding: 8px 37px;
+}
+.btn-xl, .btn-group-xl > .btn {
+  height: 58px;
+  padding: 6px 40px;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  height: 31px;
+  font-size: 10px;
+  line-height: 23px;
+  padding: 4px 12px;
+}
+.btn-group-sm > .btn[type="button"] {
+  padding: 4px 20px;
+}
+.btn-success {
+  color: $white;
+}
+.btn-link {
+  padding: 0 !important;
+  height: auto !important;
+  line-height: initial !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.btn-link:focus {
+  box-shadow: none !important;
+}
+.btn-icon {
+  font-size: 21px;
+  padding: 8px 11px;
+  &.btn-xl {
+    font-size: 32px;
+    padding: 8px 16px;
+  }
+  &.btn-lg {
+    font-size: 23px;
+    padding: 8px 13px;
+  }
+  &.btn-sm {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+/* 2.  11. Muse Badge CSS */
+.badge {
+  font-weight: $font-weight-bold;
+  padding: 10px 13px;
+  font-size: 11px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  img {
+    vertical-align: top;
+  }
+  &.badge-sm {
+    padding: 5.5px 8px;
+  }
+}
+.badge-absolute {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+.btn {
+  .badge {
+    padding: 4px 5px;
+  }
+}
+.badge-primary {
+  background-color: $primary;
+}
+.badge-secondary {
+  background-color: $secondary;
+}
+.badge-danger {
+  background-color: $danger;
+}
+.badge-success {
+  background-color: $success;
+}
+.badge-cyan {
+  background-color: $cyan-600;
+}
+.badge-warning {
+  background-color: $warning;
+  color: $black-600;
+}
+.badge-info {
+  background-color: $cyan-500;
+}
+.badge-dark {
+  background-color: $black-600;
+}
+.badge-light {
+  background-color: $white;
+  color: $black-600;
+}
+.badge-purple {
+  background-color: $purple-500;
+}
+/* 2.  12.  Muse Cards CSS */
+.card-body-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-white .card-title {
+  color: $white;
+}
+.muse-card {
+  border: none;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba($black, 0.04);
+  background-color: $white;
+  a {
+    color: $dark;
+  }
+}
+.card-dashed {
+  border: none;
+  .card-dashed-body {
+    border: 0.0625rem dashed $secondary;
+    border-radius: 0.3125rem;
+    transition: 0.3s;
+  }
+}
+/* 2.  13.  Muse Alerts CSS */
+.alert {
+  font-weight: $font-weight-semibold;
+  padding: 0.75rem 1.4rem;
+  font-size: 16px;
+  .close {
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    z-index: 1;
+  }
+  &.alert-success {
+    p {
+      color: $white;
+    }
+  }
+}
+.alert-dismissible .close {
+  padding: 0.75rem 1rem;
+}
+.alert-primary {
+  background-color: $primary;
+  border-color: $primary;
+  color: $white;
+  .alert-link {
+    color: $white;
+  }
+}
+.alert-secondary {
+  background-color: $gray-300;
+  border-color: $gray-300;
+  color: $black-600;
+}
+.alert-success {
+  background-color: $success;
+  border-color: $success;
+  color: $white;
+}
+.alert-danger {
+  background-color: $danger;
+  border-color: $danger;
+  color: $white;
+}
+.alert-warning {
+  background-color: $warning;
+  border-color: $warning;
+  color: $black-600;
+}
+.alert-info {
+  background-color: $blue-50;
+  border-color: $blue-50;
+  color: $black-600;
+}
+.alert-dark {
+  background-color: $black-600;
+  border-color: $black-600;
+  color: $white;
+}
+.alert-light {
+  background-color: $white;
+  border-color: $white;
+  color: $dark;
+}
+/* 2.  14.  Muse Checks CSS */
+.form-check-input {
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 0;
+  margin-right: 8px;
+  cursor: pointer;
+  border-color: $gray-400;
+  border-radius: 4px;
+}
+.form-check-sm {
+  .form-check-input {
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+  }
+  label {
+    font-size: 13px;
+  }
+  .form-check-input:checked[type="radio"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.5 -3.5 7 7'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  }
+}
+.form-check-lg {
+  padding-left: 2em;
+  .form-check-input {
+    width: 2em;
+    height: 2em;
+    margin-left: -2em;
+  }
+  .form-check-input:checked[type="radio"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -3 6 6'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  }
+}
+.form-check-input[type="checkbox"] {
+  border-radius: 0.25em;
+}
+.form-check-input:checked[type="radio"] {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.5 -3.5 7 7'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.form-check {
+  margin-bottom: 0.5rem;
+  &.form-check-rounded {
+    .form-check-input {
+      @include border-radius(50%);
+    }
+  }
+  &.rounded-none {
+    .form-check-input {
+      @include border-radius(0);
+    }
+  }
+}
+.form-switch .form-check-input {
+  border-radius: 2em;
+  width: 2.688em;
+  background-color: $gray-300;
+  border-color: $gray-300;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.35 -3.35 6.8 6.8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 1%29'/%3e%3c/svg%3e");
+  &:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.35 -3.35 6.8 6.8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 1%29'/%3e%3c/svg%3e");
+  }
+  &:checked {
+    background-color: $primary;
+    border-color: $primary;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.35 -3.35 6.8 6.8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  }
+}
+.form-switch.form-check-sm .form-check-input {
+  width: 1.813em;
+  &:checked {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.5 -3.5 7 7'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  }
+}
+.form-switch.form-check-lg .form-check-input {
+  width: 3.625em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.35 -3.35 6.8 6.8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 1%29'/%3e%3c/svg%3e");
+  &:checked {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.35 -3.35 6.8 6.8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  }
+}
+.form-control {
+  border-color: $gray-300;
+  font-size: 14px;
+  &:focus {
+    box-shadow: none;
+  }
+  &.form-control-xl {
+    height: 58px;
+    font-size: 16px;
+  }
+  &.form-control-lg {
+    font-size: 16px;
+  }
+  &.form-control-sm {
+    font-size: 12px;
+  }
+}
+textarea.form-control {
+  min-height: 100px;
+  &.form-control-xl {
+    height: auto;
+    min-height: 100px;
+  }
+  &.form-control-lg {
+    min-height: 100px;
+  }
+  &.form-control-sm {
+    min-height: 100px;
+  }
+}
+.form-select {
+  border-color: $gray-300;
+  font-size: 14px;
+  height: 38px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-opacity='0.36' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-size: 16px 12px;
+  background-position: right 0.82rem center;
+  &:disabled {
+    background-color: $gray-400;
+    border-color: $gray-400;
+  }
+  &.form-select-lg {
+    height: 48px;
+    font-size: 16px;
+    background-size: 18px 14px;
+    padding-left: 0.75rem;
+  }
+  &.form-select-xl {
+    height: 58px;
+    font-size: 16px;
+    background-size: 20px 16px;
+  }
+  &.form-select-sm {
+    font-size: 12px;
+    height: 31px;
+    background-size: 16px 12px;
+  }
+}
+.form-file-label {
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+}
+.form-file {
+  height: 38px;
+  .form-file-label {
+    height: 38px;
+    .form-file-text {
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .form-file-button {
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+  &.form-file-xl {
+    height: 58px;
+    .form-file-input {
+      height: 58px;
+    }
+    .form-file-label {
+      height: 58px;
+      .form-file-text {
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+      }
+      .form-file-button {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+  &.form-file-lg {
+    height: 48px;
+    .form-file-label {
+      height: 48px;
+      .form-file-text {
+        font-size: 16px;
+      }
+    }
+  }
+  &.form-file-sm {
+    height: 31px;
+    .form-file-label {
+      height: 31px;
+      font-size: 10px;
+      .form-file-text {
+        font-size: 12px;
+      }
+    }
+  }
+}
+.input-group {
+  .form-control {
+    height: 38px;
+  }
+  .input-group-text {
+    padding: 0.375rem 0.85rem;
+    font-size: 14px;
+    font-weight: $font-weight-semibold;
+  }
+  &.input-group-xl {
+    .input-group-text {
+      padding: 0.5rem 1.125rem;
+    }
+    .form-control {
+      height: 58px;
+      font-size: 16px;
+    }
+  }
+  &.input-group-lg {
+    .form-control {
+      font-size: 16px;
+      height: 48px;
+    }
+    .input-group-text {
+      padding: 0.5rem 1rem;
+    }
+  }
+  &.input-group-sm {
+    .form-control {
+      font-size: 12px;
+      height: 31px;
+    }
+    .input-group-text {
+      padding: 0.25rem 0.95rem;
+    }
+  }
+}
+.form-label {
+  font-size: 14px;
+  &.form-label-xl {
+    font-size: 16px;
+  }
+  &.form-label-lg {
+    font-size: 16px;
+  }
+  &.form-label-sm {
+    font-size: 12px;
+  }
+}
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  background-image: none;
+  padding-right: 15px;
+  border-color: $red-400;
+}
+.was-validated .form-control:valid, .form-control.is-valid {
+  background-image: none;
+  padding-right: 15px;
+  border-color: $teal-500;
+}
+/* 2.  15.  Muse Navbars CSS */
+.navbar-dark {
+  .navbar-nav {
+    .nav-link {
+      color: $white;
+    }
+  }
+}
+/* 2.  16.  Muse Popovers CSS */
+.popover-header {
+  line-height: 18px;
+  font-weight: $font-weight-medium;
+}
+/* 2.  17.  Muse Transition CSS */
+.transition-3d-hover {
+  transition: all 0.2s ease-in-out;
+}
+.transition-3d-hover:hover, .transition-3d-hover:focus {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+/* 2.  18.  Muse Multiple Select CSS */
+.choices__list--multiple {
+  .choices__item {
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+.choices__inner {
+  min-height: 38px;
+  padding: 3px 7px 0px;
+  background-color: $white;
+}
+.choices__input {
+  background-color: $white;
+}
+/* 2.  19.  Muse Overflow CSS */
+.overflow-remove {
+  overflow: inherit !important;
+}
+/* 2.  20.  Muse Progress Bar CSS */
+.progress-circle { 
+  .progressbar-text { 
+    .value {
+      font-weight: 600;
+      font-size: 2.98598rem;
+      color: $black;
+    }
+  }
+}
+/* 2.  21.  Muse Circle CSS */
+.circle {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &.bg-primary {
+    color: $white;
+  }
+}
+.circle-sm {
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+}
+.circle-md {
+  width: 38px;
+  height: 38px;
+  font-size: 16px;
+}
+.circle-lg {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+}
+.circle-xl {
+  width: 58px;
+  height: 58px;
+}
+/* 2.  22.  Muse Tabs CSS */
+/* 2.  22.  1.  Muse Tabs Gray CSS */
+.nav-pills.tabs-has-garybg {
+  .nav-link {
+    padding: 30px 30px 38px;
+    margin-bottom: 25px;
+    background-color: $dark-text;
+    color: $white;
+    border-radius: 12px;
+    &:hover {
+      color: rgba($white, 0.75);
+    }
+  }
+  .active {
+    background-color: $danger;
+    .text-secondary {
+      color: inherit !important;
+    }
+  }
+}
+.nav-tabs {
+  border-color: $gray-200;
+  .nav-link {
+    padding: 0.5rem 1.50rem;
+    color: $gray-700;
+    &.active {
+      border-color: $gray-200;
+    }
+  }
+}
+.nav-verticle {
+  min-width: 185px;
+  .nav-link {
+    color: $gray-700;
+  }
+}
+/* 2.  23.  Muse Swiper Slider CSS */
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 6px;
+}
+.swiper-pagination {
+  position: static;
+  padding-top: 28px;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: $gray-800;
+  cursor: pointer;
+  opacity: 1;
+  transition: $transition4;
+}
+.swiper-pagination-bullet-active {
+  background: $primary;
+}
+/* 2.  24.  Muse Tabler Icons CSS */
+.tabler-icons {
+  li {
+    padding: 18px;
+  }
+}
+/* 2.  25.  Muse Modal Popup CSS */
+.modal {
+  .btn-light {
+    background-color: $gray-100 !important;
+    border-color: $gray-100 !important;
+  }
+  .modal-header {
+    .btn-icon {
+      height: auto;
+    }
+  }
+  .modal-content {
+    @include border-radius(4px);
+    border-color: $gray-200;
+  }
+  .modal-footer {
+    border-color: $gray-200;
+  }
+}
+/* 2.  26.  Muse Table CSS */
+.table-responsive {
+  position: relative;
+  z-index: 0;
+}
+/* 2.  27.  Muse List Group CSS */
+.list-group {
+  .list-group-item {
+    border-color: $gray-300;
+    &.active {
+      border-color: $primary;
+    }
+  }
+  .list-group-icon {
+    margin-right: 8px;
+  }
+}
+.simplebar-track {
+  &.simplebar-horizontal {
+    display: none !important;
+  }
+}
+/* 2.  28.  Muse Btn Close CSS */
+.btn-close {
+  background: transparent url("../../assets/svg/icons/close1.svg");
+  background-repeat: no-repeat;
+}
+/* 3. Muse Links Page CSS */
+.link-underline {
+  color: $gray-600;
+  border-bottom: 0.0625rem dashed $gray-600;
+}
+.link-underline-light {
+  color: rgba($white, 0.7);
+  border-bottom: 0.0625rem dashed rgba($white, 0.7);
+}
+.link-underline-light:hover {
+  color: rgba($white, 1);
+  border-bottom: 0.0625rem dashed rgba($white, 1);
+}
+.link:hover .link-icon {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.link-icon {
+	position: relative;
+	line-height: 1;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+	vertical-align: middle;
+	text-align: center;
+	width: 1.375rem;
+	height: 1.375rem;
+	font-size: 1rem;
+	color: $blue-600;
+	background-color: rgba($blue-400, 0.1);
+	border-radius: 50%;
+	transition: 0.3s;
+}
+.link-collapse[aria-expanded="false"] .link-collapse-active, .link-collapse[aria-expanded="true"] .link-collapse-default {
+  display: none;
+}
+/* 4. Muse Dropzone Page CSS */
+.dropzone {
+	position: relative;
+	background-color: $white;
+	border: 0;
+	background-color: transparent;
+	border-radius: .375rem;
+	.dz-preview {
+		min-height: auto;
+	}
+	.dz-remove {
+		position: absolute;
+		right: .5rem;
+		top: .5rem;
+		color: $white;
+		z-index: 1000;
+		cursor: pointer;
+		opacity: 0;
+		width: 2rem;
+		height: 2rem;
+		line-height: 2rem;
+		* {
+			cursor: pointer;
+		}
+	}
+	.dz-message {
+		position: relative;
+		padding: 5rem 2rem;
+		margin: 0;
+		border: 2px dashed #d8e2ef;
+		border-radius: .375rem;
+	}
+	.dz-preview-single {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0;
+		&:hover {
+			z-index: auto;
+		}
+		.dz-preview-cover {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			border: 0 !important;
+			overflow: hidden;
+		}
+		.dz-preview-img {
+			width: 100%;
+			height: 100%;
+			-o-object-fit: cover;
+			object-fit: cover;
+			border-radius: .375rem;
+		}
+	}
+	.dz-progress {
+		background: #edf2f9 !important;
+		.dz-upload {
+			background: #2c7be5 !important;
+		}
+	}
+}
+.dropzone.dropzone-has-default {
+	.dz-message {
+		border-color: transparent;
+		-webkit-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			background-color: rgba(0,0,0,0.5);
+		}
+	}
+}
+.dropzone.dropzone-single.dz-file-processing {
+	.dz-message {
+		display: none;
+	}
+}
+.dropzone.dropzone-single.dz-file-processing.dz-file-complete {
+	.dz-message {
+		display: block;
+	}
+	.dz-default-image {
+		opacity: 0;
+	}
+}
+.dropzone.dropzone-single {
+	.dz-processing {
+		.dz-message-text {
+			opacity: 0 !important;
+		}
+		.dz-progress {
+			opacity: 1;
+		}
+	}
+	.dz-progress {
+		opacity: 1;
+		-webkit-transition: opacity 0.4s ease-in;
+		-o-transition: opacity 0.4s ease-in;
+		transition: opacity 0.4s ease-in;
+		-webkit-animation: none !important;
+		animation: none !important;
+		width: 9.375rem !important;
+		height: .5rem !important;
+		margin: 0 !important;
+		-webkit-transform: translateX(-50%) !important;
+		-ms-transform: translateX(-50%) !important;
+		transform: translateX(-50%) !important;
+		top: auto !important;
+		bottom: 1.5rem;
+	}
+	.dz-complete {
+		.dz-progress {
+			opacity: 0;
+		}
+	}
+}
+.dropzone.dropzone-single.dz-max-files-reached {
+	.dz-message {
+		background-color: rgba(0,0,0,0.5);
+		color: $white;
+		opacity: 0;
+		-webkit-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		border-color: transparent;
+	}
+	.dz-remove {
+		opacity: 1;
+	}
+	&:hover {
+		.dz-message {
+			opacity: 1;
+		}
+	}
+	&:focus {
+		.dz-message {
+			opacity: 1;
+		}
+	}
+}
+.dropzone.dropzone-multiple {
+	border: 0;
+	background: transparent;
+	.dz-message {
+		padding: 4rem 2rem;
+		border: 2px dashed #d8e2ef;
+		border-radius: .375rem;
+	}
+	.btn {
+		* {
+			cursor: pointer;
+		}
+	}
+	.media {
+		&:first-child {
+			margin-top: 1.8rem;
+		}
+	}
+	.dz-image {
+		border-radius: .25rem;
+		height: 2.5rem;
+		width: 2.5rem;
+		-o-object-fit: cover;
+		object-fit: cover;
+		margin-right: 1rem;
+		border: 1px solid #d8e2ef;
+	}
+	.dz-progress {
+		opacity: 0;
+		position: relative !important;
+		-webkit-transition: opacity 0.4s ease-in;
+		-o-transition: opacity 0.4s ease-in;
+		transition: opacity 0.4s ease-in;
+		-webkit-animation: none !important;
+		animation: none !important;
+		width: 6.25rem !important;
+		height: .5rem !important;
+		margin-top: 0;
+		margin-left: 1rem !important;
+		-webkit-transform: none !important;
+		-ms-transform: none !important;
+		transform: none !important;
+		top: auto !important;
+		left: auto !important;
+	}
+	.dz-complete {
+		.dz-progress {
+			-webkit-transition-delay: 1s;
+			-o-transition-delay: 1s;
+			transition-delay: 1s;
+			opacity: 1;
+		}
+	}
+}
+.dropzone.dz-drag-hover {
+	.dz-message {
+		border-color: #2c7be5;
+	}
+}
+.dropzone-area {
+	border: 2px dashed #d8e2ef;
+	border-radius: .25rem;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.flex-1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.dz-preview {
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .btn-link {
+    color: $gray-600;
+  }
+}
+
+@media (max-width: 767px) {
+  .avatar {
+    &.avatar-xxl {
+      height: 90px;
+      width: 90px;
+    }
+    &.avatar-xl {
+      height: 78px;
+      width: 78px;
+    }
+  }
+}
+
+
+@import 'templates';
+@import 'dashboard';

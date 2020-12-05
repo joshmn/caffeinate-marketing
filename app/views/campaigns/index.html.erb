@@ -1,0 +1,7 @@
+<h5>Available Campaigns</h5>
+<p>We're giving you the opportunity to explicitly opt-in to these demo campaigns. Don't worry, you can unsubscribe at any time, and you can delete your account and all its data if you want!</p>
+<ul>
+  <% @campaigns.each do |campaign| %>
+  <li><%= link_to(campaign.name, campaign_path(slug: campaign.slug)) %></li>
+  <% end %>
+</ul>

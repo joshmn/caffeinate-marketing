@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="246px" height="219px" viewBox="0 0 246 219" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 50</title>
+    <g id="Finals" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="agency" transform="translate(-837.000000, -1001.000000)">
+            <g id="Group-34" transform="translate(403.000000, 746.000000)">
+                <g id="Group-9-Copy-4" transform="translate(382.000000, 121.000000)">
+                    <g id="Group-50" transform="translate(52.000000, 134.000000)">
+                        <path d="M179.728144,25.139104 C201.226555,23.9288037 225.904309,30.585455 226.96409,46.3193579 C228.023871,62.0532608 205.314281,86.8644153 200.166775,108.498532 C195.019268,130.283936 207.131049,148.892302 204.103103,161.146592 C201.075158,173.400881 182.756089,179.301095 166.556583,182.326845 C150.357076,185.352596 136.27713,185.806459 120.380418,188.529634 C104.635103,191.404097 87.2244178,196.699161 72.841678,192.614397 C58.307541,188.529634 46.8013491,175.065044 40.2912669,159.936291 C33.7811847,144.807539 32.2672121,128.16591 27.2711024,108.649819 C22.2749928,89.1337283 14.0995407,66.7431741 22.8805819,55.5478971 C31.5102258,44.35262 57.3991574,44.5039075 76.7780068,44.5039075 C96.1568562,44.5039075 109.177021,44.6551951 124.619541,40.1165692 C140.213459,35.5779434 158.38113,26.3494042 179.728144,25.139104 Z" id="Path" fill="#DAF6B8" fill-rule="nonzero" transform="translate(123.000000, 109.552846) rotate(-15.000000) translate(-123.000000, -109.552846) "></path>
+                        <g id="web-ui-1" transform="translate(20.000000, 37.000000)">
+                            <rect id="Rectangle" stroke="#000000" fill="#1E1E1E" x="0" y="0" width="200" height="132"></rect>
+                            <line x1="0" y1="7" x2="200" y2="7" id="Path" stroke="#000000"></line>
+                            <rect id="Rectangle" stroke="#000000" x="15" y="19" width="60" height="60"></rect>
+                            <line x1="86" y1="25" x2="178" y2="25" id="Path" stroke="#FFFFFF"></line>
+                            <line x1="86" y1="33" x2="178" y2="33" id="Path" stroke="#FFFFFF"></line>
+                            <line x1="86" y1="42" x2="178" y2="42" id="Path" stroke="#FFFFFF"></line>
+                            <line x1="86" y1="51" x2="178" y2="51" id="Path" stroke="#FFFFFF"></line>
+                            <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="44 35 28 63 60 63"></polygon>
+                            <circle id="Oval" fill="#AB8DE5" fill-rule="nonzero" cx="4.5" cy="3.5" r="1.5"></circle>
+                            <circle id="Oval" fill="#73E5E2" fill-rule="nonzero" cx="9.5" cy="3.5" r="1.5"></circle>
+                            <circle id="Oval" fill="#50B89D" fill-rule="nonzero" cx="14.5" cy="3.5" r="1.5"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

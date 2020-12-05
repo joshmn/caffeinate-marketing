@@ -1,0 +1,17 @@
+/*
+ Highstock JS v8.2.2 (2020-10-22)
+
+ Indicator series type for Highstock
+
+ (c) 2010-2019 Wojciech Chmiel
+
+ License: www.highcharts.com/license
+*/
+(function(a){"object"===typeof module&&module.exports?(a["default"]=a,module.exports=a):"function"===typeof define&&define.amd?define("highcharts/indicators/aroon-oscillator",["highcharts","highcharts/modules/stock"],function(f){a(f);a.Highcharts=f;return a}):a("undefined"!==typeof Highcharts?Highcharts:void 0)})(function(a){function f(a,c,g,e){a.hasOwnProperty(c)||(a[c]=e.apply(null,g))}a=a?a._modules:{};f(a,"Mixins/MultipleLines.js",[a["Core/Globals.js"],a["Core/Utilities.js"]],function(a,c){var g=
+c.defined,e=c.error,f=c.merge,d=a.seriesTypes.sma;return{pointArrayMap:["top","bottom"],pointValKey:"top",linesApiNames:["bottomLine"],getTranslatedLinesNames:function(b){var a=[];(this.pointArrayMap||[]).forEach(function(d){d!==b&&a.push("plot"+d.charAt(0).toUpperCase()+d.slice(1))});return a},toYData:function(b){var a=[];(this.pointArrayMap||[]).forEach(function(d){a.push(b[d])});return a},translate:function(){var b=this,a=b.pointArrayMap,e=[],g;e=b.getTranslatedLinesNames();d.prototype.translate.apply(b,
+arguments);b.points.forEach(function(d){a.forEach(function(a,c){g=d[a];null!==g&&(d[e[c]]=b.yAxis.toPixels(g,!0))})})},drawGraph:function(){var b=this,a=b.linesApiNames,c=b.points,n=c.length,k=b.options,m=b.graph,p={options:{gapSize:k.gapSize}},l=[],h;b.getTranslatedLinesNames(b.pointValKey).forEach(function(b,a){for(l[a]=[];n--;)h=c[n],l[a].push({x:h.x,plotX:h.plotX,plotY:h[b],isNull:!g(h[b])});n=c.length});a.forEach(function(a,c){l[c]?(b.points=l[c],k[a]?b.options=f(k[a].styles,p):e('Error: "There is no '+
+a+' in DOCS options declared. Check if linesApiNames are consistent with your DOCS line names." at mixin/multiple-line.js:34'),b.graph=b["graph"+a],d.prototype.drawGraph.call(b),b["graph"+a]=b.graph):e('Error: "'+a+" doesn't have equivalent in pointArrayMap. To many elements in linesApiNames relative to pointArrayMap.\"")});b.points=c;b.options=k;b.graph=m;d.prototype.drawGraph.call(b)}}});f(a,"Mixins/IndicatorRequired.js",[a["Core/Utilities.js"]],function(a){var c=a.error;return{isParentLoaded:function(a,
+e,f,d,b){if(a)return d?d(a):!0;c(b||this.generateMessage(f,e));return!1},generateMessage:function(a,c){return'Error: "'+a+'" indicator type requires "'+c+'" indicator loaded before. Please read docs: https://api.highcharts.com/highstock/plotOptions.'+a}}});f(a,"Stock/Indicators/AroonOscillatorIndicator.js",[a["Core/Series/Series.js"],a["Mixins/MultipleLines.js"],a["Mixins/IndicatorRequired.js"],a["Core/Utilities.js"]],function(a,c,f,e){e=e.merge;var g=a.seriesTypes.aroon;a.seriesType("aroonoscillator",
+"aroon",{params:{period:25},tooltip:{pointFormat:'<span style="color:{point.color}">\u25cf</span><b> {series.name}</b>: {point.y}'}},e(c,{nameBase:"Aroon Oscillator",pointArrayMap:["y"],pointValKey:"y",linesApiNames:[],init:function(){var a=arguments,b=this;f.isParentLoaded(g,"aroon",b.type,function(d){d.prototype.init.apply(b,a)})},getValues:function(a,b){var c=[],d=[],f=[];a=g.prototype.getValues.call(this,a,b);for(b=0;b<a.yData.length;b++){var e=a.yData[b][0];var m=a.yData[b][1];e-=m;c.push([a.xData[b],
+e]);d.push(a.xData[b]);f.push(e)}return{values:c,xData:d,yData:f}}}));""});f(a,"masters/indicators/aroon-oscillator.src.js",[],function(){})});
+//# sourceMappingURL=aroon-oscillator.js.map

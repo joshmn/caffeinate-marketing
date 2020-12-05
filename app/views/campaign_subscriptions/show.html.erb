@@ -1,0 +1,9 @@
+<h2><%= @campaign_subscription.caffeinate_campaign.name %></h2>
+<p><%= link_to "Back to details", campaign_path(slug: @campaign_subscription.caffeinate_campaign.slug) %></p>
+<h5>Mailings</h5>
+<ul>
+  <% @campaign_subscription.caffeinate_mailings.each do |mailing| %>
+  <li><%= mailing.mailer_class %>#<%= mailing.mailer_action %> <%= mailing_status(mailing) %></li>
+  <% end %>
+</ul>
+<hr />

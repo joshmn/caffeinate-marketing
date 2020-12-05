@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="50px" viewBox="0 0 46 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>LS/Component/Placeholder</title>
+    <g id="Finals" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="saas-style2" transform="translate(-1241.000000, -1854.000000)" fill="#FF6F6F">
+            <g id="Group-40" transform="translate(0.000000, 1698.000000)">
+                <g id="Group-55" transform="translate(1013.000000, 119.806391)">
+                    <g id="Group-50" transform="translate(183.000000, 1.193609)">
+                        <g id="Group-42" transform="translate(0.000000, 36.806391)">
+                            <g id="LS/Component/Placeholder" transform="translate(45.000000, 0.000000)">
+                                <g id="Icon/Search" transform="translate(0.250000, 0.656015)">
+                                    <path d="M45,11.4609375 C45,5.1328125 39.796875,0 33.328125,0 C28.40625,0 24.1875,3.0234375 22.5,7.2421875 C20.8125,3.0234375 16.59375,0 11.671875,0 C5.203125,0 0,5.1328125 0,11.4609375 C0,11.53125 0,12.09375 0,12.3046875 C0,24.1171875 23.34375,39.375 23.34375,39.375 C23.34375,39.375 45,24.1171875 45,12.3046875 C45,12.09375 45,11.6015625 45,11.4609375 Z" id="Icon-Color"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
