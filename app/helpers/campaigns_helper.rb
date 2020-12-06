@@ -4,10 +4,6 @@ module CampaignsHelper
   end
 
   def dripper_source(campaign)
-    if Rails.root.to_s.include?("app") # we're on heroku
-      File.read(Rails.root.join("drippers", dripper_filename(campaign)))
-    else
-      File.read(Rails.root.join("app", "drippers", dripper_filename(campaign)))
-    end
+    File.read(Rails.root.join("app", "drippers", dripper_filename(campaign)))
   end
 end
