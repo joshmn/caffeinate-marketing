@@ -22,7 +22,7 @@ class ::CampaignSubscriptionsController < DemoController
 
   def destroy
     @campaign_subscription.unsubscribe!
-    redirect_to campaign_subscriptions_path, notice: "Unsubscribed from #{@subscription.caffeinate_campaign.name}"
+    redirect_to campaign_subscriptions_path, notice: "Unsubscribed from #{@campaign_subscription.caffeinate_campaign.name}"
   end
 
   private
