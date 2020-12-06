@@ -1,7 +1,4 @@
 :schedule:
   welcome_dripper:
-    cron: '0 * * * *'   # Run every hour
-    class: WelcomeDripperWorker
-  welcome_dripper_subscriber:
-    cron: '0 * * * *'   # Run every hour
-    class: WelcomeDripperSubscriberWorker
+    cron: '*/5 * * * *'   # Run every hour
+    class: DripperWorker
