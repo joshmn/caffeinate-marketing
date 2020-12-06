@@ -28,7 +28,7 @@
           <div class="modal-body">
             <p class="text-dark">File location: <code>app/mailers/<%= drip.options[:mailer_class].underscore %>.rb</code></p>
             <pre class="language-ruby">
-                      <code><%= drip.options[:mailer_class].constantize.instance_method(:this_is_caffeinate).source %>
+                      <code><%= drip.options[:mailer_class].constantize.instance_method(drip.action).source %>
                       </code>
                     </pre>
           </div>
