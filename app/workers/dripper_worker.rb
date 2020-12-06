@@ -1,3 +1,5 @@
+require 'sidekiq-scheduler'
+
 class DripperWorker
   include Sidekiq::Worker
 
