@@ -1,5 +1,6 @@
 class OnboardingMailer < CaffeinateMailer
   layout 'caffeinate_mailer'
+  default reply_to: "Josh Brody <caffeinate@josh.mn>"
   def this_is_caffeinate(mailing)
     @mailing = mailing
     @user = @mailing.caffeinate_campaign_subscription.subscriber
