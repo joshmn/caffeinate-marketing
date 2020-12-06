@@ -2,9 +2,9 @@ require 'sidekiq/web'
 require 'sidekiq-scheduler/web'
 
 Rails.application.routes.draw do
-  #Sidekiq::Web.use Rack::Auth::Basic do |username, password|
-    #  username == ENV['ADMIN_USERNAME'] && password == ENV['ADMIN_PASSWORD']sd
-  #end
+  Sidekiq::Web.use Rack::Auth::Basic do |username, password|
+    username == ENV['ADMIN_USERNAME'] && password == ENV['ADMIN_PASSWORD']
+  end
   mount Sidekiq::Web => '/sidekiq'
 
   mount ::Caffeinate::Engine => '/caffeinate'
