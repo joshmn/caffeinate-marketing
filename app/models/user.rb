@@ -7,6 +7,6 @@ class User < ApplicationRecord
   caffeinate_subscriber
 
   def after_confirmation
-    ::Caffeinate::Campaign[:onboarding].subscribe(self)
+    OnboardingDripper.subscribe(self)
   end
 end

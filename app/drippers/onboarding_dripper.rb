@@ -9,20 +9,16 @@ class OnboardingDripper < ApplicationDripper
     ahoy.track("$subscribe", { campaign_subscription_id: campaign_subscription.id })
   end
 
-  before_process do |dripper|
-    ahoy.track("$before_process", { dripper: dripper.class.name })
+  before_perform do |dripper|
+    ahoy.track("before_perform", { dripper: dripper.class.name })
   end
 
-  on_process do |dripper, mailings|
-    ahoy.track("$on_process", { dripper: dripper.class.name, mailings: mailings.size })
+  on_perform do |dripper, mailings|
+    ahoy.track("$on_perform", { dripper: dripper.class.name, mailings: mailings.size })
   end
 
-  after_process do |dripper|
-    ahoy.track("$after_process", { dripper: dripper.class.name })
-  end
-
-  before_drip do |campaign_subscription, mailing, drip|
-    ahoy.track("$before_drip", { campaign_subscription_id: campaign_subscription.id, mailing: mailing.id, drip: drip.action })
+  after_perform do |dripper|
+    ahoy.track("$after_perform", { dripper: dripper.class.name })
   end
 
   before_send do |mailing, mail|
