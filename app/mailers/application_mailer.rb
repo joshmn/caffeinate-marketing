@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'demo@caffeinate.email'
+  default from: 'Caffeinate Demo <demo@caffeinate.email>'
   layout 'mailer'
 end
