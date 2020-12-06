@@ -24,14 +24,14 @@
 
   <section class="muse-section">
     <div class="row pt-0 pt-md-5 align-items-center">
-      <div class="col-lg-6 pb-5">
-        <div class="pr-2 pr-md-5 mr-0 mr-md-5">
+      <div class="col-lg-6 order-1 order-md-0" >
+        <div class="pr-2 pr-md-5 mr-0 mr-md-5 pt-md-0 pt-5">
           <h6>Own your data</h6>
           <h2 class="h1 mb-3">Built right into your existing app.</h2>
           <p class="lh-lg big">Caffeinate is a Rails Engine. It works with ActionMailer, your favorite background processor like Sidekiq, DelayedJob, or Que, and your existing gems. Hate it? <code>rm -rf app/drippers</code> and you're done. </p>
         </div>
       </div>
-      <div class="col-lg-6 pt-5">
+      <div class="col-lg-6 order-0 order-md-1">
         <%= image_tag "Ruby_On_Rails_Logo.svg" %>
       </div>
     </div>
@@ -42,7 +42,7 @@
     <h6 class="text-center">Get the party started</h6>
     <h2 class="h1 mb-4 pb-4 text-center">Integrate Caffeinate in 5 easy steps</h2>
     <div class="row my-4 my-lg-5">
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-6 order-1 order-md-0" data-aos="fade-up" data-aos-delay="100">
         <pre class="language-bash">
           <code>
             $ bundle add caffeinate # or add it manually
@@ -70,17 +70,18 @@
           </code>
         </pre>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 order-0 order-md-1">
         <div class="py-3 py-xl-5 px-lg-5">
           <h2 class="mb-3 mt-3 mt-lg-0">Add the gem</h2>
-          <p class="mb-4 lh-lg">You've done this before. Add the `caffeinate` gem to your Gemfile, `bundle`, and then install it. This will copy over some some migrations, an initializer,
-            and create a new directory in your `app` folder.
+          <p class="mb-4 lh-lg">You've done this before. Add the <code>caffeinate</code> gem to your <code>Gemfile</code> and do a <code>bundle</code>.
+            This will copy over some some migrations, an initializer, and create a new directory in your <code>app</code> folder.
           </p>
+          <p>From there, run <code>rails db:migrate</code> to get your schema updated. Restart your Rails server, and behold, everything looks the same!</p>
         </div>
       </div>
     </div>
     <div class="row py-4 py-lg-5">
-      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-6 order-lg-2 order-1 order-md-1" data-aos="fade-up" data-aos-delay="100">
         <pre class="language-bash">
           <code>
             $ rails c
@@ -98,15 +99,15 @@
           </code>
         </pre>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 order-0">
         <div class="py-3 py-xl-5 px-lg-5">
           <h2 class="mb-3 mt-3 mt-lg-0">Create a Campaign</h2>
-          <p class="mb-4 lh-lg">Each email sequence or periodical email is related to a Campaign. It's not exposed publicly, but instead to your developers. Keep the `slug` attribute in mind: we'll be referencing this later.</p>
+          <p class="mb-4 lh-lg">Each email sequence or periodical email is related to a Campaign. It's not exposed publicly, but instead to your developers. Keep the <code>slug</code> attribute in mind: we'll be referencing this later.</p>
         </div>
       </div>
     </div>
     <div class="row py-4 py-lg-5">
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-6 order-1 order-md-0" data-aos="fade-up" data-aos-delay="100">
         <pre class="language-bash">
           <code>
             vi app/drippers/onboarding_dripper.rb
@@ -121,7 +122,7 @@
               # If the user completed onboarding, they don't need our help anymore.
               # Save on SES costs for off-sites!
               before_drip do |drip, mailing|
-                if mailing.subscription.user.completed_onboarding?
+                if mailing.subscription.user.not_a_fan?
                   mailing.subscription.unsubscribe!
                   return false
                 end
@@ -136,7 +137,7 @@
           </code>
         </pre>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 order-0 order-md-1">
         <div class="py-3 py-xl-5 px-lg-5">
           <h2 class="mb-3 mt-3 mt-lg-0">Create a Dripper</h2>
           <p class="mb-4 lh-lg">The Dripper handles the logic for your email sequence or periodical. It references the relevant ActionMailer class and actions, and when you want them to be sent. Oh, and because this is Rails, callbacks!</p>
@@ -148,19 +149,17 @@
       </div>
     </div>
     <div class="row py-4 py-lg-5">
-      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-6 order-1 order-md-1" data-aos="fade-up" data-aos-delay="100">
         <pre class="language-ruby">
           <code>
             class User < ApplicationRecord
               after_create_commit do
-                campaign = ::Caffeinate::Campaign.find_by(slug: "onboarding")
-                campaign.subscribe(self) # &lt;Caffeinate::CampaignSubscription id: 1, subscriber_type: "User", subscriber_id: 1>
+                OnboardingDripper.subscribe(self) # &lt;Caffeinate::CampaignSubscription id: 1, subscriber_type: "User", subscriber_id: 1>
               end
 
               after_update_commit do
                 if completed_onboarding? && completed_onboarding_changed?
-                  campaign = ::Caffeinate::Campaign.find_by(slug: "onboarding")
-                  campaign.subscriptions.find_by(subscriber: self).end!("Completed onboarding")
+                  OnboardingDripper.unsubscribe(self, reason: "Completed onboarding")
                 end
               end
             end
@@ -168,16 +167,16 @@
         </pre>
       </div>
       <div class="col-lg-6">
-        <div class="py-3 py-lg-5 px-lg-5">
+        <div class="py-3 py-lg-5 px-lg-5 order-0">
           <h2 class="mb-3 mt-3 mt-lg-0">Subscribe to the Campaign</h2>
-          <p class="mb-4 lh-lg">Now that we have our Campaign and a Dripper, we need to subscribe something to the Campaign. A subscriber can be any ActiveRecord object. We'll assume user, though.</p>
+          <p class="mb-4 lh-lg">Now that we have our Campaign and a Dripper, we need to subscribe something to the Campaign. A subscriber can be any ActiveRecord object. We'll assume a User object, though.</p>
           <p class="mb-4 lh-lg">Don't worry, there are more options for more advanced setups.</p>
         </div>
       </div>
     </div>
 
     <div class="row py-4 py-lg-5">
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-6 order-1 order-md-0" data-aos="fade-up" data-aos-delay="100">
         <pre class="language-bash">
           <code>
             vi app/workers/onboarding_dripper_worker.rb
@@ -198,7 +197,7 @@
       <div class="col-lg-6">
         <div class="py-3 py-xl-5 px-lg-5">
           <h2 class="mb-3 mt-3 mt-lg-0">Deliver the messages</h2>
-          <p class="mb-4 lh-lg">Last but not least, we need to have the messages delivered. Running the `#perform!` method on the Dripper class will check for any emails that need to be sent according to the times we gave them and send them if it's time. </p>
+          <p class="mb-4 lh-lg">Last but not least, we need to have the messages delivered. Running the <code>Dripper#perform!</code> method on the Dripper class will check for any emails that need to be sent according to the times we gave them and send them if it's time. </p>
           <p class="mb-4 lh-lg">Caffeinate is background-processor-agnostic. All you need to do is make sure you run <code>#perform!</code> on the Dripper class at a given interval and Caffeinate will take care of the rest.</p>
         </div>
       </div>
