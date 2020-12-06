@@ -117,4 +117,5 @@ Rails.application.configure do
       user_name:      'apikey',
       password:       ENV['SENDGRID_API_KEY']
   }
+  config.action_mailer.default_url_options = { host: 'caffeinate.email' }
 end
