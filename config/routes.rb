@@ -2,6 +2,8 @@ require 'sidekiq/web'
 require 'sidekiq-scheduler/web'
 
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   Sidekiq::Web.use Rack::Auth::Basic do |username, password|
     username == ENV['ADMIN_USERNAME'] && password == ENV['ADMIN_PASSWORD']
   end

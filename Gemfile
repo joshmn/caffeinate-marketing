@@ -27,3 +27,4 @@ end
 gem "devise", "~> 4.7"
 
 gem "ahoy_matey", "~> 3.0"
+gem 'activeadmin'
