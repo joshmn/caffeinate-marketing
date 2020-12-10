@@ -1,3 +1,3 @@
-ActiveAdmin.register Visit do
+ActiveAdmin.register Ahoy::Visit do
 
 end
