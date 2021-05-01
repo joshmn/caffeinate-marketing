@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
-  get '/user', to: redirect { |path_params, req| User.exists?(email: req.params[:user][:email]) ? "/users/sign_in?user%5Bemail%5D=#{req.params[:user][:email]}" : "/users/sign_up?user%5Bemail%5D=#{req.params[:user][:email]}" }
+  get '/user', to: redirect { |path_params, req| User.exists?(email: req.params.dig(:user, :email).downcase) ? "/users/sign_in?user%5Bemail%5D=#{req.params.dig(:user, :email).downcase}" : "/users/sign_up?user%5Bemail%5D=#{req.params.dig(:user, :email).downcase}" }
   mount Ahoy::Engine => "/yoha"
   resources :campaigns, only: [:index, :show], param: :slug
   resources :campaign_subscriptions, only: [:index, :show, :create, :update, :destroy], param: :token
