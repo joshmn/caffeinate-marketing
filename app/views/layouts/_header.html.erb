@@ -26,7 +26,11 @@
             <a class="nav-link" href="https://github.com/joshmn/caffeinate">Github</a>
           </li>
         </ul>
-        <a href="<%= campaigns_path %>" class="btn btn-lg btn-outline-primary my-3 my-lg-0 mr-2">Try it live</a>
+        <% if user_signed_in? %>
+          <a href="<%= campaigns_path %>" class="btn btn-lg btn-outline-primary my-3 my-lg-0 mr-2">My Account</a>
+        <% else %>
+          <a href="<%= new_user_registration_path %>" class="btn btn-lg btn-outline-primary my-3 my-lg-0 mr-2">Try it</a>
+        <% end %>
       </div>
     </nav>
   </div>
