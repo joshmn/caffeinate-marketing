@@ -4,7 +4,7 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "p-2" }) do |f| %>
     <div class="mb-4">
       <%= f.label :email, class: "form-label form-label-lg" %>
-      <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control form-control-lg' %>
+      <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control form-control-lg', value: params.dig(:user, :email) %>
       <p class="small">We will be verifying this, so make sure it's correct.</p>
     </div>
 

@@ -11,11 +11,12 @@ Rails.application.routes.draw do
 
   mount ::Caffeinate::Engine => '/caffeinate'
   devise_for :users, controllers: {
-      registrations: 'users/registrations',
-      confirmations: 'users/confirmations',
-      sessions: 'users/sessions'
+    registrations: 'users/registrations',
+    confirmations: 'users/confirmations',
+    sessions: 'users/sessions'
   }
 
+  get '/user', to: redirect { |path_params, req| User.exists?(email: req.params[:user][:email]) ? "/users/sign_in?user%5Bemail%5D=#{req.params[:user][:email]}" : "/users/sign_up?user%5Bemail%5D=#{req.params[:user][:email]}" }
   mount Ahoy::Engine => "/yoha"
   resources :campaigns, only: [:index, :show], param: :slug
   resources :campaign_subscriptions, only: [:index, :show, :create, :update, :destroy], param: :token
