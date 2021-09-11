@@ -29,8 +29,8 @@ class OnboardingDripper < ApplicationDripper
     ahoy.track("$after_send", { mailing_id: mailing.id, message_id: mail.message_id })
   end
 
-  on_complete do |campaign_subscription, mailing, message|
-    ahoy.track("$on_complete", { campaign_subscription_id: campaign_subscription.id, mailing: mailing.id, message_id: message.message_id })
+  on_complete do |campaign_subscription|
+    ahoy.track("$on_complete", { campaign_subscription_id: campaign_subscription.id })
   end
 
   on_unsubscribe do |campaign_subscription|

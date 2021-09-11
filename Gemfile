@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.6'
+ruby '2.7.2'
 
-gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
+gem 'rails'
 gem 'pg'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'caffeinate', '>= 0.4.1'
+gem 'caffeinate'
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
 gem 'turbolinks'
